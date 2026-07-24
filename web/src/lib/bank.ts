@@ -4,7 +4,8 @@ import type { Banco, Pregunta, Opcion } from "./types";
 
 // Sube este número si cambia la forma de los datos cacheados para invalidar
 // cachés antiguas en el cliente.
-const BANCO_VERSION = 1;
+// v2: se incorpora la columna `tema` (práctica por temas).
+const BANCO_VERSION = 2;
 const CACHE_KEY = "banco";
 const PAGE_SIZE = 1000;
 
@@ -15,6 +16,7 @@ interface FilaPregunta {
   respuesta_correcta: string | null;
   frecuencia: number | null;
   conflicto_respuesta: boolean | null;
+  tema: string | null;
   opciones: {
     letra: string;
     texto: string | null;
@@ -40,6 +42,7 @@ function mapFila(fila: FilaPregunta): Pregunta {
       : null,
     frecuencia: fila.frecuencia ?? 0,
     conflicto: fila.conflicto_respuesta === true,
+    tema: (fila.tema ?? "").trim(),
   };
 }
 
@@ -54,7 +57,7 @@ async function descargarBanco(onProgreso?: ProgresoDescarga): Promise<Pregunta[]
     const { data, error } = await supabase
       .from("preguntas")
       .select(
-        "id,enunciado,respuesta_correcta,frecuencia,conflicto_respuesta,opciones(letra,texto,es_correcta)",
+        "id,enunciado,respuesta_correcta,frecuencia,conflicto_respuesta,tema,opciones(letra,texto,es_correcta)",
       )
       .order("id", { ascending: true })
       .range(desde, desde + PAGE_SIZE - 1);

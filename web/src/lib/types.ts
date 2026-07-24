@@ -18,6 +18,8 @@ export interface Pregunta {
   frecuencia: number;
   /** true si el banco detectó respuestas contradictorias entre fuentes. */
   conflicto: boolean;
+  /** Slug del tema al que pertenece la pregunta (ver lib/temas.ts). */
+  tema: string;
 }
 
 /** Snapshot completo cacheado en el cliente. */
@@ -55,6 +57,11 @@ export interface ConfigExamen {
   altaProbabilidad: boolean;
   /** Modo de examen. Por defecto "real". */
   modo: ModoExamen;
+  /**
+   * Slug del tema al que restringir el examen. Si se omite, se usan todas las
+   * preguntas aptas del banco (examen general).
+   */
+  tema?: string;
 }
 
 export interface ResultadoPregunta {

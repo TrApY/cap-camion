@@ -57,15 +57,12 @@ export default function Home() {
           Examen simulado
         </Link>
 
-        <div
-          aria-disabled="true"
-          className="flex items-center justify-between rounded-xl border border-border bg-surface px-5 py-4 text-base font-semibold text-muted"
+        <Link
+          href="/temas"
+          className="flex items-center justify-center rounded-xl border border-border bg-surface px-5 py-4 text-center text-base font-semibold text-foreground shadow-sm transition hover:border-brand active:scale-[0.99]"
         >
-          <span>Práctica por temas</span>
-          <span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-muted">
-            Próximamente
-          </span>
-        </div>
+          Práctica por temas
+        </Link>
       </nav>
 
       <p className="text-center text-xs leading-relaxed text-muted">

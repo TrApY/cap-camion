@@ -33,16 +33,32 @@ export function preguntasAptas(banco: Banco): Pregunta[] {
 }
 
 /**
+ * Cuenta las preguntas aptas de cada tema (slug -> nº de aptas). Útil para la
+ * pantalla de práctica por temas sin recalcular por cada tema.
+ */
+export function contarAptasPorTema(banco: Banco): Record<string, number> {
+  const conteo: Record<string, number> = {};
+  for (const p of preguntasAptas(banco)) {
+    if (!p.tema) continue;
+    conteo[p.tema] = (conteo[p.tema] ?? 0) + 1;
+  }
+  return conteo;
+}
+
+/**
  * Construye un examen a partir del banco y la configuración.
  * - altaProbabilidad: coge las N preguntas de mayor `frecuencia`.
  * - si no: selección aleatoria.
- * En ambos casos se baraja el orden de las preguntas y de sus opciones.
+ * - tema: si se indica, restringe la selección a ese tema (práctica por temas).
+ * En todos los casos se baraja el orden de las preguntas y de sus opciones.
  */
 export function construirExamen(
   banco: Banco,
   config: ConfigExamen,
 ): PreguntaExamen[] {
-  const aptas = preguntasAptas(banco);
+  const aptas = config.tema
+    ? preguntasAptas(banco).filter((p) => p.tema === config.tema)
+    : preguntasAptas(banco);
   const n = Math.min(config.numPreguntas, aptas.length);
 
   let seleccion: Pregunta[];
