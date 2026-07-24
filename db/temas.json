@@ -1,0 +1,68 @@
+[
+  {
+    "slug": "motor-transmision",
+    "label": "El vehículo: motor y transmisión",
+    "seccion": "Conducción racional y seguridad",
+    "orden": 1
+  },
+  {
+    "slug": "frenado-seguridad",
+    "label": "Frenado y dispositivos de seguridad",
+    "seccion": "Conducción racional y seguridad",
+    "orden": 2
+  },
+  {
+    "slug": "conduccion-eficiente",
+    "label": "Conducción eficiente y consumo",
+    "seccion": "Conducción racional y seguridad",
+    "orden": 3
+  },
+  {
+    "slug": "carga-estiba",
+    "label": "Carga, estiba y masas",
+    "seccion": "Conducción racional y seguridad",
+    "orden": 4
+  },
+  {
+    "slug": "tiempos-tacografo",
+    "label": "Tiempos de conducción y tacógrafo",
+    "seccion": "Reglamentación",
+    "orden": 5
+  },
+  {
+    "slug": "reglamentacion-documentos",
+    "label": "Documentos y reglamentación del transporte",
+    "seccion": "Reglamentación",
+    "orden": 6
+  },
+  {
+    "slug": "seguridad-vial-accidentes",
+    "label": "Seguridad vial, accidentes y primeros auxilios",
+    "seccion": "Salud, seguridad y servicio",
+    "orden": 7
+  },
+  {
+    "slug": "salud-ergonomia",
+    "label": "Salud, ergonomía y aptitud",
+    "seccion": "Salud, seguridad y servicio",
+    "orden": 8
+  },
+  {
+    "slug": "prevencion-riesgos",
+    "label": "Prevención de riesgos (robos, tráfico ilegal)",
+    "seccion": "Salud, seguridad y servicio",
+    "orden": 9
+  },
+  {
+    "slug": "calidad-servicio",
+    "label": "Calidad del servicio e imagen de empresa",
+    "seccion": "Salud, seguridad y servicio",
+    "orden": 10
+  },
+  {
+    "slug": "entorno-economico",
+    "label": "Entorno económico y organización",
+    "seccion": "Salud, seguridad y servicio",
+    "orden": 11
+  }
+]
