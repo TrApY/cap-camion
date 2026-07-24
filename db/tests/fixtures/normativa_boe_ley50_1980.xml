@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+  <status>
+    <code>200</code>
+    <text>ok</text>
+  </status>
+  <data>
+    <texto>
+<bloque id="atercero" tipo="precepto" titulo="Artículo tercero">
+        <version id_norma="BOE-A-1980-22501" fecha_publicacion="19801017" fecha_vigencia="19810417">
+          <p class="articulo">Artículo tercero.</p>
+          <p class="parrafo">Las condiciones generales, que en ningún caso podrán tener carácter lesivo para los asegurados, habrán de incluirse por el asegurador en la proposición de seguro si la hubiere y necesariamente en la póliza de contrato o en un documento complementario, que se suscribirá por el asegurado y al que se entregará copia del mismo. Las condiciones generales y particulares se redactarán de forma clara y precisa. Se destacarán de modo especial las cláusulas limitativas de los derechos de los asegurados, que deberán ser específicamente aceptadas por escrito.</p>
+          <p class="parrafo">Las condiciones generales del contrato estarán sometidas a la vigilancia de la Administración Pública en los términos previstos por la Ley.</p>
+          <p class="parrafo">Declarada por el Tribunal Supremo la nulidad de alguna de las cláusulas de las condiciones generales de un contrato, la Administración Pública competente obligará a los aseguradores a modificar las cláusulas idénticas contenidas en sus pólizas.</p>
+        </version>
+      </bloque>
+<bloque id="asextobis" tipo="precepto" titulo="Artículo sexto bis">
+        <version id_norma="BOE-A-2003-20330" fecha_publicacion="20031105" fecha_vigencia="20031106">
+          <p class="articulo">Artículo sexto bis.</p>
+          <p class="parrafo">1. El tomador de un contrato de seguro celebrado a distancia, distinto del seguro sobre la vida, que sea una persona física que actúe con un propósito ajeno a una actividad comercial o profesional propia, tendrá la facultad unilateral de resolver el contrato sin indicación de los motivos y sin penalización alguna, siempre que no haya acaecido el evento dañoso objeto de cobertura, dentro del plazo de 14 días, contados desde la fecha de celebración del contrato o desde el día en que el tomador reciba las condiciones contractuales y la información exigida por el artículo 60 de la Ley 30/1995, de 8 de noviembre, de Ordenación y Supervisión de los Seguros Privados, si esta fecha es posterior.</p>
+          <p class="parrafo">Lo anterior no será de aplicación a los contratos de seguros de viaje o equipaje de una duración inferior a un mes, a aquellos cuyos efectos terminen antes del plazo al que se refiere el apartado anterior, ni a los que den cumplimiento a una obligación de aseguramiento del tomador.</p>
+          <p class="parrafo">2. La facultad unilateral de resolución del contrato deberá ejercitarse por el tomador mediante comunicación dirigida al asegurador a través de un soporte duradero, disponible y accesible para éste y que permita dejar constancia de la notificación. Esta comunicación se hará de acuerdo con las instrucciones que el tomador haya recibido de conformidad con lo previsto en el apartado 3 del artículo 60 de la Ley 30/1995, de 8 de noviembre, de Ordenación y Supervisión de los Seguros Privados. La referida comunicación deberá expedirse por el tomador del seguro antes de que venza el plazo indicado en el apartado anterior.</p>
+          <p class="parrafo">3. A partir de la fecha en que se expida la comunicación a que se refiere el apartado anterior cesará la cobertura del riesgo por parte del asegurador y el tomador del seguro tendrá derecho a la devolución de la prima que hubiera pagado, salvo la parte correspondiente al período de tiempo en que el contrato hubiera tenido vigencia. El asegurador dispondrá para ello de un plazo de 30 días a contar desde el día que reciba la comunicación de rescisión.</p>
+          <blockquote>
+            <p class="nota_pie">Se añade por el art. 2.1 de la Ley 34/2003, de 4 de noviembre. <ins><a class="refPost">Ref. BOE-A-2003-20330</a></ins></p>
+          </blockquote>
+        </version>
+        <version id_norma="BOE-A-2007-13411" fecha_publicacion="20070712" fecha_vigencia="20071012">
+          <p class="articulo">Artículo sexto bis.</p>
+          <p class="parrafo">
+            <strong>(Derogado).</strong>
+          </p>
+          <blockquote>
+            <p class="nota_pie">Se deroga por la disposición derogatoria.a) de la Ley 22/2007, de 11 de julio. <a class="refPost">Ref. BOE-A-2007-13411</a></p>
+            <p class="nota_pie">Se añade por el art. 2.1 de la Ley 34/2003, de 4 de noviembre. <a class="refPost"><a class="refPost">Ref. BOE-A-2003-20330</a></a></p>
+          </blockquote>
+        </version>
+      </bloque>
+<bloque id="adieciseis" tipo="precepto" titulo="Artículo dieciséis">
+        <version id_norma="BOE-A-1980-22501" fecha_publicacion="19801017" fecha_vigencia="19810417">
+          <p class="articulo">Artículo dieciséis.</p>
+          <p class="parrafo">El tomador del seguro o el asegurado o el beneficiario deberán comunicar al asegurador el acaecimiento del siniestro dentro del plazo máximo de siete días de haberlo conocido, salvo que se haya fijado en la póliza un plazo más amplio. En caso de incumplimiento, el asegurador podrá reclamar los daños y perjuicios causados por la falta de declaración.</p>
+          <p class="parrafo">Este efecto no se producirá si se prueba que el asegurador ha tenido conocimiento del siniestro por otro medio.</p>
+          <p class="parrafo">El tomador del seguro o el asegurado deberá, además, dar al asegurador toda clase de informaciones sobre las circunstancias y consecuencias del siniestro. En caso de violación de este deber, la pérdida del derecho a la indemnización sólo se producirá en el supuesto de que hubiese concurrido dolo o culpa grave.</p>
+        </version>
+      </bloque>
+    </texto>
+  </data>
+</response>

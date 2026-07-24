@@ -16,3 +16,7 @@ pipeline/out/*.json
 pipeline/out/*.md
 pipeline/out/*.csv
 .DS_Store
+
+# Raw normativo (87 MB, reproducible via db/normativa_textos.py + manifest)
+data/normativa/*
+!data/normativa/manifest.json

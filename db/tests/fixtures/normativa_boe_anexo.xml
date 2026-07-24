@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+  <status>
+    <code>200</code>
+    <text>ok</text>
+  </status>
+  <data>
+    <texto>
+<bloque id="ani" tipo="encabezado" titulo="ANEXO I">
+        <version id_norma="BOE-A-1997-12735" fecha_publicacion="19970612" fecha_vigencia="19970812">
+          <p class="anexo_num">ANEXO I</p>
+          <p class="anexo_tit">Lista indicativa y no exhaustiva de equipos de protección individual</p>
+          <p class="centro_cursiva">1. Protectores de la cabeza</p>
+          <p class="parrafo">Cascos de seguridad (obras públicas y construcción, minas e industrias diversas).</p>
+          <p class="parrafo">Cascos de protección contra choques e impactos.</p>
+          <p class="parrafo">Prendas de protección para la cabeza (gorros, gorras, sombreros, etc., de tejido, de tejido recubierto, etc.).</p>
+          <p class="parrafo">Cascos para usos especiales (fuego, productos químicos).</p>
+          <p class="centro_cursiva">2. Protectores del oído</p>
+          <p class="parrafo">Protectores auditivos tipo «tapones».</p>
+          <p class="parrafo">Protectores auditivos desechables o reutilizables.</p>
+          <p class="parrafo">Protectores auditivos tipo «orejeras», con arnés de cabeza, bajo la barbilla o la nuca.</p>
+          <p class="parrafo">Cascos antirruido.</p>
+          <p class="parrafo">Protectores auditivos acoplables a los cascos de protección para la industria.</p>
+          <p class="parrafo">Protectores auditivos dependientes del nivel.</p>
+          <p class="parrafo">Protectores auditivos con aparatos de intercomunicación.</p>
+          <p class="centro_cursiva">3. Protectores de los ojos y de la cara</p>
+          <p class="parrafo">Gafas de montura «universal».</p>
+          <p class="parrafo">Gafas de montura «integral» (uni o biocular).</p>
+          <p class="parrafo">Gafas de montura «cazoletas».</p>
+          <p class="parrafo">Pantallas faciales.</p>
+          <p class="parrafo">Pantallas para soldadura (de mano, de cabeza, acoplables a casco de protección para la industria).</p>
+          <p class="centro_cursiva">4. Protección de las vías respiratorias</p>
+          <p class="parrafo">Equipos filtrantes de partículas (molestas, nocivas, tóxicas o radiactivas).</p>
+          <p class="parrafo">Equipos filtrantes frente a gases y vapores.</p>
+          <p class="parrafo">Equipos filtrantes mixtos.</p>
+          <p class="parrafo">Equipos aislantes de aire libre.</p>
+          <p class="parrafo">Equipos aislantes con suministro de aire.</p>
+          <p class="parrafo">Equipos respiratorios con casco o pantalla para soldadura.</p>
+          <p class="parrafo">Equipos respiratorios con máscara amovible para soldadura.</p>
+          <p class="parrafo">Equipos de submarinismo.</p>
+          <p class="centro_cursiva">5. Protectores de manos y brazos</p>
+          <p class="parrafo">Guantes contra las agresiones mecánicas (perforaciones, cortes, vibraciones).</p>
+          <p class="parrafo">Guantes contra las agresiones químicas.</p>
+          <p class="parrafo">Guantes contra las agresiones de origen eléctrico.</p>
+          <p class="parrafo">Guantes contra las agresiones de origen térmico.</p>
+          <p class="parrafo">Manoplas.</p>
+          <p class="parrafo">Manguitos y mangas.</p>
+          <p class="centro_cursiva">6. Protectores de pies y piernas</p>
+          <p class="parrafo">Calzado de seguridad.</p>
+          <p class="parrafo">Calzado de protección.</p>
+          <p class="parrafo">Calzado de trabajo.</p>
+          <p class="parrafo">Calzado y cubrecalzado de protección contra el calor.</p>
+          <p class="parrafo">Calzado y cubrecalzado de protección contra el frío.</p>
+          <p class="parrafo">Calzado frente a la electricidad.</p>
+          <p class="parrafo">Calzado de protección contra las motosierras.</p>
+          <p class="parrafo">Protectores amovibles del empeine.</p>
+          <p class="parrafo">Polainas.</p>
+          <p class="parrafo">Suelas amovibles (antitérmicas, antiperforación o antitranspiración).</p>
+          <p class="parrafo">Rodilleras.</p>
+          <p class="centro_cursiva">7. Protectores de la piel</p>
+          <p class="parrafo">Cremas de protección y pomadas.</p>
+          <p class="centro_cursiva">8. Protectores del tronco y el abdomen</p>
+          <p class="parrafo">Chalecos, chaquetas y mandiles de protección contra las agresiones mecánicas (perforaciones, cortes, proyecciones de metales en fusión).</p>
+          <p class="parrafo">Chalecos, chaquetas y mandiles de protección contra las agresiones químicas.</p>
+          <p class="parrafo">Chalecos termógenos.</p>
+          <p class="parrafo">Chalecos salvavidas.</p>
+          <p class="parrafo">Mandiles de protección contra los rayos X.</p>
+          <p class="parrafo">Cinturones de sujeción del tronco.</p>
+          <p class="parrafo">Fajas y cinturones antivibraciones.</p>
+          <p class="centro_cursiva">9. Protección total del cuerpo</p>
+          <p class="parrafo">Equipos de protección contra las caídas de altura.</p>
+          <p class="parrafo">Dispositivos anticaídas deslizantes.</p>
+          <p class="parrafo">Arneses.</p>
+          <p class="parrafo">Cinturones de sujeción.</p>
+          <p class="parrafo">Dispositivos anticaídas con amortiguador.</p>
+          <p class="parrafo">Ropa de protección.</p>
+          <p class="parrafo">Ropa de protección contra las agresiones mecánicas (perforaciones, cortes).</p>
+          <p class="parrafo">Ropa de protección contra las agresiones químicas.</p>
+          <p class="parrafo">Ropa de protección contra las proyecciones de metales en fusión y las radiaciones infrarrojas.</p>
+          <p class="parrafo">Ropa de protección contra fuentes de calor intenso o estrés térmico.</p>
+          <p class="parrafo">Ropa de protección contra bajas temperaturas.</p>
+          <p class="parrafo">Ropa de protección contra la contaminación radiactiva.</p>
+          <p class="parrafo">Ropa antipolvo.</p>
+          <p class="parrafo">Ropa antigás.</p>
+          <p class="parrafo">Ropa y accesorios (brazaletes, guantes) de señalización (retrorreflectantes, fluorescentes).</p>
+        </version>
+        <version id_norma="BOE-A-2021-20261" fecha_publicacion="20211208" fecha_vigencia="20211209">
+          <p class="anexo_num">ANEXO I</p>
+          <p class="anexo_tit">Riesgos en relación con las partes del cuerpo que se deben proteger con los EPI<sup> (*)</sup></p>
+          <p class="cita_con_pleca"><sup>(*) </sup>No se puede esperar que esta lista de riesgos/partes del cuerpo sea exhaustiva.</p>
+          <p class="parrafo_2">La evaluación de riesgos determinará la necesidad de suministrar un EPI y sus características de acuerdo con las disposiciones de este real decreto.</p>
+          <p class="centro_cursiva">Riesgos</p>
+          <p class="imagen_girada">
+            <img class="frame" data-pdf="20344_Revisada.pdf" height="2776" src="/datos/imagenes/disp/2021/293/20261_10709418_1.png" width="1124"/>
+          </p>
+          <blockquote>
+            <p class="nota_pie">Se modifica por el art. único.5 del Real Decreto 1076/2021, de 7 de diciembre. <a class="refPost">Ref. BOE-A-2021-20261</a></p>
+          </blockquote>
+        </version>
+      </bloque>
+    </texto>
+  </data>
+</response>

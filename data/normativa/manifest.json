@@ -1,0 +1,418 @@
+{
+  "https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=CELEX:32014R0165": {
+    "archivo": "eurlex/32014R0165.html",
+    "fecha": "2026-07-24T21:54:45+00:00",
+    "sha256": "fadb241a3e92d5a6f529107741f2af17e5005c5988b963bbfed1a47f49b0f6af",
+    "bytes": 547538,
+    "content_type": "text/html; charset=UTF-8",
+    "origen": "eurlex:Reglamento Comunitario (UE) 165/2014"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%2216%2F1987%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__Ley_16_1987.json",
+    "fecha": "2026-07-24T21:54:51+00:00",
+    "sha256": "36fedbaf25750c3111d4dee6db4af3a1519a8a887dcfb5d7fd3b452d96be8ce4",
+    "bytes": 1252,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:Ley 16/1987"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1987-17803/texto": {
+    "archivo": "boe/BOE-A-1987-17803__texto.xml",
+    "fecha": "2026-07-24T21:54:55+00:00",
+    "sha256": "b0fb08065c066a6f02f33c7616bb99166c6c3164e1d39a48306b99aee31cd43e",
+    "bytes": 1172238,
+    "content_type": "application/xml",
+    "origen": "boe-texto:Ley 16/1987"
+  },
+  "https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=CELEX:32006R0561": {
+    "archivo": "eurlex/32006R0561.html",
+    "fecha": "2026-07-24T21:54:59+00:00",
+    "sha256": "731e75441e1885a9d703de6eccc15b48adada73d6306e9f7efd6e42ad1b4af09",
+    "bytes": 200039,
+    "content_type": "text/html; charset=UTF-8",
+    "origen": "eurlex:Reglamento Comunitario (CE) 561/2006"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%221032%2F2007%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__RD_1032_2007.json",
+    "fecha": "2026-07-24T21:55:03+00:00",
+    "sha256": "1d0c43ae07b5e2e07e10b94798bb565fa5f643d9a6664a9a7d062060f77b9f50",
+    "bytes": 1406,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:RD 1032/2007"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-2007-14726/texto": {
+    "archivo": "boe/BOE-A-2007-14726__texto.xml",
+    "fecha": "2026-07-24T21:55:08+00:00",
+    "sha256": "a301e404762c5cbcf8b333392b13a113c5715a85fd7b60ea396a4daf6e2de5af",
+    "bytes": 198336,
+    "content_type": "application/xml",
+    "origen": "boe-texto:RD 1032/2007"
+  },
+  "https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=CELEX:32013R0952": {
+    "archivo": "eurlex/32013R0952.html",
+    "fecha": "2026-07-24T21:55:12+00:00",
+    "sha256": "5d18628a22fcf199ed81149608eb31aceb064747836cf51d32feb702fcab33fa",
+    "bytes": 1323296,
+    "content_type": "text/html; charset=UTF-8",
+    "origen": "eurlex:Reglamento Comunitario (UE) 952/2013"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%221211%2F1990%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__RD_1211_1990.json",
+    "fecha": "2026-07-24T21:55:18+00:00",
+    "sha256": "6e09428f747241058a2584e603592f09a730a71ece6afbb09849d22a35e6f41e",
+    "bytes": 1360,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:RD 1211/1990"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1990-24442/texto": {
+    "archivo": "boe/BOE-A-1990-24442__texto.xml",
+    "fecha": "2026-07-24T21:55:25+00:00",
+    "sha256": "90dfa9fd2cc2064367595d008d139ea76cb9daf262d067c1612234bddb37e828",
+    "bytes": 2194473,
+    "content_type": "application/xml",
+    "origen": "boe-texto:RD 1211/1990"
+  },
+  "https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=CELEX:32009R1072": {
+    "archivo": "eurlex/32009R1072.html",
+    "fecha": "2026-07-24T21:55:30+00:00",
+    "sha256": "ff501ca6dfa2837ba987c95cd71a6940de1fb65c219f56ca83b8653934627648",
+    "bytes": 962463,
+    "content_type": "text/html; charset=UTF-8",
+    "origen": "eurlex:Reglamento Comunitario (CE) 1072/2009"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%22640%2F2007%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__RD_640_2007.json",
+    "fecha": "2026-07-24T21:55:34+00:00",
+    "sha256": "126c6fbaf69a27b689385d4c5cf73d56d8a732bbdad8a067f624d8eb2e7fcff7",
+    "bytes": 1407,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:RD 640/2007"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-2007-10557/texto": {
+    "archivo": "boe/BOE-A-2007-10557__texto.xml",
+    "fecha": "2026-07-24T21:55:40+00:00",
+    "sha256": "f48c9fddc917f873824e5612a105fcc03ed9a4116fc247d12c7390425ddf62b4",
+    "bytes": 44771,
+    "content_type": "application/xml",
+    "origen": "boe-texto:RD 640/2007"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%221%2F2010%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__RD_Legislativo_1_2010.json",
+    "fecha": "2026-07-24T21:55:45+00:00",
+    "sha256": "f5c7607a94985c137dc223bb0c311d8128b20d228f7f8df5165cdbb105b69ef4",
+    "bytes": 18872,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:RD Legislativo 1/2010"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-2010-10544/texto": {
+    "archivo": "boe/BOE-A-2010-10544__texto.xml",
+    "fecha": "2026-07-24T21:55:50+00:00",
+    "sha256": "57b59f4fc31ac29a4ccbdad1877d03c1fcfa79fd91d67900ee4e95910ba024d3",
+    "bytes": 1282243,
+    "content_type": "application/xml",
+    "origen": "boe-texto:RD Legislativo 1/2010"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%22FOM%2F1190%2F2005%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__OM_FOM_1190_2005.json",
+    "fecha": "2026-07-24T21:55:53+00:00",
+    "sha256": "3d62c800d8d7ec23ba9da92c6ee166e680142282f00005af1dbc78dc4f23b22a",
+    "bytes": 1295,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:OM FOM/1190/2005"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-2005-7137/texto": {
+    "archivo": "boe/BOE-A-2005-7137__texto.xml",
+    "fecha": "2026-07-24T21:55:58+00:00",
+    "sha256": "7ea60588ada49beb9217771ac2764e13796bd9059a22d515452cca3ab76ca6fb",
+    "bytes": 112353,
+    "content_type": "application/xml",
+    "origen": "boe-texto:OM FOM/1190/2005"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%22773%2F1997%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__RD_773_1997.json",
+    "fecha": "2026-07-24T21:56:02+00:00",
+    "sha256": "7a2926a42352ec467f5ddb2ba551b895014aab2c215807470a0ffd1815e6b6d7",
+    "bytes": 1381,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:RD 773/1997"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1997-12735/texto": {
+    "archivo": "boe/BOE-A-1997-12735__texto.xml",
+    "fecha": "2026-07-24T21:56:06+00:00",
+    "sha256": "c897df8215829a509e13a4dc701d2ea25bb1b25cc0f960910948131abfc7f289",
+    "bytes": 227699,
+    "content_type": "application/xml",
+    "origen": "boe-texto:RD 773/1997"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%224%2F2000%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__Ley_Org_nica_4_2000.json",
+    "fecha": "2026-07-24T21:56:11+00:00",
+    "sha256": "1c4a5643453e8512e49f99ae113a4c1be05f482a8f7c52491aa6f7c42d717dec",
+    "bytes": 13594,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:Ley Orgánica 4/2000"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-2000-544/texto": {
+    "archivo": "boe/BOE-A-2000-544__texto.xml",
+    "fecha": "2026-07-24T21:56:16+00:00",
+    "sha256": "b4f90cbd568c59003cd69ce2b11d707fb45395fce05e12da7442374e5d8ccc6f",
+    "bytes": 711592,
+    "content_type": "application/xml",
+    "origen": "boe-texto:Ley Orgánica 4/2000"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%221561%2F1995%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__RD_1561_1995.json",
+    "fecha": "2026-07-24T21:56:21+00:00",
+    "sha256": "741d777b3cf0df338ad52c0dee6c824d139721a40fd81740f0b2c503a528a591",
+    "bytes": 1291,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:RD 1561/1995"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1995-21346/texto": {
+    "archivo": "boe/BOE-A-1995-21346__texto.xml",
+    "fecha": "2026-07-24T21:56:26+00:00",
+    "sha256": "13c2cc0ed90a653824200cc7a5e67443f4dbbe3e10c8268dab2252ff11b21272",
+    "bytes": 211138,
+    "content_type": "application/xml",
+    "origen": "boe-texto:RD 1561/1995"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%228%2F2004%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__RD_Legislativo_8_2004.json",
+    "fecha": "2026-07-24T21:56:30+00:00",
+    "sha256": "009e2c2081a70fe038e8ec88bbe6c8f69479fdb1a70451c8a01ac3af0e160fd3",
+    "bytes": 10157,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:RD Legislativo 8/2004"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-2004-18911/texto": {
+    "archivo": "boe/BOE-A-2004-18911__texto.xml",
+    "fecha": "2026-07-24T21:56:43+00:00",
+    "sha256": "64a3dfcf8904af3ea8fc686011b2e6c764d85a975ed69d3e5fae1188ecd3ac66",
+    "bytes": 50144150,
+    "content_type": "application/xml",
+    "origen": "boe-texto:RD Legislativo 8/2004"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%2250%2F1980%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__Ley_50_1980.json",
+    "fecha": "2026-07-24T21:56:48+00:00",
+    "sha256": "de4eb1dde74947b10f09780dccf86a5e605eb5b82dffc03db006e5a16fbaaaf9",
+    "bytes": 1226,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:Ley 50/1980"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1980-22501/texto": {
+    "archivo": "boe/BOE-A-1980-22501__texto.xml",
+    "fecha": "2026-07-24T21:56:52+00:00",
+    "sha256": "8c65b65bad588afe34e494446b306743be609e1f2bae374c6780d671deb3134f",
+    "bytes": 209861,
+    "content_type": "application/xml",
+    "origen": "boe-texto:Ley 50/1980"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%228%2F2015%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__RD_Legislativo_8_2015.json",
+    "fecha": "2026-07-24T21:56:55+00:00",
+    "sha256": "333668d11cbbc61c12f8f7679687ba640a38185041d0ff526d5c6d5d0322fbe3",
+    "bytes": 15204,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:RD Legislativo 8/2015"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-2015-11724/texto": {
+    "archivo": "boe/BOE-A-2015-11724__texto.xml",
+    "fecha": "2026-07-24T21:57:01+00:00",
+    "sha256": "8b2525f5735c3e242699329ffd268aa261ec04954e8976d50f0c14ecbf3ca917",
+    "bytes": 3741662,
+    "content_type": "application/xml",
+    "origen": "boe-texto:RD Legislativo 8/2015"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%2215%2F2009%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__Ley_15_2009.json",
+    "fecha": "2026-07-24T21:57:05+00:00",
+    "sha256": "ad423da02ba93c55eb040e3d9ff9c6cc799ff58166c9270f177013201b5d5983",
+    "bytes": 3727,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:Ley 15/2009"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-2009-18004/texto": {
+    "archivo": "boe/BOE-A-2009-18004__texto.xml",
+    "fecha": "2026-07-24T21:57:09+00:00",
+    "sha256": "764a19548e1e5bad6091dd69bf13ece933f2a48e7bf67978d3c51dda4c92fbdc",
+    "bytes": 155826,
+    "content_type": "application/xml",
+    "origen": "boe-texto:Ley 15/2009"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%2231%2F1995%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__Ley_31_1995.json",
+    "fecha": "2026-07-24T21:57:13+00:00",
+    "sha256": "76f5266467b5c600e10abcdbd22c711f6f9d2cfa56dad5980162f4af11331d27",
+    "bytes": 1246,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:Ley 31/1995"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1995-24292/texto": {
+    "archivo": "boe/BOE-A-1995-24292__texto.xml",
+    "fecha": "2026-07-24T21:57:18+00:00",
+    "sha256": "d1d8f4b362d9c15c08eba5dbc508a16e6baf9396890810dac3f7af00ece1c425",
+    "bytes": 318136,
+    "content_type": "application/xml",
+    "origen": "boe-texto:Ley 31/1995"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%22FOM%2F734%2F2007%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__OM_FOM_734_2007.json",
+    "fecha": "2026-07-24T21:57:23+00:00",
+    "sha256": "3183019c98ec39476ae1dce64d48b76f983f011b0bc08b56868448bbbb877372",
+    "bytes": 1396,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:OM FOM/734/2007"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-2007-6514/texto": {
+    "archivo": "boe/BOE-A-2007-6514__texto.xml",
+    "fecha": "2026-07-24T21:57:28+00:00",
+    "sha256": "3fffb491210760a8438ebd0155366bf08cbf32685f3ae8f5737431f8a8df3f74",
+    "bytes": 129817,
+    "content_type": "application/xml",
+    "origen": "boe-texto:OM FOM/734/2007"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%221428%2F2003%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__RD_1428_2003.json",
+    "fecha": "2026-07-24T21:57:33+00:00",
+    "sha256": "ead4840fe0e6d978e822aad9f9c3b9d584c3fc198e6317114ad2043b8caff9ae",
+    "bytes": 1520,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:RD 1428/2003"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-2003-23514/texto": {
+    "archivo": "boe/BOE-A-2003-23514__texto.xml",
+    "fecha": "2026-07-24T21:57:39+00:00",
+    "sha256": "1105a26b121e2048816438ddf8a36910e04d5a92ee49e87982608d027ab40072",
+    "bytes": 1158926,
+    "content_type": "application/xml",
+    "origen": "boe-texto:RD 1428/2003"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%2227%2F1999%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__Ley_27_1999.json",
+    "fecha": "2026-07-24T21:57:42+00:00",
+    "sha256": "9d4341dddc21493859b78f27c89d3d22c82bd5e1c258e209aeeebc74bd82febc",
+    "bytes": 1219,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:Ley 27/1999"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1999-15681/texto": {
+    "archivo": "boe/BOE-A-1999-15681__texto.xml",
+    "fecha": "2026-07-24T21:57:49+00:00",
+    "sha256": "94a965462e0ca7b241fd99cfb08ea6bbe62c110ebb4df0545219f1c32dbb6223",
+    "bytes": 495734,
+    "content_type": "application/xml",
+    "origen": "boe-texto:Ley 27/1999"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%22FOM%2F1882%2F2012%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__OM_FOM_1882_2012.json",
+    "fecha": "2026-07-24T21:57:54+00:00",
+    "sha256": "5b16a24e939fdd63ddd1a4711716f0c6a5ef8be77e8cdf518c2bdb2151c311bc",
+    "bytes": 1350,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:OM FOM/1882/2012"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-2012-11324/texto": {
+    "archivo": "boe/BOE-A-2012-11324__texto.xml",
+    "fecha": "2026-07-24T21:57:58+00:00",
+    "sha256": "c548c09062bdc3f16aa9233eeb1482c2a7dee06e4b34f5cd527187b94fe9e6a1",
+    "bytes": 174081,
+    "content_type": "application/xml",
+    "origen": "boe-texto:OM FOM/1882/2012"
+  },
+  "https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=CELEX:32015R2447": {
+    "archivo": "eurlex/32015R2447.html",
+    "fecha": "2026-07-24T21:58:07+00:00",
+    "sha256": "70f9dff999b2c7726bc6f6e01aaa9cdb1cea672c361b8518e991d0ba28c800b6",
+    "bytes": 15761812,
+    "content_type": "text/html; charset=UTF-8",
+    "origen": "eurlex:Reglamento Comunitario (UE) 2015/2447"
+  },
+  "https://eur-lex.europa.eu/legal-content/ES/TXT/HTML/?uri=CELEX:32005R0001": {
+    "archivo": "eurlex/32005R0001.html",
+    "fecha": "2026-07-24T21:58:13+00:00",
+    "sha256": "3dd269973990061d14864512a86406b87e6fcbc10bf79dc760400a28e23c74d2",
+    "bytes": 2641394,
+    "content_type": "text/html; charset=UTF-8",
+    "origen": "eurlex:Reglamento Comunitario (CE) 1/2005"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%222822%2F1998%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__RD_2822_1998.json",
+    "fecha": "2026-07-24T21:58:19+00:00",
+    "sha256": "8f6308b25d36f9a1fbef4ce74f2ac7a0787b871b34291939f9a7e7da9fd73fb2",
+    "bytes": 1300,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:RD 2822/1998"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1999-1826/texto": {
+    "archivo": "boe/BOE-A-1999-1826__texto.xml",
+    "fecha": "2026-07-24T21:58:25+00:00",
+    "sha256": "6062cd9015bde99d7e2ff9e2c1418114e9aa36963fef79fc09cf9399a6aa1fe7",
+    "bytes": 2478414,
+    "content_type": "application/xml",
+    "origen": "boe-texto:RD 2822/1998"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%2244%2F2015%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__Ley_44_2015.json",
+    "fecha": "2026-07-24T21:58:29+00:00",
+    "sha256": "ae5f5f61eab0f2de3406ea9c0d210fed74603e69b84ed4e3de67b66644455de9",
+    "bytes": 2731,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:Ley 44/2015"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-2015-11071/texto": {
+    "archivo": "boe/BOE-A-2015-11071__texto.xml",
+    "fecha": "2026-07-24T21:58:33+00:00",
+    "sha256": "6d1581aca987a9b4f789a57b8593df11896d5dc78bf6f85326592dda807e0554",
+    "bytes": 80238,
+    "content_type": "application/xml",
+    "origen": "boe-texto:Ley 44/2015"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%221299%2F2006%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__RD_1299_2006.json",
+    "fecha": "2026-07-24T21:58:37+00:00",
+    "sha256": "a67306efb95c77537948bf5bd8def07f28bad09522951ce7e2fc2d420551dbf4",
+    "bytes": 1415,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:RD 1299/2006"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-2006-22169/texto": {
+    "archivo": "boe/BOE-A-2006-22169__texto.xml",
+    "fecha": "2026-07-24T21:58:42+00:00",
+    "sha256": "2f88af3faedf50399f06c32e7b744457b12fc11a823cfec0f6271c33b055502e",
+    "bytes": 4123517,
+    "content_type": "application/xml",
+    "origen": "boe-texto:RD 1299/2006"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%2212%2F1995%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__Ley_Org_nica_12_1995.json",
+    "fecha": "2026-07-24T21:58:46+00:00",
+    "sha256": "c5666336681d94b44a7bf685102b210060f915263b9313d4cd2c3fde6494e277",
+    "bytes": 4863,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:Ley Orgánica 12/1995"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-1995-26836/texto": {
+    "archivo": "boe/BOE-A-1995-26836__texto.xml",
+    "fecha": "2026-07-24T21:58:50+00:00",
+    "sha256": "2f4518a54c00881ad2709d493ffc72b556a53f8f5f4a137b9883867031dfcc1c",
+    "bytes": 134556,
+    "content_type": "application/xml",
+    "origen": "boe-texto:Ley Orgánica 12/1995"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%22INT%2F2223%2F2014%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__OM_INT_2223_2014.json",
+    "fecha": "2026-07-24T21:58:56+00:00",
+    "sha256": "c5577a8327ec979a52cf7c22353eee3a9ce56e6aaf15691c53f6f7792d52e7b1",
+    "bytes": 1365,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:OM INT/2223/2014"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-2014-12411/texto": {
+    "archivo": "boe/BOE-A-2014-12411__texto.xml",
+    "fecha": "2026-07-24T21:59:02+00:00",
+    "sha256": "5f305d989fe52391a46a16bd5739e86b63fba2b833b2d225ba32394a2035e994",
+    "bytes": 43837,
+    "content_type": "application/xml",
+    "origen": "boe-texto:OM INT/2223/2014"
+  }
+}

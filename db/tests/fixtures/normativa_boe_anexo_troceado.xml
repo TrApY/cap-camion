@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<response>
+  <status>
+    <code>200</code>
+    <text>ok</text>
+  </status>
+  <data>
+    <texto>
+<bloque id="a7" tipo="precepto" titulo="Artículo 7">
+        <version id_norma="BOE-A-2012-11324" fecha_publicacion="20120905" fecha_vigencia="20120925">
+          <p class="articulo">Artículo 7. Aplicación del régimen de responsabilidad a las diversas acciones.</p>
+          <p class="parrafo">De conformidad con lo dispuesto en el artículo 63 de la Ley del contrato, el régimen de responsabilidad previsto en los supuestos contemplados en el apartado 7 de las presentes condiciones será aplicable a toda acción que persiga una indemnización por daños y perjuicios derivados del transporte, con independencia de cuál sea el procedimiento a través del que se ejercite o su fundamento contractual o extracontractual, tanto si se hace valer frente al porteador como si se dirige contra sus auxiliares.</p>
+        </version>
+      </bloque>
+<bloque id="an" tipo="encabezado" titulo="ANEXO">
+        <version id_norma="BOE-A-2012-11324" fecha_publicacion="20120905" fecha_vigencia="20120925">
+          <p class="anexo_num">ANEXO</p>
+          <p class="anexo_tit">Condiciones generales de contratación de los transportes de mercancías por carretera</p>
+        </version>
+      </bloque>
+<bloque id="A1" tipo="precepto" titulo="1. Definiciones">
+        <version id_norma="BOE-A-2012-11324" fecha_publicacion="20120905" fecha_vigencia="20120925">
+          <p class="articulo">1. Definiciones.</p>
+          <p class="parrafo_2">1.1 En virtud del contrato de transporte de mercancías por carretera, el porteador se obliga frente al cargador a cambio de un precio, a trasladar mercancías de un lugar a otro por carretera y ponerlas a disposición del destinatario, utilizando medios mecánicos con capacidad de tracción propia.</p>
+          <p class="parrafo">1.2 Transportista es el titular de una empresa especialmente concebida y equipada para la realización material de transportes de mercancías por carretera por cuenta ajena con sus propios medios personales y materiales, y que, al efecto, dispone de uno o más vehículos adecuados con capacidad de tracción propia, bien en propiedad, o en virtud de cualquier otro título permitido por la legislación vigente.</p>
+          <p class="parrafo">1.3 Operador de transporte de mercancías es el titular de una empresa que, ya sea bajo la denominación comercial de agencia de transporte, transitario, almacenista-distribuidor u operador logístico, se dedica a intermediar en la contratación del transporte de mercancías, actuando como organización interpuesta entre los cargadores y los porteadores que contrata en nombre propio tanto con los unos como con los otros.</p>
+          <p class="parrafo">1.4 Cargador es quien contrata en nombre propio la realización de un transporte y frente al cual el porteador se obliga a efectuarlo.</p>
+          <p class="parrafo">Cuando la realización del transporte fuera requerida al porteador por el personal de una empresa en el ejercicio de las funciones que en ésta tenga atribuidas, se presumirá, salvo prueba en contrario, que contrata en nombre de dicha empresa, correspondiendo, por consiguiente, a ésta la posición de cargador en el contrato.</p>
+          <p class="parrafo">Lo dispuesto en el primer párrafo de esta condición se dicta en ejecución de los criterios marcados por el artículo 4.1 de la Ley 15/2009, de 11 de noviembre, del contrato de transporte terrestre de mercancías.</p>
+          <p class="parrafo">1.5 Porteador es quien asume la obligación de realizar el transporte en nombre propio con independencia de que lo ejecute por sus propios medios o contrate su realización con otros sujetos.</p>
+          <p class="parrafo">Lo dispuesto en esta condición se dicta en ejecución de los criterios marcados por el artículo 4.2 de la Ley 15/2009, de 11 de noviembre, del contrato de transporte terrestre de mercancías.</p>
+          <p class="parrafo">1.6 Destinatario es la persona a quien el porteador ha de entregar las mercancías en el lugar de destino.</p>
+          <p class="parrafo">Podrá ser destinatario de las mercancías el propio cargador o una persona distinta.</p>
+          <p class="parrafo">Lo dispuesto en el primer párrafo de esta condición se dicta en ejecución de los criterios marcados por el artículo 4.3 de la Ley 15/2009, de 11 de noviembre, del contrato de transporte terrestre de mercancías.</p>
+          <p class="parrafo">1.7 Expedidor es el tercero que, por cuenta del cargador, hace entrega de las mercancías al transportista en el lugar de recepción de la mercancía.</p>
+          <p class="parrafo">Lo dispuesto en esta condición se dicta en ejecución de los criterios marcados por el artículo 4.4 de la Ley 15/2009, de 11 de noviembre, del contrato de transporte terrestre de mercancías.</p>
+          <p class="parrafo">1.8 Envío es la cantidad de mercancía, embalajes y soporte de la carga incluidos, que un cargador entrega simultáneamente a un porteador para su transporte y entrega a un único destinatario, desde un único lugar de carga a un único lugar de destino, si bien un solo contrato podrá tener por objeto el transporte de múltiples envíos de un mismo cargador.</p>
+          <p class="parrafo">A los efectos previstos en el párrafo anterior, cuando existan diferentes puntos de carga o de descarga situados dentro de un mismo establecimiento industrial o comercial o en distintos enclaves de una misma obra o explotación, serán considerados como un único lugar de carga o descarga.</p>
+          <p class="parrafo">Lo dispuesto en el primer párrafo de esta condición se dicta en ejecución de los criterios marcados por los artículos 7.2 y 7.3 de la Ley 15/2009, de 11 de noviembre, del contrato de transporte terrestre de mercancías.</p>
+          <p class="parrafo">1.9 Bulto es cada unidad material de carga diferenciada que forman las mercancías objeto de transporte, con independencia de su volumen, dimensiones y contenido.</p>
+          <p class="parrafo">Cuando las mercancías que integran el bulto estén embaladas, se considerará que el embalaje forma parte integrante del bulto.</p>
+          <p class="parrafo">Lo dispuesto en el primer párrafo de esta condición se dicta en ejecución de los criterios marcados por el artículo 7.1 de la Ley 15/2009, de 11 de noviembre, del contrato de transporte terrestre de mercancías.</p>
+        </version>
+      </bloque>
+<bloque id="A2" tipo="precepto" titulo="2. Carta de porte">
+        <version id_norma="BOE-A-2012-11324" fecha_publicacion="20120905" fecha_vigencia="20120925">
+          <p class="articulo">2. Carta de porte.</p>
+          <p class="parrafo_2">2.1 Concepto:</p>
+          <p class="parrafo_2">Se denomina carta de porte al documento en que se hagan constar todas o una parte de las condiciones de realización del transporte contratado, que habrá de sujetarse a lo dispuesto en la Ley del Contrato de Transporte Terrestre de Mercancías y en estas condiciones generales de contratación.</p>
+          <p class="parrafo">Cuando el contrato comprenda el transporte de diversos envíos, se podrá exigir la emisión de una carta de porte para cada envío.</p>
+          <p class="parrafo">Cuando el envío se distribuya en varios vehículos, el porteador o el cargador podrán exigir la emisión de una carta de porte por cada vehículo.</p>
+          <p class="parrafo">Lo dispuesto en el último párrafo de esta condición se dicta en ejecución de los criterios marcados por el artículo 10.4 de la Ley 15/2009, de 11 de noviembre, del contrato de transporte terrestre de mercancías.</p>
+          <p class="parrafo_2">2.2 Exigibilidad de la carta de porte:</p>
+          <p class="parrafo_2">La carta de porte no es un documento obligatorio. La ausencia o irregularidad de la carta de porte no producirá la inexistencia o la nulidad del contrato.</p>
+          <p class="parrafo">No obstante, cualquiera de las partes del contrato podrá exigir a la otra que se extienda una carta de porte.</p>
+          <p class="parrafo">Cuando la parte contratante requerida a formalizar la carta de porte se negase a ello, la otra podrá considerarla desistida del contrato.</p>
+          <p class="parrafo">El cargador y el porteador responderán de los gastos y perjuicios que se deriven de la inexactitud o insuficiencia de los datos que les corresponda incluir en la carta de porte.</p>
+          <p class="parrafo">Lo dispuesto en el primero, tercero y cuarto párrafo de esta condición se dicta en ejecución de los criterios marcados por los artículos 13.1, 10.6 y 10.7, respectivamente, de la Ley 15/2009, de 11 de noviembre, del contrato de transporte terrestre de mercancías.</p>
+          <p class="parrafo_2">2.3 Contenido de la carta de porte:</p>
+          <p class="parrafo_2">Como regla general, la carta de porte incluirá las siguientes menciones:</p>
+          <p class="parrafo_2">a) Lugar y fecha de su emisión.</p>
+          <p class="parrafo">b) Nombre y dirección del cargador y, en su caso, del expedidor.</p>
+          <p class="parrafo">c) Nombre y dirección del porteador y, en su caso, del tercero que reciba el envío para su transporte.</p>
+          <p class="parrafo">d) Lugar y fecha de la recepción del envío por el porteador.</p>
+          <p class="parrafo">e) Lugar y, en su caso, fecha prevista de entrega del envío en destino.</p>
+          <p class="parrafo">f) Nombre y dirección del destinatario, así como, eventualmente, un domicilio donde éste pueda recibir notificaciones.</p>
+          <p class="parrafo">g) Naturaleza de las mercancías que integran el envío, así como el número de bultos y sus signos y señales de identificación.</p>
+          <p class="parrafo">h) Identificación del carácter peligroso de la mercancía enviada, así como de la denominación prevista en la legislación sobre transporte de mercancías peligrosas, cuando así corresponda.</p>
+          <p class="parrafo">i) Cantidad de mercancías enviadas, determinada por su peso o expresada de otra manera.</p>
+          <p class="parrafo">j) Clase de embalaje utilizado para acondicionar el envío.</p>
+          <p class="parrafo">k) Precio convenido del transporte, así como el importe de los gastos previsibles relacionados con el transporte.</p>
+          <p class="parrafo">l) Indicación de si el precio del transporte se paga por el cargador o por el destinatario.</p>
+          <p class="parrafo">m) En su caso, declaración de valor de las mercancías o de interés especial en la entrega, de acuerdo con lo dispuesto en la condición 7.16.</p>
+          <p class="parrafo">n) Instrucciones para el cumplimiento de formalidades y trámites administrativos preceptivos en relación con las mercancías que integran el envío.</p>
+          <p class="parrafo_2">No obstante, la omisión de alguna de las menciones previstas en esta condición no privará de eficacia a la carta de porte en cuanto a las incluidas.</p>
+          <p class="parrafo">Por otra parte, la carta de porte podrá contener cualquier otra mención que sea convenida por las partes.</p>
+          <p class="parrafo">Lo dispuesto en esta condición se dicta en ejecución de los criterios marcados por los artículos 10.1, 10.2 y 13.2 de la Ley 15/2009, de 11 de noviembre, del contrato de transporte terrestre de mercancías.</p>
+          <p class="parrafo_2">2.4 Contenido de la carta de porte en supuestos especiales:</p>
+          <p class="parrafo_2">En su caso, la carta de porte deberá contener cualquier otra mención que exija la legislación especial aplicable, por razón de la naturaleza de la mercancía o por otras circunstancias.</p>
+          <p class="parrafo_2">2.5 Emisión y número de ejemplares de la carta de porte:</p>
+          <p class="parrafo_2">La carta de porte se emitirá en tres ejemplares originales, que firmarán el cargador y el porteador.</p>
+          <p class="parrafo">Será válida la firma de la carta de porte por medios mecánicos, mediante estampación de un sello o por cualquier otro medio que resulte adecuado, siempre que quede acreditada la identidad del firmante.</p>
+          <p class="parrafo">El primer ejemplar de la carta de porte será entregado al cargador, el segundo viajará con el envío y el tercero quedará en poder del porteador.</p>
+          <p class="parrafo">Lo dispuesto en esta condición se dicta en ejecución de los criterios marcados por el artículo 11 de la Ley 15/2009, de 11 de noviembre, del contrato de transporte terrestre de mercancías.</p>
+          <p class="parrafo_2">2.6 Fuerza probatoria de la carta de porte:</p>
+          <p class="parrafo_2">La carta de porte firmada por ambas partes dará fe de la conclusión y del contenido del contrato, así como de la recepción del envío por el porteador, salvo prueba en contrario.</p>
+          <p class="parrafo">Lo dispuesto en esta condición se dicta en ejecución de los criterios marcados por el artículo 14.1 de la Ley 15/2009, de 11 de noviembre, del contrato de transporte terrestre de mercancías.</p>
+          <p class="parrafo_2">2.7 Carta de porte electrónica:</p>
+          <p class="parrafo_2">Si las partes están de acuerdo, podrán emitir la carta de porte por medios electrónicos con idénticos efectos a los señalados en la condición 2.6.</p>
+          <p class="parrafo">En este supuesto, la carta de porte deberá consistir en un registro electrónico de datos que puedan ser transformados en signos de escritura legibles.</p>
+          <p class="parrafo">Asimismo, podrá realizarse por medios electrónicos cualquier solicitud, declaración, instrucción, orden, reserva u otra comunicación relativa a la ejecución del contrato de transporte cuando las partes así lo hubiesen convenido.</p>
+          <p class="parrafo">Lo dispuesto en los dos primeros párrafos de esta condición se dicta en ejecución de los criterios marcados por los artículos 15.1 y 15. 2 de la Ley 15/2009, de 11 de noviembre, del contrato de transporte terrestre de mercancías.</p>
+          <p class="parrafo_2">2.8 Condiciones de elaboración de la carta de porte electrónica:</p>
+          <p class="parrafo_2">La carta de porte electrónica contendrá las mismas menciones que se contemplan en estas condiciones con carácter general para toda carta de porte.</p>
+          <p class="parrafo">El procedimiento empleado para la elaboración de la carta de porte electrónica deberá garantizar la integridad de las indicaciones que contenga a partir del momento en que haya sido elaborada. Se entenderá que las indicaciones mantienen su integridad cuando sigan estando completas y no hayan sufrido otras alteraciones que las que puedan producirse, en su caso, como consecuencia de su normal utilización.</p>
+          <p class="parrafo">Las indicaciones contenidas en la carta de porte electrónica deberán poderse completar o modificar en todos los supuestos previstos en estas condiciones con carácter general para toda carta de porte, si bien en este caso el procedimiento utilizado deberá permitir la detección como tal de toda adición o modificación y garantizar el mantenimiento de las indicaciones originales.</p>
+          <p class="parrafo_2">2.9 Firma de la carta de porte electrónica:</p>
+          <p class="parrafo_2">El contenido de la carta de porte electrónica deberá ser refrendado por el cargador y el porteador con sus firmas electrónicas.</p>
+          <p class="parrafo_2">2.10 Funcionamiento de la carta de porte electrónica: Las partes interesadas en la ejecución del contrato de transporte cuyo contenido se pretenda documentar total o parcialmente en una carta de porte electrónica, deberán convenir las reglas a que se ajustará su funcionamiento en relación con:</p>
+          <p class="parrafo_2">a) El método para elaborarla y remitirla.</p>
+          <p class="parrafo">b) Las garantías respecto al mantenimiento de su integridad.</p>
+          <p class="parrafo">c) La forma en que el titular de los derechos derivados de la carta podrá demostrar que lo es.</p>
+          <p class="parrafo">d) La forma en que se podrá confirmar su efectiva entrega al destinatario.</p>
+          <p class="parrafo">e) Los procedimientos que permitirán completar o modificar su contenido.</p>
+          <p class="parrafo">f) El procedimiento mediante el que, eventualmente, podrá sustituirse la carta de porte electrónica por otra elaborada por un medio distinto.</p>
+          <p class="parrafo_2">Las referidas reglas deberán señalarse expresamente en la propia carta de porte electrónica y su aplicación deberá poder ser fácilmente verificada.</p>
+          <p class="parrafo_2">2.11 Otros documentos destinados a completar la carta de porte electrónica: El cargador podrá remitir o comunicar en forma electrónica al porteador cualquier otro de los documentos o informaciones mencionados en estas condiciones generales siempre que resulte posible su tratamiento en este formato y las partes hayan convenido el procedimiento para establecer un vínculo entre tales documentos o informaciones y la carta de porte electrónica, de manera que se garantice su integridad.</p>
+        </version>
+      </bloque>
+    </texto>
+  </data>
+</response>

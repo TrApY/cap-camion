@@ -12,7 +12,8 @@ Base de datos: **Supabase** (proyecto `qcotnigcbvgmspdvhasm`, schema `public`).
 | `clasificar_temas.py` | Clasifica el banco en los 11 temas de `temas.json` con Gemini (caché en `out/`). |
 | `ministerio_descarga.py` | Descarga el banco oficial del Ministerio y lo parsea a `out/ministerio_preguntas.json`. |
 | `ministerio_match.py` | Cruza nuestro banco con el del Ministerio para asignar NORMA → `out/ministerio_match.json`. |
-| `tests/` | Tests sin red del parseo y del matching del banco ministerial. |
+| `normativa_textos.py` | Recupera de BOE/EUR-Lex el texto de los artículos citados por esas normas → `out/normativa_cache.json`. |
+| `tests/` | Tests sin red del parseo y del matching del banco ministerial y de la recuperación de textos normativos. |
 
 ## Banco oficial del Ministerio (norma por pregunta)
 
@@ -39,6 +40,43 @@ pipeline/.venv/bin/python -m pytest db/tests/ -q
 Artefactos en `out/`: `ministerio_preguntas.json` (banco oficial parseado),
 `ministerio_match.json` (id nuestro → origen/num/norma/score/método),
 `ministerio_report.md` y `ministerio_match_report.md`.
+
+## Textos normativos para el RAG (`normativa_textos.py`)
+
+Del campo `norma` de `out/ministerio_match.json` (709 referencias) se agrupan las
+**normas base** y, para las que tienen **>= 4 referencias**, se recupera el texto
+real de los artículos/anexos citados. Ese texto es el ancla anti-alucinación de
+las explicaciones; la cita que ve el usuario sigue siendo la del Ministerio tal
+cual. Una norma que no se resuelva limpiamente se marca `no-resuelta` y no pasa
+nada: sólo se pierde contexto.
+
+Dos fuentes, ambas verificadas contra su documentación oficial:
+
+- **BOE, API de legislación consolidada** (`www.boe.es/datosabiertos`) para las
+  normas españolas con número oficial: búsqueda por `numero_oficial` y descarga
+  del XML de `/id/{id}/texto`. **Nunca se acepta un identificador sin verificar**:
+  se exige ámbito estatal, el rango esperado y que el título empiece por
+  `<rango> <numero/año>`; si sobreviven cero o más de un candidato → `no-resuelta`.
+- **EUR-Lex** para los reglamentos comunitarios, con CELEX determinista
+  `3{AAAA}R{NNNN}`, verificando el número y el año en el título del acto.
+
+Convenios (CMR, TIR, CIDE, ATP, Schengen), directivas, acuerdos y normas
+identificadas sólo por fecha quedan **fuera de alcance v1** y no gastan ni una
+petición.
+
+Cortesía: espera aleatoria de 3-6 s entre peticiones, backoff de 60 s y un único
+reintento ante 403/429. El raw se guarda en `data/normativa/` con `manifest.json`
+(url, fecha, sha256, bytes), así que **re-ejecutar cuesta 0 peticiones**.
+
+```bash
+pipeline/.venv/bin/python db/normativa_textos.py                 # descarga + extracción
+pipeline/.venv/bin/python db/normativa_textos.py --solo-extraer  # sin red
+```
+
+Artefactos en `out/`: `normativa_cache.json` (por norma base: estado, fuente, id,
+url, título, nº de referencias y el texto limpio de cada artículo/anexo citado,
+recortado a 20 KB) y `normativa_report.md` (estado norma a norma y cuántas de las
+709 referencias acaban con texto disponible).
 
 ## Modelo de datos (resumen)
 
