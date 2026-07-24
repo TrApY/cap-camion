@@ -1,0 +1,41 @@
+// Logo del camión (mismo trazado que el icono PWA), reutilizable en la UI.
+export function TruckLogo({
+  className,
+  title = "CAP Camión",
+}: {
+  className?: string;
+  title?: string;
+}) {
+  return (
+    <svg
+      viewBox="0 0 512 512"
+      className={className}
+      role="img"
+      aria-label={title}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="512" height="512" rx="112" fill="#1d4ed8" />
+      <g transform="translate(12,-14)">
+        <g fill="#ffffff">
+          <rect x="70" y="206" width="210" height="120" rx="16" />
+          <rect x="286" y="252" width="118" height="74" rx="12" />
+          <path d="M300 252 L300 214 Q300 208 306 208 L360 208 Q366 208 372 214 L400 252 Z" />
+        </g>
+        <path
+          d="M318 246 L318 226 Q318 222 322 222 L352 222 L370 246 Z"
+          fill="#1d4ed8"
+        />
+        <g fill="#0b1e40">
+          <circle cx="140" cy="338" r="32" />
+          <circle cx="202" cy="338" r="32" />
+          <circle cx="360" cy="338" r="32" />
+        </g>
+        <g fill="#ffffff">
+          <circle cx="140" cy="338" r="13" />
+          <circle cx="202" cy="338" r="13" />
+          <circle cx="360" cy="338" r="13" />
+        </g>
+      </g>
+    </svg>
+  );
+}
