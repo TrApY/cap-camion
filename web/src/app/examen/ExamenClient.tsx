@@ -9,6 +9,7 @@ import type {
 } from "@/lib/types";
 import { cargarBanco } from "@/lib/bank";
 import { construirExamen, corregirExamen, type Correccion } from "@/lib/exam";
+import { registrarSesion } from "@/lib/stats";
 import { ExamConfig } from "@/components/exam/ExamConfig";
 import { ExamRunner } from "@/components/exam/ExamRunner";
 import { ExamResults } from "@/components/exam/ExamResults";
@@ -73,10 +74,22 @@ export function ExamenClient() {
 
   function finalizar(respuestas: (number | null)[], elapsed: number) {
     if (!config) return;
-    setCorreccion(corregirExamen(preguntas, respuestas));
+    const corr = corregirExamen(preguntas, respuestas);
+    setCorreccion(corr);
     setTiempoMs(elapsed);
     setFase("resultados");
     window.scrollTo(0, 0);
+
+    // Estadísticas: fire-and-forget. Si IndexedDB falla, los resultados se
+    // muestran igualmente.
+    void registrarSesion({
+      tipo: "general",
+      modo: config.modo,
+      correccion: corr,
+      tiempoMs: elapsed,
+    }).catch((e) => {
+      console.warn("No se pudo guardar la sesión en estadísticas:", e);
+    });
   }
 
   function repetir() {

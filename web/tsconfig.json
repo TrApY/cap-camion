@@ -30,5 +30,8 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules"]
+  // Los tests corren con el runner de bun (`bun test`), que aporta sus propios
+  // globals y el módulo "bun:test". Se excluyen del typecheck de Next para no
+  // tener que añadir @types/bun como dependencia.
+  "exclude": ["node_modules", "src/**/*.test.ts", "src/**/*.test.tsx"]
 }

@@ -77,6 +77,7 @@ export function construirExamen(
     id: p.id,
     enunciado: p.enunciado,
     frecuencia: p.frecuencia,
+    tema: p.tema,
     opciones: barajar(p.opciones).map((o) => ({
       letra: o.letra,
       texto: o.texto,

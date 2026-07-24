@@ -10,12 +10,30 @@ import {
   corregirExamen,
   type Correccion,
 } from "@/lib/exam";
+import {
+  cargarProgresos,
+  estadisticasPorTema,
+  registrarSesion,
+  tramoAcierto,
+  type ProgresoPregunta,
+  type TramoAcierto,
+} from "@/lib/stats";
 import { temasPorSeccion, temaPorSlug, type Tema } from "@/lib/temas";
 import { ExamRunner } from "@/components/exam/ExamRunner";
 import { ExamResults } from "@/components/exam/ExamResults";
 import { TruckLogo } from "@/components/TruckLogo";
 
 type Fase = "cargando" | "error" | "temas" | "config" | "examen" | "resultados";
+
+/** Respuestas mínimas en un tema para mostrar su badge de acierto. */
+const MIN_RESPUESTAS_BADGE = 5;
+
+/** Clases del badge de acierto según el tramo (color + texto, nunca solo color). */
+const CLASES_TRAMO: Record<TramoAcierto, string> = {
+  verde: "bg-emerald-100 text-success",
+  ambar: "bg-amber-100 text-amber-700",
+  rojo: "bg-rose-100 text-danger",
+};
 
 const OPCIONES_MODO: {
   valor: ModoExamen;
@@ -44,6 +62,10 @@ export function TemasClient() {
   const [progreso, setProgreso] = useState(0);
   const [errorMsg, setErrorMsg] = useState("");
 
+  const [progresoPreguntas, setProgresoPreguntas] = useState<
+    ProgresoPregunta[]
+  >([]);
+
   const [temaSel, setTemaSel] = useState<Tema | null>(null);
   const [numPreguntas, setNumPreguntas] = useState(20);
   const [modo, setModo] = useState<ModoExamen>("practica");
@@ -53,8 +75,14 @@ export function TemasClient() {
 
   const cargar = useCallback(async () => {
     try {
-      const b = await cargarBanco({ onProgreso: (n) => setProgreso(n) });
+      // El progreso del usuario es opcional: si IndexedDB falla la pantalla
+      // funciona igual, solo que sin badges de acierto.
+      const [b, progresos] = await Promise.all([
+        cargarBanco({ onProgreso: (n) => setProgreso(n) }),
+        cargarProgresos().catch(() => [] as ProgresoPregunta[]),
+      ]);
       setBanco(b);
+      setProgresoPreguntas(progresos);
       setFase("temas");
     } catch (e) {
       setErrorMsg(e instanceof Error ? e.message : "Error desconocido.");
@@ -71,6 +99,13 @@ export function TemasClient() {
   const aptasPorTema = useMemo(
     () => (banco ? contarAptasPorTema(banco) : {}),
     [banco],
+  );
+
+  // Acierto del usuario por tema (slug -> estadística), para los badges.
+  const aciertoPorTema = useMemo(
+    () =>
+      new Map(estadisticasPorTema(progresoPreguntas).map((t) => [t.slug, t])),
+    [progresoPreguntas],
   );
 
   const secciones = useMemo(() => temasPorSeccion(), []);
@@ -99,10 +134,24 @@ export function TemasClient() {
   }
 
   function finalizar(respuestas: (number | null)[], elapsed: number) {
-    setCorreccion(corregirExamen(preguntas, respuestas));
+    const corr = corregirExamen(preguntas, respuestas);
+    setCorreccion(corr);
     setTiempoMs(elapsed);
     setFase("resultados");
     window.scrollTo(0, 0);
+
+    if (!temaSel) return;
+    // Estadísticas: fire-and-forget. Si IndexedDB falla, los resultados se
+    // muestran igualmente.
+    void registrarSesion({
+      tipo: "tema",
+      tema: temaSel.slug,
+      modo,
+      correccion: corr,
+      tiempoMs: elapsed,
+    }).catch((e) => {
+      console.warn("No se pudo guardar la sesión en estadísticas:", e);
+    });
   }
 
   function repetir() {
@@ -186,6 +235,10 @@ export function TemasClient() {
               {grupo.temas.map((tema) => {
                 const n = aptasPorTema[tema.slug] ?? 0;
                 const disponible = n > 0;
+                const acierto = aciertoPorTema.get(tema.slug);
+                const mostrarAcierto =
+                  acierto != null &&
+                  acierto.respuestas >= MIN_RESPUESTAS_BADGE;
                 return (
                   <button
                     key={tema.slug}
@@ -197,9 +250,23 @@ export function TemasClient() {
                     <span className="text-sm font-semibold leading-snug">
                       {tema.label}
                     </span>
-                    <span className="flex-none rounded-full bg-brand/10 px-2.5 py-1 text-xs font-semibold text-brand-strong tabular-nums">
-                      {n.toLocaleString("es-ES")}
-                      <span className="font-medium text-muted"> preg.</span>
+                    <span className="flex flex-none items-center gap-1.5">
+                      {mostrarAcierto && (
+                        <span
+                          className={`rounded-full px-2.5 py-1 text-xs font-semibold tabular-nums ${
+                            CLASES_TRAMO[tramoAcierto(acierto.porcentaje)]
+                          }`}
+                        >
+                          {acierto.porcentaje.toLocaleString("es-ES", {
+                            maximumFractionDigits: 0,
+                          })}
+                          {" % acierto"}
+                        </span>
+                      )}
+                      <span className="rounded-full bg-brand/10 px-2.5 py-1 text-xs font-semibold text-brand-strong tabular-nums">
+                        {n.toLocaleString("es-ES")}
+                        <span className="font-medium text-muted"> preg.</span>
+                      </span>
                     </span>
                   </button>
                 );

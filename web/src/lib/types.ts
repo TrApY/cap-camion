@@ -41,6 +41,8 @@ export interface PreguntaExamen {
   id: string;
   enunciado: string;
   frecuencia: number;
+  /** Slug del tema de la pregunta (se propaga para las estadísticas). */
+  tema: string;
   /** Opciones ya barajadas para presentación. */
   opciones: OpcionExamen[];
 }

@@ -1,18 +1,20 @@
 // Service worker de CAP Camión.
 // Estrategia:
-//  - Precache del app shell (/, /examen, manifest, iconos) en install.
+//  - Precache del app shell (rutas de la app, manifest, iconos) en install.
 //  - _next/static (hasheado, inmutable): cache-first.
 //  - Resto de GET same-origin (documentos, payloads RSC): stale-while-revalidate.
 //  - Cross-origin (API de Supabase): se deja pasar a red; el banco se cachea
 //    aparte en IndexedDB desde la app, así el examen funciona offline.
 //
 // Subir CACHE_VERSION invalida las cachés antiguas.
-const CACHE_VERSION = "v1";
+const CACHE_VERSION = "v2";
 const CACHE = `cap-camion-${CACHE_VERSION}`;
 
 const PRECACHE_URLS = [
   "/",
   "/examen",
+  "/temas",
+  "/estadisticas",
   "/manifest.webmanifest",
   "/icons/icon-192.png",
   "/icons/icon-512.png",
