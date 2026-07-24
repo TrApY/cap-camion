@@ -1,12 +1,32 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { Banco, ConfigExamen } from "@/lib/types";
+import type { Banco, ConfigExamen, ModoExamen } from "@/lib/types";
 import { preguntasAptas } from "@/lib/exam";
 
 const OPCIONES_NUM = [
   { valor: 30, etiqueta: "30", sub: "Rápido" },
   { valor: 100, etiqueta: "100", sub: "Completo" },
+];
+
+const OPCIONES_MODO: {
+  valor: ModoExamen;
+  icono: string;
+  titulo: string;
+  sub: string;
+}[] = [
+  {
+    valor: "real",
+    icono: "📝",
+    titulo: "Examen real",
+    sub: "Corrección al final",
+  },
+  {
+    valor: "practica",
+    icono: "🎓",
+    titulo: "Práctica",
+    sub: "Corrección inmediata",
+  },
 ];
 
 const OPCIONES_UMBRAL = [0.5, 0.55, 0.6, 0.65];
@@ -27,6 +47,7 @@ export function ExamConfig({
   const [numPreguntas, setNumPreguntas] = useState(30);
   const [altaProbabilidad, setAltaProbabilidad] = useState(false);
   const [umbral, setUmbral] = useState(0.5);
+  const [modo, setModo] = useState<ModoExamen>("real");
 
   const descargado = new Date(banco.descargadoEn).toLocaleDateString("es-ES", {
     day: "2-digit",
@@ -44,6 +65,46 @@ export function ExamConfig({
           {numAptas.toLocaleString("es-ES")} preguntas disponibles para examen.
         </p>
       </div>
+
+      {/* Modo de examen */}
+      <fieldset className="rounded-2xl border border-border bg-surface p-4 shadow-sm">
+        <legend className="px-1 text-sm font-semibold">Modo</legend>
+        <div className="mt-2 grid grid-cols-2 gap-2">
+          {OPCIONES_MODO.map((op) => {
+            const activo = modo === op.valor;
+            return (
+              <button
+                key={op.valor}
+                type="button"
+                onClick={() => setModo(op.valor)}
+                aria-pressed={activo}
+                className={`flex flex-col items-center gap-1 rounded-xl border px-3 py-3 text-center transition ${
+                  activo
+                    ? "border-brand bg-brand text-white shadow-sm"
+                    : "border-border bg-surface text-foreground active:scale-[0.99]"
+                }`}
+              >
+                <span className="text-2xl leading-none" aria-hidden>
+                  {op.icono}
+                </span>
+                <span className="text-sm font-bold leading-tight">
+                  {op.titulo}
+                </span>
+                <span
+                  className={`text-xs leading-tight ${activo ? "text-white/80" : "text-muted"}`}
+                >
+                  {op.sub}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+        <p className="mt-2 text-xs text-muted">
+          {modo === "real"
+            ? "Simula el examen: sin pistas hasta el final."
+            : "Aprende: cada respuesta se corrige al instante para memorizarla."}
+        </p>
+      </fieldset>
 
       {/* Número de preguntas */}
       <fieldset className="rounded-2xl border border-border bg-surface p-4 shadow-sm">
@@ -146,7 +207,7 @@ export function ExamConfig({
       <button
         type="button"
         onClick={() =>
-          onStart({ numPreguntas, altaProbabilidad, umbral })
+          onStart({ numPreguntas, altaProbabilidad, umbral, modo })
         }
         className="rounded-xl bg-brand px-5 py-4 text-base font-semibold text-white shadow-sm transition hover:bg-brand-strong active:scale-[0.99]"
       >

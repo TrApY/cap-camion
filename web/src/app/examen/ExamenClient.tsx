@@ -140,10 +140,11 @@ export function ExamenClient() {
     );
   }
 
-  if (fase === "examen") {
+  if (fase === "examen" && config) {
     return (
       <ExamRunner
         preguntas={preguntas}
+        modo={config.modo}
         onFinish={finalizar}
         onCancel={() => setFase("config")}
       />

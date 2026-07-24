@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { PreguntaExamen } from "@/lib/types";
+import type { ModoExamen, PreguntaExamen } from "@/lib/types";
 
 const LETRAS = ["A", "B", "C", "D", "E", "F"];
 
@@ -13,13 +13,16 @@ function formatoTiempo(segundos: number): string {
 
 export function ExamRunner({
   preguntas,
+  modo,
   onFinish,
   onCancel,
 }: {
   preguntas: PreguntaExamen[];
+  modo: ModoExamen;
   onFinish: (respuestas: (number | null)[], elapsedMs: number) => void;
   onCancel: () => void;
 }) {
+  const practica = modo === "practica";
   const total = preguntas.length;
   const inicioRef = useRef<number>(Date.now());
   const [indice, setIndice] = useState(0);
@@ -42,10 +45,24 @@ export function ExamRunner({
   const enBlanco = total - contestadas;
   const esUltima = indice === total - 1;
 
+  // En práctica, una vez marcada la respuesta queda fijada y revelada.
+  const elegidaActual = respuestas[indice];
+  const revelada = practica && elegidaActual !== null;
+  const aciertoActual =
+    revelada && elegidaActual !== null
+      ? pregunta.opciones[elegidaActual]?.esCorrecta === true
+      : false;
+
   function elegir(opIndex: number) {
     setRespuestas((prev) => {
+      // En práctica la respuesta es inmutable una vez marcada.
+      if (practica && prev[indice] !== null) return prev;
       const copia = prev.slice();
-      copia[indice] = copia[indice] === opIndex ? null : opIndex;
+      copia[indice] = practica
+        ? opIndex
+        : copia[indice] === opIndex
+          ? null
+          : opIndex;
       return copia;
     });
   }
@@ -70,12 +87,19 @@ export function ExamRunner({
         >
           Salir
         </button>
-        <div
-          className="flex items-center gap-1.5 rounded-full bg-surface px-3 py-1 text-sm font-semibold tabular-nums shadow-sm ring-1 ring-border"
-          aria-label="Tiempo transcurrido"
-        >
-          <span aria-hidden>⏱</span>
-          {formatoTiempo(segundos)}
+        <div className="flex items-center gap-2">
+          {practica && (
+            <span className="rounded-full bg-brand/10 px-2.5 py-1 text-xs font-semibold text-brand-strong">
+              Práctica
+            </span>
+          )}
+          <div
+            className="flex items-center gap-1.5 rounded-full bg-surface px-3 py-1 text-sm font-semibold tabular-nums shadow-sm ring-1 ring-border"
+            aria-label="Tiempo transcurrido"
+          >
+            <span aria-hidden>⏱</span>
+            {formatoTiempo(segundos)}
+          </div>
         </div>
       </div>
 
@@ -109,36 +133,96 @@ export function ExamRunner({
       </div>
 
       {/* Opciones */}
-      <div className="flex flex-col gap-2.5" role="radiogroup" aria-label="Opciones">
+      <div
+        className="flex flex-col gap-2.5"
+        role="radiogroup"
+        aria-label="Opciones"
+      >
         {pregunta.opciones.map((op, i) => {
           const elegida = respuestas[indice] === i;
+
+          // Estado visual en modo práctica cuando la pregunta está revelada.
+          const mostrarCorrecta = revelada && op.esCorrecta;
+          const mostrarFallo = revelada && elegida && !op.esCorrecta;
+
+          let contenedor: string;
+          let badge: string;
+          if (mostrarCorrecta) {
+            contenedor = "border-success bg-emerald-50 ring-1 ring-success";
+            badge = "bg-success text-white";
+          } else if (mostrarFallo) {
+            contenedor = "border-danger bg-rose-50 ring-1 ring-danger";
+            badge = "bg-danger text-white";
+          } else if (revelada) {
+            // Opciones no elegidas y no correctas: atenuadas.
+            contenedor = "border-border bg-surface opacity-60";
+            badge = "bg-slate-100 text-muted";
+          } else if (elegida) {
+            contenedor = "border-brand bg-blue-50 ring-1 ring-brand";
+            badge = "bg-brand text-white";
+          } else {
+            contenedor = "border-border bg-surface active:scale-[0.995]";
+            badge = "bg-slate-100 text-muted";
+          }
+
           return (
             <button
               key={i}
               type="button"
               role="radio"
               aria-checked={elegida}
+              disabled={revelada}
               onClick={() => elegir(i)}
-              className={`flex items-start gap-3 rounded-xl border p-3.5 text-left transition ${
-                elegida
-                  ? "border-brand bg-blue-50 ring-1 ring-brand"
-                  : "border-border bg-surface active:scale-[0.995]"
-              }`}
+              className={`flex items-start gap-3 rounded-xl border p-3.5 text-left transition disabled:cursor-default ${contenedor}`}
             >
               <span
-                className={`flex h-7 w-7 flex-none items-center justify-center rounded-full text-sm font-bold ${
-                  elegida
-                    ? "bg-brand text-white"
-                    : "bg-slate-100 text-muted"
-                }`}
+                className={`flex h-7 w-7 flex-none items-center justify-center rounded-full text-sm font-bold ${badge}`}
               >
-                {LETRAS[i]}
+                {mostrarCorrecta ? "✓" : mostrarFallo ? "✗" : LETRAS[i]}
               </span>
-              <span className="pt-0.5 text-[15px] leading-snug">{op.texto}</span>
+              <span className="flex-1 pt-0.5 text-[15px] leading-snug">
+                {op.texto}
+              </span>
+              {mostrarCorrecta && (
+                <span className="flex-none self-center rounded-full bg-success px-2 py-0.5 text-xs font-bold text-white">
+                  Correcta
+                </span>
+              )}
+              {mostrarFallo && (
+                <span className="flex-none self-center rounded-full bg-danger px-2 py-0.5 text-xs font-bold text-white">
+                  Incorrecta
+                </span>
+              )}
             </button>
           );
         })}
       </div>
+
+      {/* Feedback de práctica */}
+      {revelada && (
+        <div
+          role="status"
+          className={`flex items-center gap-2 rounded-xl border p-3 text-sm font-semibold ${
+            aciertoActual
+              ? "border-success bg-emerald-50 text-success"
+              : "border-danger bg-rose-50 text-danger"
+          }`}
+        >
+          <span
+            aria-hidden
+            className={`flex h-6 w-6 flex-none items-center justify-center rounded-full text-white ${
+              aciertoActual ? "bg-success" : "bg-danger"
+            }`}
+          >
+            {aciertoActual ? "✓" : "✗"}
+          </span>
+          <span>
+            {aciertoActual
+              ? "¡Correcto! Respuesta fijada."
+              : "Fallaste. La respuesta correcta está marcada en verde."}
+          </span>
+        </div>
+      )}
 
       {/* Navegación */}
       <div className="mt-1 flex items-center gap-2">
@@ -156,7 +240,7 @@ export function ExamRunner({
             onClick={intentarFinalizar}
             className="flex-1 rounded-xl bg-success px-4 py-3 text-sm font-semibold text-white shadow-sm active:scale-[0.99]"
           >
-            Finalizar
+            {practica ? "Ver resultados" : "Finalizar"}
           </button>
         ) : (
           <button
@@ -173,9 +257,30 @@ export function ExamRunner({
       {navegador && (
         <Overlay onClose={() => setNavegador(false)} titulo="Índice de preguntas">
           <div className="grid grid-cols-6 gap-2">
-            {preguntas.map((_, i) => {
-              const contestada = respuestas[i] !== null;
+            {preguntas.map((preg, i) => {
+              const respuesta = respuestas[i];
+              const contestada = respuesta !== null;
               const actual = i === indice;
+              // En práctica coloreamos por acierto/fallo (respuestas ya reveladas).
+              const acertada =
+                practica &&
+                respuesta !== null &&
+                preg.opciones[respuesta]?.esCorrecta === true;
+              const fallada = practica && contestada && !acertada;
+
+              let estilo: string;
+              if (actual) {
+                estilo = "bg-brand text-white ring-2 ring-brand-strong";
+              } else if (acertada) {
+                estilo = "bg-emerald-100 text-success ring-1 ring-success";
+              } else if (fallada) {
+                estilo = "bg-rose-100 text-danger ring-1 ring-danger";
+              } else if (contestada) {
+                estilo = "bg-blue-100 text-brand-strong";
+              } else {
+                estilo = "border border-border bg-surface text-muted";
+              }
+
               return (
                 <button
                   key={i}
@@ -184,13 +289,7 @@ export function ExamRunner({
                     setIndice(i);
                     setNavegador(false);
                   }}
-                  className={`flex h-10 items-center justify-center rounded-lg text-sm font-semibold ${
-                    actual
-                      ? "bg-brand text-white ring-2 ring-brand-strong"
-                      : contestada
-                        ? "bg-blue-100 text-brand-strong"
-                        : "border border-border bg-surface text-muted"
-                  }`}
+                  className={`flex h-10 items-center justify-center rounded-lg text-sm font-semibold ${estilo}`}
                 >
                   {i + 1}
                 </button>

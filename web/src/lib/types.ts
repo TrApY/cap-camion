@@ -43,11 +43,20 @@ export interface PreguntaExamen {
   opciones: OpcionExamen[];
 }
 
+/**
+ * Modo de examen:
+ * - "real": sin feedback hasta el final; corrige y muestra resultados al terminar.
+ * - "practica": corrección inmediata al marcar cada opción; la respuesta queda fijada.
+ */
+export type ModoExamen = "real" | "practica";
+
 export interface ConfigExamen {
   numPreguntas: number;
   altaProbabilidad: boolean;
   /** Umbral de aprobado (0-1), por defecto 0.5. */
   umbral: number;
+  /** Modo de examen. Por defecto "real". */
+  modo: ModoExamen;
 }
 
 export interface ResultadoPregunta {
