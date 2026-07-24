@@ -1,0 +1,54 @@
+COD: 10
+
+¿A qué se debe la resistencia a la aceleración?
+
+A A la máxima velocidad del camión.
+
+B A la inercia de la masa del camión.
+
+C Al estado de la superficie de la calzada.
+
+D A la fuerza aerodinámica.
+
+RESPUESTA: B
+
+NORMA: Sin referencia
+ 
+ 
+
+COD: 48
+
+¿Cómo debe ser un contenedor que transporte mercancías peligrosas de la Clase 4.3?
+
+A Isotermo.
+
+B Sin aristas.
+
+C Impermeable al agua.
+
+D Reforzado.
+
+RESPUESTA: C
+
+NORMA: Acuerdo
+ ADR 2015
+ 7.3.2.4
+
+COD: 500
+
+A mayor altura del centro de gravedad, la estabilidad del camión:
+
+A disminuye.
+
+B aumenta.
+
+C aumenta, siempre que la parte más ligera de la carga permanezca en la base de la caja.
+
+D no sufre alteraciones.
+
+RESPUESTA: A
+
+NORMA: Sin referencia
+ 
+ 
+

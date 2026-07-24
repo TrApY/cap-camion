@@ -1,0 +1,26 @@
+{
+  "https://www.transportes.gob.es/areas-de-actividad/transporte-terrestre/servicios-al-transportista/cap/preguntas-especificas-mercancias": {
+    "archivo": "html/especificas-mercancias.html",
+    "fecha": "2026-07-24T21:18:14+00:00",
+    "sha256": "2e6a55c23856e96ba0b6eeee92072e58480c8b7055cabd7a3b8c4e6fcdb0f21b",
+    "bytes": 76621,
+    "content_type": "text/html; charset=utf-8",
+    "origen": "landing:especificas-mercancias"
+  },
+  "https://cdn.mitma.gob.es/portal-web-drupal/cap/CAPMercancias.zip": {
+    "archivo": "descargas/especificas-mercancias__CAPMercancias.zip",
+    "fecha": "2026-07-24T21:19:04+00:00",
+    "sha256": "1d403717ebf89398971970e93dd8d3520ac94f77d360edb1b804e4e2a987d59a",
+    "bytes": 145454,
+    "content_type": "application/zip",
+    "origen": "especificas-mercancias"
+  },
+  "https://cdn.mitma.gob.es/portal-web-drupal/cap/CAPComunes.zip": {
+    "archivo": "descargas/comunes__CAPComunes.zip",
+    "fecha": "2026-07-24T21:19:17+00:00",
+    "sha256": "0013578e8c91d2bbe641cf7d06ea52895b676d859c66a8119fa354349f00addf",
+    "bytes": 361122,
+    "content_type": "application/zip",
+    "origen": "comunes"
+  }
+}

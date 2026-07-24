@@ -9,6 +9,36 @@ Base de datos: **Supabase** (proyecto `qcotnigcbvgmspdvhasm`, schema `public`).
 | `migrations/0001_cap_schema_inicial.sql` | Esquema inicial (extensión `vector` + tablas `preguntas`, `opciones`, `intentos`, `respuestas_usuario`, índices y RLS). Reconstruido con fidelidad del esquema aplicado. |
 | `seed_supabase.py` | Genera el SQL de carga del banco de preguntas a partir de `pipeline/out/banco_preguntas.json`. Escapado de SQL correcto y salida por lotes. |
 | `seed_out/` | Ficheros SQL por lotes generados por el script (regenerables; no editar a mano). |
+| `clasificar_temas.py` | Clasifica el banco en los 11 temas de `temas.json` con Gemini (caché en `out/`). |
+| `ministerio_descarga.py` | Descarga el banco oficial del Ministerio y lo parsea a `out/ministerio_preguntas.json`. |
+| `ministerio_match.py` | Cruza nuestro banco con el del Ministerio para asignar NORMA → `out/ministerio_match.json`. |
+| `tests/` | Tests sin red del parseo y del matching del banco ministerial. |
+
+## Banco oficial del Ministerio (norma por pregunta)
+
+`ministerio_descarga.py` baja de la landing CAP de transportes.gob.es los ZIP
+`CAPMercancias.zip` y `CAPComunes.zip` (viajeros queda fuera: nuestro banco es
+de mercancías) y los parsea. Dentro hay un `.txt` en cp1252 por objetivo con
+bloques `COD/enunciado/A-B-C-D/RESPUESTA/NORMA`.
+
+**Cortesía obligatoria con el sitio** (es un servicio público): user-agent de
+navegador, espera aleatoria de 12-20 s entre peticiones, backoff de 120 s y un
+único reintento ante 403, y parada si el WAF insiste. Todo lo descargado se
+guarda tal cual en `data/ministerio/` con `manifest.json` (url, fecha, sha256,
+bytes): **si una URL ya está en el manifest no se vuelve a pedir**, así que
+re-ejecutar el script no genera tráfico nuevo.
+
+```bash
+# Los scripts necesitan rapidfuzz/pypdf: usar el intérprete del pipeline.
+pipeline/.venv/bin/python db/ministerio_descarga.py               # descarga + parseo
+pipeline/.venv/bin/python db/ministerio_descarga.py --solo-parsear  # sin red
+pipeline/.venv/bin/python db/ministerio_match.py                  # cruce con nuestro banco
+pipeline/.venv/bin/python -m pytest db/tests/ -q
+```
+
+Artefactos en `out/`: `ministerio_preguntas.json` (banco oficial parseado),
+`ministerio_match.json` (id nuestro → origen/num/norma/score/método),
+`ministerio_report.md` y `ministerio_match_report.md`.
 
 ## Modelo de datos (resumen)
 
