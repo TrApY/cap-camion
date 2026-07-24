@@ -29,8 +29,6 @@ const OPCIONES_MODO: {
   },
 ];
 
-const OPCIONES_UMBRAL = [0.5, 0.55, 0.6, 0.65];
-
 export function ExamConfig({
   banco,
   onStart,
@@ -46,7 +44,6 @@ export function ExamConfig({
 
   const [numPreguntas, setNumPreguntas] = useState(30);
   const [altaProbabilidad, setAltaProbabilidad] = useState(false);
-  const [umbral, setUmbral] = useState(0.5);
   const [modo, setModo] = useState<ModoExamen>("real");
 
   const descargado = new Date(banco.descargadoEn).toLocaleDateString("es-ES", {
@@ -176,38 +173,17 @@ export function ExamConfig({
         </button>
       </div>
 
-      {/* Umbral de aprobado */}
-      <div className="rounded-2xl border border-border bg-surface p-4 shadow-sm">
-        <label
-          htmlFor="umbral"
-          className="block text-sm font-semibold"
-        >
-          Umbral de aprobado
-        </label>
-        <div className="mt-2 flex items-center gap-3">
-          <select
-            id="umbral"
-            value={umbral}
-            onChange={(e) => setUmbral(Number(e.target.value))}
-            className="flex-1 rounded-xl border border-border bg-surface px-3 py-2.5 text-base font-semibold"
-          >
-            {OPCIONES_UMBRAL.map((u) => (
-              <option key={u} value={u}>
-                {Math.round(u * 100)}%
-              </option>
-            ))}
-          </select>
-        </div>
-        <p className="mt-2 text-xs text-muted">
-          Orientativo y ajustable. No es la nota oficial exacta del examen del
-          CAP.
-        </p>
+      {/* Baremo oficial */}
+      <div className="rounded-2xl border border-border bg-surface p-4 text-xs leading-relaxed text-muted shadow-sm">
+        <span className="font-semibold text-foreground">Baremo oficial del CAP:</span>{" "}
+        acierto +1, fallo −0,5, en blanco 0. Se aprueba con ≥ 50 puntos sobre 100
+        (escalado al nº de preguntas de este test).
       </div>
 
       <button
         type="button"
         onClick={() =>
-          onStart({ numPreguntas, altaProbabilidad, umbral, modo })
+          onStart({ numPreguntas, altaProbabilidad, modo })
         }
         className="rounded-xl bg-brand px-5 py-4 text-base font-semibold text-white shadow-sm transition hover:bg-brand-strong active:scale-[0.99]"
       >

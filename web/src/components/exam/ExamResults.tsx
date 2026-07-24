@@ -1,7 +1,6 @@
 "use client";
 
 import type { Correccion } from "@/lib/exam";
-import type { ConfigExamen } from "@/lib/types";
 
 const LETRAS = ["A", "B", "C", "D", "E", "F"];
 
@@ -14,24 +13,31 @@ function formatoTiempo(ms: number): string {
 
 export function ExamResults({
   correccion,
-  config,
   tiempoMs,
   onRepetir,
   onInicio,
 }: {
   correccion: Correccion;
-  config: ConfigExamen;
   tiempoMs: number;
   onRepetir: () => void;
   onInicio: () => void;
 }) {
-  const { total, aciertos, fallos, porcentaje, aprobado, falladas } =
-    correccion;
-  const enBlanco = falladas.filter((f) => f.elegidaIndex === null).length;
+  const {
+    total,
+    aciertos,
+    fallos,
+    enBlanco,
+    puntuacionSobre100,
+    aprobado,
+    falladas,
+  } = correccion;
+  const nota = puntuacionSobre100.toLocaleString("es-ES", {
+    maximumFractionDigits: 1,
+  });
 
   return (
     <div className="flex flex-col gap-5">
-      {/* Nota */}
+      {/* Nota (baremo oficial del CAP) */}
       <div
         className={`rounded-2xl border p-5 text-center shadow-sm ${
           aprobado
@@ -49,23 +55,29 @@ export function ExamResults({
           {aprobado ? "Aprobado" : "Suspenso"}
         </span>
         <p className="mt-3 text-4xl font-extrabold tabular-nums">
-          {aciertos}
-          <span className="text-2xl text-muted"> / {total}</span>
+          {nota}
+          <span className="text-2xl text-muted"> / 100 pts</span>
         </p>
-        <p className="mt-1 text-lg font-semibold tabular-nums text-muted">
-          {porcentaje.toFixed(0)}% de aciertos
+        <p className="mt-1 text-sm font-semibold tabular-nums text-muted">
+          {aciertos} de {total} aciertos
         </p>
         <p className="mt-3 text-xs text-muted">
-          Umbral aplicado: {Math.round(config.umbral * 100)}% (orientativo, no es
-          la nota oficial exacta).
+          Baremo oficial: acierto +1, fallo −0,5, en blanco 0. Se aprueba con ≥ 50
+          / 100.
         </p>
       </div>
 
-      {/* Estadísticas */}
+      {/* Desglose */}
       <div className="grid grid-cols-3 gap-2">
-        <Stat etiqueta="Aciertos" valor={aciertos} color="text-success" />
-        <Stat etiqueta="Fallos" valor={fallos} color="text-danger" />
-        <Stat etiqueta="En blanco" valor={enBlanco} color="text-muted" />
+        <Stat etiqueta="Aciertos (+1)" valor={aciertos} color="text-success" />
+        <Stat etiqueta="Fallos (−0,5)" valor={fallos} color="text-danger" />
+        <Stat etiqueta="En blanco (0)" valor={enBlanco} color="text-muted" />
+      </div>
+
+      {/* Consejo de estrategia */}
+      <div className="rounded-2xl border border-amber-200 bg-amber-50 p-3 text-xs leading-relaxed text-amber-900">
+        💡 En el examen real, si dudas es mejor dejar en blanco que fallar: un
+        fallo resta 0,5 puntos, el blanco no penaliza.
       </div>
 
       <div className="rounded-2xl border border-border bg-surface p-4 text-center text-sm shadow-sm">

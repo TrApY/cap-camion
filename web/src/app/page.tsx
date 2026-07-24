@@ -69,8 +69,9 @@ export default function Home() {
       </nav>
 
       <p className="text-center text-xs leading-relaxed text-muted">
-        El umbral de aprobado es orientativo y ajustable; no representa la nota
-        oficial exacta. Exámenes públicos oficiales reproducidos para estudio.
+        Corrección con el baremo oficial del CAP (acierto +1, fallo −0,5, en
+        blanco 0; aprobado ≥ 50/100). Exámenes públicos oficiales reproducidos
+        para estudio.
       </p>
     </div>
   );

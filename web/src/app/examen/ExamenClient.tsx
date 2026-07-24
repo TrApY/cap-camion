@@ -73,7 +73,7 @@ export function ExamenClient() {
 
   function finalizar(respuestas: (number | null)[], elapsed: number) {
     if (!config) return;
-    setCorreccion(corregirExamen(preguntas, respuestas, config.umbral));
+    setCorreccion(corregirExamen(preguntas, respuestas));
     setTiempoMs(elapsed);
     setFase("resultados");
     window.scrollTo(0, 0);
@@ -151,11 +151,10 @@ export function ExamenClient() {
     );
   }
 
-  if (fase === "resultados" && correccion && config) {
+  if (fase === "resultados" && correccion) {
     return (
       <ExamResults
         correccion={correccion}
-        config={config}
         tiempoMs={tiempoMs}
         onRepetir={repetir}
         onInicio={() => router.push("/")}

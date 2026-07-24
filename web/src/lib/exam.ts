@@ -72,21 +72,37 @@ export function construirExamen(
 export interface Correccion {
   total: number;
   aciertos: number;
+  /** Contestadas incorrectas (penalizan -0,5 c/u). */
   fallos: number;
-  porcentaje: number; // 0-100
+  /** No contestadas (no penalizan). */
+  enBlanco: number;
+  /** Nota neta = aciertos - 0,5*fallos. */
+  puntuacion: number;
+  /** Nota escalada a 100 (marco del examen oficial). */
+  puntuacionSobre100: number;
+  /** Puntos netos necesarios para aprobar (= total * 0,5). */
+  umbralPuntos: number;
   aprobado: boolean;
+  /** Porcentaje de aciertos (informativo). */
+  porcentajeAciertos: number;
   falladas: ResultadoPregunta[];
   resultados: ResultadoPregunta[];
 }
 
 /**
- * Corrige el examen. `respuestas[i]` es el índice de la opción elegida en
- * preguntas[i].opciones, o null si se dejó en blanco (cuenta como fallo).
+ * Corrige el examen con el BAREMO OFICIAL del CAP:
+ *   acierto = +1, fallo (contestada e incorrecta) = -0,5, en blanco = 0.
+ *   nota = aciertos - 0,5*fallos ; se aprueba con >= 50 puntos sobre 100.
+ * El umbral se escala al nº de preguntas del test (50% de la puntuación máxima,
+ * que es `total`), de modo que un test de 30 preguntas aprueba con >= 15 puntos
+ * netos (equivalente a 50/100).
+ *
+ * `respuestas[i]` es el índice de la opción elegida en preguntas[i].opciones,
+ * o null si se dejó en blanco.
  */
 export function corregirExamen(
   preguntas: PreguntaExamen[],
   respuestas: (number | null)[],
-  umbral: number,
 ): Correccion {
   const resultados: ResultadoPregunta[] = preguntas.map((pregunta, i) => {
     const elegidaIndex = respuestas[i] ?? null;
@@ -97,15 +113,23 @@ export function corregirExamen(
 
   const total = preguntas.length;
   const aciertos = resultados.filter((r) => r.acertada).length;
-  const fallos = total - aciertos;
-  const porcentaje = total > 0 ? (aciertos / total) * 100 : 0;
+  const enBlanco = resultados.filter((r) => r.elegidaIndex === null).length;
+  const fallos = total - aciertos - enBlanco; // contestadas e incorrectas
+
+  const puntuacion = aciertos - 0.5 * fallos;
+  const puntuacionSobre100 = total > 0 ? (puntuacion / total) * 100 : 0;
+  const umbralPuntos = total * 0.5;
 
   return {
     total,
     aciertos,
     fallos,
-    porcentaje,
-    aprobado: porcentaje >= umbral * 100,
+    enBlanco,
+    puntuacion,
+    puntuacionSobre100,
+    umbralPuntos,
+    aprobado: puntuacion >= umbralPuntos,
+    porcentajeAciertos: total > 0 ? (aciertos / total) * 100 : 0,
     falladas: resultados.filter((r) => !r.acertada),
     resultados,
   };
