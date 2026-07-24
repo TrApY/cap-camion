@@ -1,0 +1,18 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+# Node / web (fases posteriores)
+node_modules/
+.next/
+dist/
+# Salidas del pipeline (se regeneran)
+pipeline/out/*.json
+pipeline/out/*.md
+pipeline/out/*.csv
+.DS_Store
