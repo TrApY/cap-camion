@@ -27,16 +27,27 @@ export interface ProgresoPregunta {
   /** Contestadas incorrectas. */
   fallos: number;
   enBlanco: number;
-  /** Aciertos consecutivos; un fallo o un blanco la resetean a 0. */
+  /**
+   * Aciertos consecutivos; un fallo o un blanco la resetean a 0. Hace además de
+   * contador de repeticiones de SM-2.
+   */
   racha: number;
   /** epoch ms de la última vez que se presentó. */
   ultimaVez: number;
+  // --- Programación de repaso (SM-2). Opcionales: los registros guardados
+  // antes de existir el repaso no los traen y se tratan como valores iniciales.
+  /** Factor de facilidad SM-2 (init 2,5; suelo 1,3; techo 2,5). */
+  ef?: number;
+  /** Intervalo vigente en días (0 = pendiente de repasar ya). */
+  intervaloDias?: number;
+  /** epoch ms a partir del cual la pregunta vence para repaso. */
+  vencimiento?: number;
 }
 
 export interface SesionGuardada {
   /** epoch ms del fin del test. */
   fecha: number;
-  tipo: "general" | "tema";
+  tipo: "general" | "tema" | "repaso";
   /** Slug del tema, solo si tipo === "tema". */
   tema?: string;
   modo: ModoExamen;
@@ -58,6 +69,18 @@ export const SESIONES_PREDICCION = 10;
 /** Respuestas mínimas en esas sesiones para que la predicción sea fiable. */
 export const RESPUESTAS_MINIMAS_PREDICCION = 50;
 
+/** Factor de facilidad inicial de SM-2. */
+export const EF_INICIAL = 2.5;
+
+/** Suelo del factor de facilidad: las preguntas que se resisten no se espacian. */
+export const EF_MIN = 1.3;
+
+/** Techo del factor de facilidad. */
+export const EF_MAX = 2.5;
+
+/** Milisegundos de un día (los intervalos de SM-2 se miden en días). */
+export const MS_DIA = 86_400_000;
+
 /** Resultado de una pregunta concreta dentro de un test corregido. */
 export interface ResultadoAgregable {
   preguntaId: string;
@@ -74,6 +97,14 @@ export interface ResultadoAgregable {
  * - fallo    → fallos+1, racha=0
  * - blanco   → enBlanco+1, racha=0 (dejar en blanco no demuestra dominio)
  * En todos los casos: vistas+1 y ultimaVez=ahora.
+ *
+ * Además reprograma el repaso con SM-2 adaptado a señal binaria (acierto / no
+ * acierto), usando `racha` como contador de repeticiones:
+ * - acierto: ef sube 0,05 (techo 2,5) e intervalo 1 → 6 → round(intervalo × ef) días.
+ * - fallo o blanco: ef baja 0,2 (suelo 1,3) e intervalo a 0 (vuelve a la cola ya).
+ *
+ * Cualquier respuesta alimenta la programación, venga de un examen, de la
+ * práctica por temas o del propio repaso.
  */
 export function aplicarResultado(
   previo: ProgresoPregunta | undefined,
@@ -92,6 +123,24 @@ export function aplicarResultado(
   };
   const fallada = !r.acertada && !r.enBlanco;
 
+  // Los registros anteriores al repaso no traen campos SM-2: se toman como
+  // recién iniciados, así no hace falta migrar la store "progreso".
+  const efPrevio = base.ef ?? EF_INICIAL;
+  const intervaloPrevio = base.intervaloDias ?? 0;
+
+  let ef: number;
+  let intervaloDias: number;
+  if (r.acertada) {
+    const repeticion = base.racha + 1;
+    ef = Math.min(EF_MAX, efPrevio + 0.05);
+    if (repeticion === 1) intervaloDias = 1;
+    else if (repeticion === 2) intervaloDias = 6;
+    else intervaloDias = Math.max(1, Math.round(intervaloPrevio * ef));
+  } else {
+    ef = Math.max(EF_MIN, efPrevio - 0.2);
+    intervaloDias = 0;
+  }
+
   return {
     preguntaId: base.preguntaId,
     // El tema del banco manda; se conserva el previo si viniera vacío.
@@ -102,7 +151,54 @@ export function aplicarResultado(
     enBlanco: base.enBlanco + (r.enBlanco ? 1 : 0),
     racha: r.acertada ? base.racha + 1 : 0,
     ultimaVez: ahora,
+    ef,
+    intervaloDias,
+    vencimiento: ahora + intervaloDias * MS_DIA,
   };
+}
+
+// --- Cola de repaso (pura) ---
+
+export interface EstadoRepaso {
+  /** Falladas alguna vez (universo del repaso). */
+  falladas: number;
+  /** Vencidas ahora, de la más atrasada a la menos. */
+  vencidas: ProgresoPregunta[];
+  /** Próximo vencimiento futuro (epoch ms) o null si no hay nada programado. */
+  proximoVencimiento: number | null;
+}
+
+/**
+ * Estado de la cola de repaso en un instante dado. Entra en el universo toda
+ * pregunta fallada alguna vez; una fallada sin `vencimiento` (guardada antes de
+ * existir la programación) cuenta como vencida: si se falló y no está
+ * programada, toca repasarla ya.
+ */
+export function estadoRepaso(
+  progresos: ProgresoPregunta[],
+  ahora: number,
+): EstadoRepaso {
+  const falladas = progresos.filter((p) => p.fallos >= 1);
+  const vencidas: ProgresoPregunta[] = [];
+  let proximoVencimiento: number | null = null;
+
+  for (const p of falladas) {
+    const vence = p.vencimiento ?? 0;
+    if (vence <= ahora) {
+      vencidas.push(p);
+    } else if (proximoVencimiento === null || vence < proximoVencimiento) {
+      proximoVencimiento = vence;
+    }
+  }
+
+  // Primero las más atrasadas; desempate estable por id.
+  vencidas.sort(
+    (a, b) =>
+      (a.vencimiento ?? 0) - (b.vencimiento ?? 0) ||
+      a.preguntaId.localeCompare(b.preguntaId, "es-ES"),
+  );
+
+  return { falladas: falladas.length, vencidas, proximoVencimiento };
 }
 
 // --- Lecturas agregadas (puras) ---
@@ -295,7 +391,7 @@ export async function cargarDatosEstadisticas(): Promise<DatosEstadisticas> {
  * agregado por pregunta. Pensada para llamarse fire-and-forget desde la UI.
  */
 export async function registrarSesion(entrada: {
-  tipo: "general" | "tema";
+  tipo: SesionGuardada["tipo"];
   tema?: string;
   modo: ModoExamen;
   correccion: Correccion;

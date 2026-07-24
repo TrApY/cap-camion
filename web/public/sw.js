@@ -7,13 +7,14 @@
 //    aparte en IndexedDB desde la app, así el examen funciona offline.
 //
 // Subir CACHE_VERSION invalida las cachés antiguas.
-const CACHE_VERSION = "v2";
+const CACHE_VERSION = "v3";
 const CACHE = `cap-camion-${CACHE_VERSION}`;
 
 const PRECACHE_URLS = [
   "/",
   "/examen",
   "/temas",
+  "/repaso",
   "/estadisticas",
   "/manifest.webmanifest",
   "/icons/icon-192.png",

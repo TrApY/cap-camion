@@ -12,6 +12,7 @@ import {
   cargarDatosEstadisticas,
   contarDominadas,
   estadisticasPorTema,
+  estadoRepaso,
   prediccion,
   resumenGlobal,
   tramoAcierto,
@@ -95,6 +96,8 @@ export function EstadisticasClient() {
   const [banco, setBanco] = useState<Banco | null>(null);
   const [datos, setDatos] = useState<DatosEstadisticas>(DATOS_VACIOS);
   const [progresoDescarga, setProgresoDescarga] = useState(0);
+  // Instante de referencia de la cola de repaso; se fija al cargar, no en render.
+  const [ahora, setAhora] = useState(0);
   const [errorMsg, setErrorMsg] = useState("");
   const [confirmandoBorrado, setConfirmandoBorrado] = useState(false);
   const [borrando, setBorrando] = useState(false);
@@ -108,6 +111,7 @@ export function EstadisticasClient() {
       ]);
       setBanco(b);
       setDatos(d);
+      setAhora(Date.now());
       setFase("listo");
     } catch (e) {
       setErrorMsg(e instanceof Error ? e.message : "Error desconocido.");
@@ -137,6 +141,10 @@ export function EstadisticasClient() {
   const dominadas = useMemo(
     () => contarDominadas(datos.progresos),
     [datos.progresos],
+  );
+  const paraRepasar = useMemo(
+    () => estadoRepaso(datos.progresos, ahora).vencidas.length,
+    [datos.progresos, ahora],
   );
 
   // Temas del catálogo que aún no tienen ninguna respuesta (y sí preguntas
@@ -468,6 +476,19 @@ export function EstadisticasClient() {
             reinicia la racha.
           </p>
         </div>
+        {paraRepasar > 0 && (
+          <Link
+            href="/repaso"
+            className="mt-2 flex items-center justify-between gap-3 rounded-2xl border border-border bg-surface p-4 text-sm font-semibold shadow-sm transition active:scale-[0.995]"
+          >
+            <span>
+              Tienes {paraRepasar.toLocaleString("es-ES")} para repasar hoy
+            </span>
+            <span aria-hidden className="flex-none text-brand-strong">
+              →
+            </span>
+          </Link>
+        )}
       </section>
 
       <div className="flex flex-col gap-2">

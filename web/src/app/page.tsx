@@ -65,6 +65,13 @@ export default function Home() {
         </Link>
 
         <Link
+          href="/repaso"
+          className="flex items-center justify-center rounded-xl border border-border bg-surface px-5 py-4 text-center text-base font-semibold text-foreground shadow-sm transition hover:border-brand active:scale-[0.99]"
+        >
+          Repasar mis falladas
+        </Link>
+
+        <Link
           href="/estadisticas"
           className="flex items-center justify-center rounded-xl border border-border bg-surface px-5 py-4 text-center text-base font-semibold text-foreground shadow-sm transition hover:border-brand active:scale-[0.99]"
         >

@@ -46,6 +46,25 @@ export function contarAptasPorTema(banco: Banco): Record<string, number> {
 }
 
 /**
+ * Prepara preguntas para presentación: baraja su orden y el de sus opciones.
+ * La usan tanto `construirExamen` como el repaso de falladas, que trae su propia
+ * selección ya decidida por la cola de repetición espaciada.
+ */
+export function prepararPreguntas(seleccion: Pregunta[]): PreguntaExamen[] {
+  return barajar(seleccion).map((p) => ({
+    id: p.id,
+    enunciado: p.enunciado,
+    frecuencia: p.frecuencia,
+    tema: p.tema,
+    opciones: barajar(p.opciones).map((o) => ({
+      letra: o.letra,
+      texto: o.texto,
+      esCorrecta: o.esCorrecta,
+    })),
+  }));
+}
+
+/**
  * Construye un examen a partir del banco y la configuración.
  * - altaProbabilidad: coge las N preguntas de mayor `frecuencia`.
  * - si no: selección aleatoria.
@@ -73,17 +92,7 @@ export function construirExamen(
   }
 
   // Barajar el orden de presentación de las preguntas y de sus opciones.
-  return barajar(seleccion).map((p) => ({
-    id: p.id,
-    enunciado: p.enunciado,
-    frecuencia: p.frecuencia,
-    tema: p.tema,
-    opciones: barajar(p.opciones).map((o) => ({
-      letra: o.letra,
-      texto: o.texto,
-      esCorrecta: o.esCorrecta,
-    })),
-  }));
+  return prepararPreguntas(seleccion);
 }
 
 export interface Correccion {

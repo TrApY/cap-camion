@@ -3,14 +3,21 @@
 
 import { describe, expect, test } from "bun:test";
 import {
+  EF_INICIAL,
+  EF_MAX,
+  EF_MIN,
+  MS_DIA,
   aplicarResultado,
   contarDominadas,
   estadisticasPorTema,
+  estadoRepaso,
   prediccion,
   resumenGlobal,
   type ProgresoPregunta,
   type SesionGuardada,
 } from "./stats";
+import { prepararPreguntas } from "./exam";
+import type { Pregunta } from "./types";
 
 // --- Helpers ---
 
@@ -75,6 +82,9 @@ describe("aplicarResultado", () => {
       enBlanco: 0,
       racha: 1,
       ultimaVez: 1_000,
+      ef: EF_INICIAL,
+      intervaloDias: 1,
+      vencimiento: 1_000 + MS_DIA,
     });
   });
 
@@ -119,6 +129,276 @@ describe("aplicarResultado", () => {
     expect(r.vistas).toBe(3);
     expect(r.ultimaVez).toBe(30);
     expect(r.aciertos + r.fallos + r.enBlanco).toBe(r.vistas);
+  });
+});
+
+// --- aplicarResultado: programación SM-2 ---
+
+describe("aplicarResultado (SM-2)", () => {
+  const acierto = {
+    preguntaId: "p1",
+    tema: "frenado-seguridad",
+    acertada: true,
+    enBlanco: false,
+  };
+  const fallo = { ...acierto, acertada: false };
+  const blanco = { ...acierto, acertada: false, enBlanco: true };
+
+  test("el primer acierto programa la pregunta a 1 día", () => {
+    const r = aplicarResultado(undefined, acierto, 1_000);
+    expect(r.racha).toBe(1);
+    expect(r.intervaloDias).toBe(1);
+    expect(r.vencimiento).toBe(1_000 + MS_DIA);
+  });
+
+  test("el segundo acierto seguido la programa a 6 días", () => {
+    const primero = aplicarResultado(undefined, acierto, 1_000);
+    const r = aplicarResultado(primero, acierto, 2_000);
+    expect(r.racha).toBe(2);
+    expect(r.intervaloDias).toBe(6);
+    expect(r.vencimiento).toBe(2_000 + 6 * MS_DIA);
+  });
+
+  test("del tercer acierto en adelante el intervalo se multiplica por el ef", () => {
+    let r = aplicarResultado(undefined, acierto, 0);
+    r = aplicarResultado(r, acierto, 0);
+    r = aplicarResultado(r, acierto, 0);
+    expect(r.racha).toBe(3);
+    expect(r.ef).toBe(EF_MAX);
+    // round(6 × 2,5) = 15
+    expect(r.intervaloDias).toBe(15);
+    expect(r.vencimiento).toBe(15 * MS_DIA);
+  });
+
+  test("un fallo devuelve la pregunta a la cola y baja el ef 0,2", () => {
+    const previo = progreso({
+      vistas: 2,
+      aciertos: 2,
+      racha: 2,
+      ef: EF_INICIAL,
+      intervaloDias: 6,
+      vencimiento: 6 * MS_DIA,
+    });
+    const r = aplicarResultado(previo, fallo, 9_000);
+    expect(r.intervaloDias).toBe(0);
+    expect(r.vencimiento).toBe(9_000);
+    expect(r.ef).toBeCloseTo(EF_INICIAL - 0.2, 10);
+  });
+
+  test("un blanco reprograma igual que un fallo", () => {
+    const previo = progreso({
+      vistas: 2,
+      aciertos: 2,
+      racha: 2,
+      ef: EF_INICIAL,
+      intervaloDias: 6,
+      vencimiento: 6 * MS_DIA,
+    });
+    const r = aplicarResultado(previo, blanco, 9_000);
+    expect(r.intervaloDias).toBe(0);
+    expect(r.vencimiento).toBe(9_000);
+    expect(r.ef).toBeCloseTo(EF_INICIAL - 0.2, 10);
+  });
+
+  test("el ef nunca baja del suelo por muchos fallos que haya", () => {
+    let r = aplicarResultado(undefined, fallo, 0);
+    for (let i = 0; i < 20; i++) r = aplicarResultado(r, fallo, 0);
+    expect(r.ef).toBe(EF_MIN);
+  });
+
+  test("el ef nunca sube del techo por muchos aciertos que haya", () => {
+    let r = aplicarResultado(progreso({ ef: 2.4 }), acierto, 0);
+    expect(r.ef).toBeCloseTo(2.45, 10);
+    for (let i = 0; i < 20; i++) r = aplicarResultado(r, acierto, 0);
+    expect(r.ef).toBe(EF_MAX);
+  });
+
+  test("un registro sin campos SM-2 se trata como ef inicial e intervalo 0", () => {
+    // Registros guardados antes de existir el repaso (sin ef/intervalo/vencimiento).
+    const legacy = progreso({ vistas: 4, aciertos: 1, fallos: 3, racha: 0 });
+    expect(legacy.ef).toBeUndefined();
+
+    const conAcierto = aplicarResultado(legacy, acierto, 5_000);
+    expect(conAcierto.ef).toBe(EF_INICIAL);
+    expect(conAcierto.intervaloDias).toBe(1);
+    expect(conAcierto.vencimiento).toBe(5_000 + MS_DIA);
+
+    const conFallo = aplicarResultado(legacy, fallo, 5_000);
+    expect(conFallo.ef).toBeCloseTo(EF_INICIAL - 0.2, 10);
+    expect(conFallo.intervaloDias).toBe(0);
+    expect(conFallo.vencimiento).toBe(5_000);
+  });
+
+  test("el intervalo multiplicado nunca cae por debajo de 1 día", () => {
+    // racha alta pero intervalo previo 0 (venía de un fallo): round(0 × ef) = 0.
+    const previo = progreso({
+      racha: 5,
+      ef: EF_MIN,
+      intervaloDias: 0,
+      vencimiento: 0,
+    });
+    const r = aplicarResultado(previo, acierto, 0);
+    expect(r.intervaloDias).toBe(1);
+  });
+});
+
+// --- estadoRepaso ---
+
+describe("estadoRepaso", () => {
+  const AHORA = 1_000_000;
+
+  test("solo entran en el repaso las preguntas falladas alguna vez", () => {
+    const e = estadoRepaso(
+      [
+        progreso({ preguntaId: "a", fallos: 1, vencimiento: AHORA - 1 }),
+        progreso({ preguntaId: "b", fallos: 0, vencimiento: AHORA - 1 }),
+        progreso({
+          preguntaId: "c",
+          fallos: 0,
+          enBlanco: 3,
+          vencimiento: AHORA - 1,
+        }),
+      ],
+      AHORA,
+    );
+    expect(e.falladas).toBe(1);
+    expect(e.vencidas.map((v) => v.preguntaId)).toEqual(["a"]);
+  });
+
+  test("una fallada sin vencimiento (registro antiguo) cuenta como vencida", () => {
+    const legacy = progreso({ preguntaId: "a", fallos: 2 });
+    expect(legacy.vencimiento).toBeUndefined();
+    const e = estadoRepaso([legacy], AHORA);
+    expect(e.vencidas.map((v) => v.preguntaId)).toEqual(["a"]);
+    expect(e.proximoVencimiento).toBeNull();
+  });
+
+  test("las vencidas salen de la más atrasada a la menos, con desempate por id", () => {
+    const e = estadoRepaso(
+      [
+        progreso({ preguntaId: "z", fallos: 1, vencimiento: AHORA - 10 }),
+        progreso({ preguntaId: "m", fallos: 1, vencimiento: AHORA - 500 }),
+        progreso({ preguntaId: "a", fallos: 1, vencimiento: AHORA - 10 }),
+        progreso({ preguntaId: "legacy", fallos: 1 }),
+        progreso({ preguntaId: "futura", fallos: 1, vencimiento: AHORA + 5 }),
+      ],
+      AHORA,
+    );
+    expect(e.vencidas.map((v) => v.preguntaId)).toEqual([
+      "legacy", // sin vencimiento → 0, la más atrasada
+      "m",
+      "a", // mismo vencimiento que "z": desempate por id
+      "z",
+    ]);
+  });
+
+  test("una vencida justo en el instante actual entra en la cola", () => {
+    const e = estadoRepaso(
+      [progreso({ preguntaId: "a", fallos: 1, vencimiento: AHORA })],
+      AHORA,
+    );
+    expect(e.vencidas).toHaveLength(1);
+    expect(e.proximoVencimiento).toBeNull();
+  });
+
+  test("proximoVencimiento es el mínimo futuro de las falladas", () => {
+    const e = estadoRepaso(
+      [
+        progreso({ preguntaId: "a", fallos: 1, vencimiento: AHORA + 3 * MS_DIA }),
+        progreso({ preguntaId: "b", fallos: 1, vencimiento: AHORA + MS_DIA }),
+        progreso({ preguntaId: "c", fallos: 1, vencimiento: AHORA + 9 * MS_DIA }),
+        // No fallada nunca: no cuenta aunque venza antes.
+        progreso({ preguntaId: "d", fallos: 0, vencimiento: AHORA + 1 }),
+      ],
+      AHORA,
+    );
+    expect(e.vencidas).toHaveLength(0);
+    expect(e.proximoVencimiento).toBe(AHORA + MS_DIA);
+  });
+
+  test("sin progreso no hay falladas, ni cola, ni próximo vencimiento", () => {
+    const e = estadoRepaso([], AHORA);
+    expect(e).toEqual({ falladas: 0, vencidas: [], proximoVencimiento: null });
+  });
+
+  test("una fallada ya acertada y programada a futuro no está vencida", () => {
+    const e = estadoRepaso(
+      [
+        progreso({
+          preguntaId: "a",
+          vistas: 4,
+          aciertos: 3,
+          fallos: 1,
+          racha: 3,
+          ef: EF_MAX,
+          intervaloDias: 15,
+          vencimiento: AHORA + 15 * MS_DIA,
+        }),
+      ],
+      AHORA,
+    );
+    expect(e.falladas).toBe(1);
+    expect(e.vencidas).toHaveLength(0);
+    expect(e.proximoVencimiento).toBe(AHORA + 15 * MS_DIA);
+  });
+});
+
+// --- prepararPreguntas (lib/exam) ---
+
+describe("prepararPreguntas", () => {
+  function pregunta(id: string, textos: string[]): Pregunta {
+    return {
+      id,
+      enunciado: `Enunciado de ${id}`,
+      opciones: textos.map((texto, i) => ({
+        letra: "abcd"[i],
+        texto,
+        esCorrecta: i === 0,
+      })),
+      respuestaCorrecta: "a",
+      frecuencia: 3,
+      conflicto: false,
+      tema: "carga-estiba",
+    };
+  }
+
+  const seleccion = [
+    pregunta("p1", ["uno", "dos", "tres", "cuatro"]),
+    pregunta("p2", ["alfa", "beta", "gamma", "delta"]),
+    pregunta("p3", ["rojo", "verde", "azul", "gris"]),
+  ];
+
+  test("conserva las mismas preguntas (sin asumir orden)", () => {
+    const preparadas = prepararPreguntas(seleccion);
+    expect(preparadas).toHaveLength(3);
+    expect(preparadas.map((p) => p.id).sort()).toEqual(["p1", "p2", "p3"]);
+  });
+
+  test("conserva todas las opciones de cada pregunta y la correcta", () => {
+    const preparadas = prepararPreguntas(seleccion);
+    for (const original of seleccion) {
+      const p = preparadas.find((x) => x.id === original.id);
+      expect(p).toBeDefined();
+      expect(p!.enunciado).toBe(original.enunciado);
+      expect(p!.tema).toBe(original.tema);
+      expect(p!.opciones.map((o) => o.texto).sort()).toEqual(
+        original.opciones.map((o) => o.texto).sort(),
+      );
+      expect(p!.opciones.filter((o) => o.esCorrecta)).toHaveLength(1);
+      expect(p!.opciones.find((o) => o.esCorrecta)!.texto).toBe(
+        original.opciones.find((o) => o.esCorrecta)!.texto,
+      );
+    }
+  });
+
+  test("no muta la selección de entrada", () => {
+    const antes = seleccion.map((p) => p.opciones.map((o) => o.texto));
+    prepararPreguntas(seleccion);
+    expect(seleccion.map((p) => p.opciones.map((o) => o.texto))).toEqual(antes);
+  });
+
+  test("con una selección vacía devuelve un array vacío", () => {
+    expect(prepararPreguntas([])).toEqual([]);
   });
 });
 
