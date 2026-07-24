@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Salida autocontenida para despliegue en contenedor (Docker/Dokploy):
+  // genera .next/standalone con un server.js mínimo y solo las dependencias
+  // necesarias, sin necesidad de instalar node_modules en la imagen final.
+  output: "standalone",
   async headers() {
     return [
       {

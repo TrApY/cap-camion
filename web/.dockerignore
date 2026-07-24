@@ -1,0 +1,15 @@
+node_modules
+.next
+.git
+.gitignore
+Dockerfile
+.dockerignore
+README.md
+AGENTS.md
+CLAUDE.md
+npm-debug.log*
+yarn-error.log*
+*.tsbuildinfo
+# .env.production SÍ se incluye (claves públicas necesarias en build).
+# .env.local se excluye para que el build sea determinista dentro del contenedor.
+.env*.local

@@ -33,6 +33,9 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 !.env.example
+# .env.production contiene solo claves PUBLISHABLE de Supabase (públicas, no
+# secretas) y debe existir en el build del contenedor: se commitea a propósito.
+!.env.production
 
 # vercel
 .vercel
