@@ -102,22 +102,28 @@ export function EstadisticasClient() {
   const [confirmandoBorrado, setConfirmandoBorrado] = useState(false);
   const [borrando, setBorrando] = useState(false);
 
-  const cargar = useCallback(async () => {
-    try {
+  // El estado se actualiza en los callbacks de la promesa, no con `await` en el
+  // cuerpo: así el efecto de montaje no aplica estado de forma sincrónica y no
+  // encadena renders (react-hooks/set-state-in-effect).
+  const cargar = useCallback(
+    () =>
       // El banco da los denominadores (preguntas aptas); las stats, el progreso.
-      const [b, d] = await Promise.all([
+      Promise.all([
         cargarBanco({ onProgreso: (n) => setProgresoDescarga(n) }),
         cargarDatosEstadisticas(),
-      ]);
-      setBanco(b);
-      setDatos(d);
-      setAhora(Date.now());
-      setFase("listo");
-    } catch (e) {
-      setErrorMsg(e instanceof Error ? e.message : "Error desconocido.");
-      setFase("error");
-    }
-  }, []);
+      ])
+        .then(([b, d]) => {
+          setBanco(b);
+          setDatos(d);
+          setAhora(Date.now());
+          setFase("listo");
+        })
+        .catch((e: unknown) => {
+          setErrorMsg(e instanceof Error ? e.message : "Error desconocido.");
+          setFase("error");
+        }),
+    [],
+  );
 
   useEffect(() => {
     void cargar();

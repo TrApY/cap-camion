@@ -79,22 +79,28 @@ export function TemasClient() {
   const [correccion, setCorreccion] = useState<Correccion | null>(null);
   const [tiempoMs, setTiempoMs] = useState(0);
 
-  const cargar = useCallback(async () => {
-    try {
+  // El estado se actualiza en los callbacks de la promesa, no con `await` en el
+  // cuerpo: así el efecto de montaje no aplica estado de forma sincrónica y no
+  // encadena renders (react-hooks/set-state-in-effect).
+  const cargar = useCallback(
+    () =>
       // El progreso del usuario es opcional: si IndexedDB falla la pantalla
       // funciona igual, solo que sin badges de acierto.
-      const [b, progresos] = await Promise.all([
+      Promise.all([
         cargarBanco({ onProgreso: (n) => setProgreso(n) }),
         cargarProgresos().catch(() => [] as ProgresoPregunta[]),
-      ]);
-      setBanco(b);
-      setProgresoPreguntas(progresos);
-      setFase("temas");
-    } catch (e) {
-      setErrorMsg(e instanceof Error ? e.message : "Error desconocido.");
-      setFase("error");
-    }
-  }, []);
+      ])
+        .then(([b, progresos]) => {
+          setBanco(b);
+          setProgresoPreguntas(progresos);
+          setFase("temas");
+        })
+        .catch((e: unknown) => {
+          setErrorMsg(e instanceof Error ? e.message : "Error desconocido.");
+          setFase("error");
+        }),
+    [],
+  );
 
   useEffect(() => {
     void cargar();

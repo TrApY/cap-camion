@@ -30,19 +30,25 @@ export function ExamenClient() {
   const [correccion, setCorreccion] = useState<Correccion | null>(null);
   const [tiempoMs, setTiempoMs] = useState(0);
 
-  const cargar = useCallback(async (forzar = false) => {
-    try {
-      const b = await cargarBanco({
+  // El estado se actualiza en los callbacks de la promesa, no con `await` en el
+  // cuerpo: así el efecto de montaje no aplica estado de forma sincrónica y no
+  // encadena renders (react-hooks/set-state-in-effect).
+  const cargar = useCallback(
+    (forzar = false) =>
+      cargarBanco({
         forzar,
         onProgreso: (n) => setProgreso(n),
-      });
-      setBanco(b);
-      setFase("config");
-    } catch (e) {
-      setErrorMsg(e instanceof Error ? e.message : "Error desconocido.");
-      setFase("error");
-    }
-  }, []);
+      })
+        .then((b) => {
+          setBanco(b);
+          setFase("config");
+        })
+        .catch((e: unknown) => {
+          setErrorMsg(e instanceof Error ? e.message : "Error desconocido.");
+          setFase("error");
+        }),
+    [],
+  );
 
   useEffect(() => {
     void cargar(false);

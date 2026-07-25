@@ -58,23 +58,29 @@ export function RepasoClient() {
   // esperarlo para releer una cola ya actualizada.
   const guardadoRef = useRef<Promise<void> | null>(null);
 
-  const cargar = useCallback(async () => {
-    try {
+  // El estado se actualiza en los callbacks de la promesa, no con `await` en el
+  // cuerpo: así el efecto de montaje no aplica estado de forma sincrónica y no
+  // encadena renders (react-hooks/set-state-in-effect).
+  const cargar = useCallback(
+    () =>
       // Aquí el progreso NO es opcional: sin él no hay nada que repasar, así
       // que un fallo de IndexedDB lleva a la pantalla de error.
-      const [b, p] = await Promise.all([
+      Promise.all([
         cargarBanco({ onProgreso: (n) => setProgresoDescarga(n) }),
         cargarProgresos(),
-      ]);
-      setBanco(b);
-      setProgresos(p);
-      setAhora(Date.now());
-      setFase("resumen");
-    } catch (e) {
-      setErrorMsg(e instanceof Error ? e.message : "Error desconocido.");
-      setFase("error");
-    }
-  }, []);
+      ])
+        .then(([b, p]) => {
+          setBanco(b);
+          setProgresos(p);
+          setAhora(Date.now());
+          setFase("resumen");
+        })
+        .catch((e: unknown) => {
+          setErrorMsg(e instanceof Error ? e.message : "Error desconocido.");
+          setFase("error");
+        }),
+    [],
+  );
 
   useEffect(() => {
     void cargar();

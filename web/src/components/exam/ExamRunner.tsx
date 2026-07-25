@@ -26,7 +26,9 @@ export function ExamRunner({
 }) {
   const practica = modo === "practica";
   const total = preguntas.length;
-  const inicioRef = useRef<number>(Date.now());
+  // Instante de arranque del cronómetro. Se fija en el efecto de montaje, no en
+  // el render: el reloj es impuro y no puede leerse durante el renderizado.
+  const inicioRef = useRef<number | null>(null);
   const [indice, setIndice] = useState(0);
   const [respuestas, setRespuestas] = useState<(number | null)[]>(
     () => Array(total).fill(null),
@@ -39,8 +41,10 @@ export function ExamRunner({
   const [verExplicacion, setVerExplicacion] = useState(false);
 
   useEffect(() => {
+    const inicio = Date.now();
+    inicioRef.current = inicio;
     const id = setInterval(() => {
-      setSegundos(Math.floor((Date.now() - inicioRef.current) / 1000));
+      setSegundos(Math.floor((Date.now() - inicio) / 1000));
     }, 1000);
     return () => clearInterval(id);
   }, []);
@@ -79,7 +83,10 @@ export function ExamRunner({
   }
 
   function finalizar() {
-    onFinish(respuestas, Date.now() - inicioRef.current);
+    // `inicioRef` ya está fijado (el efecto de montaje corre antes de que se
+    // pueda pulsar nada); el fallback deja el tiempo en 0 si aún no lo estuviera.
+    const inicio = inicioRef.current ?? Date.now();
+    onFinish(respuestas, Date.now() - inicio);
   }
 
   function intentarFinalizar() {

@@ -79,7 +79,7 @@ async function cacheFirst(req) {
     const res = await fetch(req);
     if (res.ok) cache.put(req, res.clone());
     return res;
-  } catch (err) {
+  } catch {
     return cached || Response.error();
   }
 }
