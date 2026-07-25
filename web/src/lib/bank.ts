@@ -1,11 +1,12 @@
 import { supabase } from "./supabase";
 import { idbGet, idbSet } from "./idb";
-import type { Banco, Pregunta, Opcion } from "./types";
+import type { Banco, Pregunta, Opcion, TeoriaTema } from "./types";
 
 // Sube este número si cambia la forma de los datos cacheados para invalidar
 // cachés antiguas en el cliente.
 // v2: se incorpora la columna `tema` (práctica por temas).
-const BANCO_VERSION = 2;
+// v3: se incorporan `explicacion` y `norma` por pregunta y la teoría por tema.
+const BANCO_VERSION = 3;
 const CACHE_KEY = "banco";
 const PAGE_SIZE = 1000;
 
@@ -17,11 +18,20 @@ interface FilaPregunta {
   frecuencia: number | null;
   conflicto_respuesta: boolean | null;
   tema: string | null;
+  explicacion: string | null;
+  norma: string | null;
   opciones: {
     letra: string;
     texto: string | null;
     es_correcta: boolean | null;
   }[];
+}
+
+// Fila cruda de la teoría por tema.
+interface FilaTeoria {
+  slug: string;
+  titulo: string | null;
+  resumen_md: string | null;
 }
 
 function mapFila(fila: FilaPregunta): Pregunta {
@@ -43,6 +53,8 @@ function mapFila(fila: FilaPregunta): Pregunta {
     frecuencia: fila.frecuencia ?? 0,
     conflicto: fila.conflicto_respuesta === true,
     tema: (fila.tema ?? "").trim(),
+    explicacion: fila.explicacion?.trim() ? fila.explicacion : null,
+    norma: fila.norma?.trim() ? fila.norma : null,
   };
 }
 
@@ -57,7 +69,7 @@ async function descargarBanco(onProgreso?: ProgresoDescarga): Promise<Pregunta[]
     const { data, error } = await supabase
       .from("preguntas")
       .select(
-        "id,enunciado,respuesta_correcta,frecuencia,conflicto_respuesta,tema,opciones(letra,texto,es_correcta)",
+        "id,enunciado,respuesta_correcta,frecuencia,conflicto_respuesta,tema,explicacion,norma,opciones(letra,texto,es_correcta)",
       )
       .order("id", { ascending: true })
       .range(desde, desde + PAGE_SIZE - 1);
@@ -74,6 +86,33 @@ async function descargarBanco(onProgreso?: ProgresoDescarga): Promise<Pregunta[]
   }
 
   return preguntas;
+}
+
+/**
+ * Descarga la teoría por tema (11 filas: no hace falta paginar). Es material de
+ * apoyo, no el banco: si la consulta falla se devuelve `undefined` y la app
+ * sigue funcionando sin la card de teoría.
+ */
+async function descargarTeoria(): Promise<
+  Record<string, TeoriaTema> | undefined
+> {
+  try {
+    const { data, error } = await supabase
+      .from("temas_teoria")
+      .select("slug,titulo,resumen_md");
+
+    if (error || !data) return undefined;
+
+    const teoria: Record<string, TeoriaTema> = {};
+    for (const fila of data as unknown as FilaTeoria[]) {
+      const resumen = fila.resumen_md?.trim();
+      if (!fila.slug || !resumen) continue;
+      teoria[fila.slug] = { titulo: fila.titulo ?? "", resumen };
+    }
+    return Object.keys(teoria).length > 0 ? teoria : undefined;
+  } catch {
+    return undefined;
+  }
 }
 
 /**
@@ -97,10 +136,12 @@ export async function cargarBanco(
   }
 
   const preguntas = await descargarBanco(onProgreso);
+  const teoria = await descargarTeoria();
   const banco: Banco = {
     version: BANCO_VERSION,
     descargadoEn: Date.now(),
     preguntas,
+    teoria,
   };
 
   try {

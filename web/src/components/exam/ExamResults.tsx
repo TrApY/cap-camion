@@ -1,6 +1,7 @@
 "use client";
 
 import type { Correccion } from "@/lib/exam";
+import { ExplicacionPregunta } from "./ExplicacionPregunta";
 
 const LETRAS = ["A", "B", "C", "D", "E", "F"];
 
@@ -121,6 +122,12 @@ export function ExamResults({
                       </span>
                       <span>{r.pregunta.opciones[correctaIndex]?.texto}</span>
                     </p>
+                  )}
+                  {r.pregunta.explicacion && (
+                    <ExplicacionPregunta
+                      explicacion={r.pregunta.explicacion}
+                      norma={r.pregunta.norma}
+                    />
                   )}
                 </div>
               </div>

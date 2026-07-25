@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { ModoExamen, PreguntaExamen } from "@/lib/types";
+import { ExplicacionPregunta } from "./ExplicacionPregunta";
 
 const LETRAS = ["A", "B", "C", "D", "E", "F"];
 
@@ -32,6 +33,9 @@ export function ExamRunner({
   const [segundos, setSegundos] = useState(0);
   const [navegador, setNavegador] = useState(false);
   const [confirmando, setConfirmando] = useState(false);
+  // Explicación desplegada de la pregunta actual (solo cuando se acierta: si se
+  // falla va abierta). Se recoge al cambiar de pregunta, en `irAPregunta`.
+  const [verExplicacion, setVerExplicacion] = useState(false);
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -65,6 +69,12 @@ export function ExamRunner({
           : opIndex;
       return copia;
     });
+  }
+
+  /** Único punto de navegación entre preguntas: colapsa la explicación abierta. */
+  function irAPregunta(i: number) {
+    setIndice(Math.min(total - 1, Math.max(0, i)));
+    setVerExplicacion(false);
   }
 
   function finalizar() {
@@ -224,11 +234,40 @@ export function ExamRunner({
         </div>
       )}
 
+      {/* Explicación: abierta si se falló, tras un botón discreto si se acertó */}
+      {revelada &&
+        pregunta.explicacion &&
+        (aciertoActual ? (
+          <div>
+            <button
+              type="button"
+              onClick={() => setVerExplicacion((v) => !v)}
+              aria-expanded={verExplicacion}
+              className="text-sm font-semibold text-brand underline underline-offset-2"
+            >
+              {verExplicacion ? "Ocultar explicación" : "Ver explicación"}
+            </button>
+            {verExplicacion && (
+              <div className="mt-2">
+                <ExplicacionPregunta
+                  explicacion={pregunta.explicacion}
+                  norma={pregunta.norma}
+                />
+              </div>
+            )}
+          </div>
+        ) : (
+          <ExplicacionPregunta
+            explicacion={pregunta.explicacion}
+            norma={pregunta.norma}
+          />
+        ))}
+
       {/* Navegación */}
       <div className="mt-1 flex items-center gap-2">
         <button
           type="button"
-          onClick={() => setIndice((i) => Math.max(0, i - 1))}
+          onClick={() => irAPregunta(indice - 1)}
           disabled={indice === 0}
           className="flex-1 rounded-xl border border-border bg-surface px-4 py-3 text-sm font-semibold disabled:opacity-40"
         >
@@ -245,7 +284,7 @@ export function ExamRunner({
         ) : (
           <button
             type="button"
-            onClick={() => setIndice((i) => Math.min(total - 1, i + 1))}
+            onClick={() => irAPregunta(indice + 1)}
             className="flex-1 rounded-xl bg-brand px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-brand-strong active:scale-[0.99]"
           >
             Siguiente
@@ -286,7 +325,7 @@ export function ExamRunner({
                   key={i}
                   type="button"
                   onClick={() => {
-                    setIndice(i);
+                    irAPregunta(i);
                     setNavegador(false);
                   }}
                   className={`flex h-10 items-center justify-center rounded-lg text-sm font-semibold ${estilo}`}

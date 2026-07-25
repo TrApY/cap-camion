@@ -20,6 +20,17 @@ export interface Pregunta {
   conflicto: boolean;
   /** Slug del tema al que pertenece la pregunta (ver lib/temas.ts). */
   tema: string;
+  /** Por qué la respuesta correcta lo es; null si la pregunta no la tiene. */
+  explicacion: string | null;
+  /** Referencia normativa oficial del Ministerio, literal. null si no consta. */
+  norma: string | null;
+}
+
+/** Resumen de teoría de un tema (slug -> resumen), tal como llega del banco. */
+export interface TeoriaTema {
+  titulo: string;
+  /** Markdown sencillo (ver lib/markdown.ts). */
+  resumen: string;
 }
 
 /** Snapshot completo cacheado en el cliente. */
@@ -27,6 +38,8 @@ export interface Banco {
   version: number;
   descargadoEn: number; // epoch ms
   preguntas: Pregunta[];
+  /** Teoría por tema. Opcional: si la consulta falla, la app funciona igual. */
+  teoria?: Record<string, TeoriaTema>;
 }
 
 // --- Estructuras de un examen en curso ---
@@ -43,6 +56,10 @@ export interface PreguntaExamen {
   frecuencia: number;
   /** Slug del tema de la pregunta (se propaga para las estadísticas). */
   tema: string;
+  /** Explicación de la respuesta correcta (se propaga para mostrarla al corregir). */
+  explicacion: string | null;
+  /** Referencia normativa oficial, literal. */
+  norma: string | null;
   /** Opciones ya barajadas para presentación. */
   opciones: OpcionExamen[];
 }

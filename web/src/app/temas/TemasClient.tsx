@@ -21,6 +21,7 @@ import {
 import { temasPorSeccion, temaPorSlug, type Tema } from "@/lib/temas";
 import { ExamRunner } from "@/components/exam/ExamRunner";
 import { ExamResults } from "@/components/exam/ExamResults";
+import { MarkdownSencillo } from "@/components/MarkdownSencillo";
 import { TruckLogo } from "@/components/TruckLogo";
 
 type Fase = "cargando" | "error" | "temas" | "config" | "examen" | "resultados";
@@ -67,6 +68,8 @@ export function TemasClient() {
   >([]);
 
   const [temaSel, setTemaSel] = useState<Tema | null>(null);
+  // Card de teoría del tema: cerrada por defecto, se recoge al cambiar de tema.
+  const [teoriaAbierta, setTeoriaAbierta] = useState(false);
   const [numPreguntas, setNumPreguntas] = useState(20);
   const [modo, setModo] = useState<ModoExamen>("practica");
   const [preguntas, setPreguntas] = useState<PreguntaExamen[]>([]);
@@ -115,6 +118,7 @@ export function TemasClient() {
     setTemaSel(tema);
     setModo("practica");
     setNumPreguntas(20);
+    setTeoriaAbierta(false);
     setFase("config");
     window.scrollTo(0, 0);
   }
@@ -289,6 +293,8 @@ export function TemasClient() {
   // Configuración de la sesión para el tema elegido.
   if (fase === "config" && temaSel) {
     const seccion = temaPorSlug(temaSel.slug)?.seccion ?? temaSel.seccion;
+    // La teoría es material de apoyo: si el banco no la trae, no se muestra.
+    const teoria = banco?.teoria?.[temaSel.slug];
     const opcionesNum = [
       { valor: 20, etiqueta: "20", sub: "Rápido" },
       { valor: aptasTemaSel, etiqueta: "Todas", sub: `${aptasTemaSel}` },
@@ -307,6 +313,36 @@ export function TemasClient() {
             tema.
           </p>
         </div>
+
+        {/* Teoría del tema (colapsable, cerrada por defecto) */}
+        {teoria && (
+          <section className="overflow-hidden rounded-2xl border border-border bg-surface shadow-sm">
+            <button
+              type="button"
+              onClick={() => setTeoriaAbierta((v) => !v)}
+              aria-expanded={teoriaAbierta}
+              className="flex w-full items-center justify-between gap-3 p-4 text-left"
+            >
+              <span className="text-sm font-semibold">
+                <span aria-hidden>📖 </span>
+                Teoría del tema
+              </span>
+              <span className="flex-none text-xs font-semibold text-brand">
+                {teoriaAbierta ? "Ocultar" : "Ver"}
+              </span>
+            </button>
+            {teoriaAbierta && (
+              <div className="border-t border-border p-4">
+                <MarkdownSencillo md={teoria.resumen} />
+                <p className="mt-3 text-xs leading-relaxed text-muted">
+                  Resumen elaborado a partir del banco oficial de preguntas del
+                  Ministerio de Transportes y Movilidad Sostenible y del Anexo I
+                  del RD 284/2021 (BOE).
+                </p>
+              </div>
+            )}
+          </section>
+        )}
 
         {/* Modo */}
         <fieldset className="rounded-2xl border border-border bg-surface p-4 shadow-sm">

@@ -82,7 +82,9 @@ export default function Home() {
       <p className="text-center text-xs leading-relaxed text-muted">
         Corrección con el baremo oficial del CAP (acierto +1, fallo −0,5, en
         blanco 0; aprobado ≥ 50/100). Exámenes públicos oficiales reproducidos
-        para estudio.
+        para estudio. Explicaciones y teoría elaboradas a partir del banco
+        oficial de preguntas del Ministerio de Transportes y Movilidad
+        Sostenible y de la normativa publicada en el BOE.
       </p>
     </div>
   );

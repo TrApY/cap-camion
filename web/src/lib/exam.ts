@@ -56,6 +56,8 @@ export function prepararPreguntas(seleccion: Pregunta[]): PreguntaExamen[] {
     enunciado: p.enunciado,
     frecuencia: p.frecuencia,
     tema: p.tema,
+    explicacion: p.explicacion,
+    norma: p.norma,
     opciones: barajar(p.opciones).map((o) => ({
       letra: o.letra,
       texto: o.texto,
