@@ -77,6 +77,14 @@ export default function Home() {
         >
           Mi progreso
         </Link>
+
+        <Link
+          href="/ranking"
+          className="flex items-center justify-center rounded-xl border border-border bg-surface px-5 py-4 text-center text-base font-semibold text-foreground shadow-sm transition hover:border-brand active:scale-[0.99]"
+        >
+          <span aria-hidden>🏆&nbsp;</span>
+          Ranking
+        </Link>
       </nav>
 
       <p className="text-center text-xs leading-relaxed text-muted">
