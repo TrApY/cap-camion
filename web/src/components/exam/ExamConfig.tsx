@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { Banco, ConfigExamen, ModoExamen } from "@/lib/types";
-import { preguntasAptas } from "@/lib/exam";
+import { FRECUENCIA_MINIMA_ALTA_PROB, preguntasAptas } from "@/lib/exam";
 
 const OPCIONES_NUM = [
   { valor: 30, etiqueta: "30", sub: "Rápido" },
@@ -41,6 +41,15 @@ export function ExamConfig({
   refreshing: boolean;
 }) {
   const numAptas = useMemo(() => preguntasAptas(banco).length, [banco]);
+  // Tamaño del pool de alta probabilidad en todo el banco, para avisar de con
+  // cuántas preguntas realmente cuenta el modo.
+  const numAltaProb = useMemo(
+    () =>
+      preguntasAptas(banco).filter(
+        (p) => p.frecuencia >= FRECUENCIA_MINIMA_ALTA_PROB,
+      ).length,
+    [banco],
+  );
 
   const [numPreguntas, setNumPreguntas] = useState(30);
   const [altaProbabilidad, setAltaProbabilidad] = useState(false);
@@ -171,6 +180,16 @@ export function ExamConfig({
             />
           </span>
         </button>
+        {altaProbabilidad && (
+          <p className="mt-2 text-xs text-muted">
+            {numAltaProb.toLocaleString("es-ES")}{" "}
+            {numAltaProb === 1
+              ? "pregunta del banco ha"
+              : "preguntas del banco han"}{" "}
+            caído en {FRECUENCIA_MINIMA_ALTA_PROB} o más exámenes; si hacen falta
+            más, se completa con el resto.
+          </p>
+        )}
       </div>
 
       {/* Baremo oficial */}

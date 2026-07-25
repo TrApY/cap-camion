@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { ModoExamen, PreguntaExamen } from "@/lib/types";
 import { ExplicacionPregunta } from "./ExplicacionPregunta";
+import { FrecuenciaExamenes } from "./FrecuenciaExamenes";
 
 const LETRAS = ["A", "B", "C", "D", "E", "F"];
 
@@ -233,6 +234,10 @@ export function ExamRunner({
           </span>
         </div>
       )}
+
+      {/* Frecuencia: solo en práctica y ya respondida (`revelada`); en modo real
+          nunca se ve, para no sesgar el simulacro. */}
+      {revelada && <FrecuenciaExamenes frecuencia={pregunta.frecuencia} />}
 
       {/* Explicación: abierta si se falló, tras un botón discreto si se acertó */}
       {revelada &&

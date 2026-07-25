@@ -5,7 +5,9 @@ import { useRouter } from "next/navigation";
 import type { Banco, ModoExamen, PreguntaExamen } from "@/lib/types";
 import { cargarBanco } from "@/lib/bank";
 import {
+  FRECUENCIA_MINIMA_ALTA_PROB,
   construirExamen,
+  contarAltaProbPorTema,
   contarAptasPorTema,
   corregirExamen,
   type Correccion,
@@ -72,6 +74,7 @@ export function TemasClient() {
   const [teoriaAbierta, setTeoriaAbierta] = useState(false);
   const [numPreguntas, setNumPreguntas] = useState(20);
   const [modo, setModo] = useState<ModoExamen>("practica");
+  const [altaProbabilidad, setAltaProbabilidad] = useState(false);
   const [preguntas, setPreguntas] = useState<PreguntaExamen[]>([]);
   const [correccion, setCorreccion] = useState<Correccion | null>(null);
   const [tiempoMs, setTiempoMs] = useState(0);
@@ -111,13 +114,22 @@ export function TemasClient() {
     [progresoPreguntas],
   );
 
+  // Pool de alta probabilidad por tema (slug -> nº de aptas que han caído en
+  // varios exámenes). Igual que `aptasPorTema`: solo depende del banco.
+  const altaProbPorTema = useMemo(
+    () => (banco ? contarAltaProbPorTema(banco) : {}),
+    [banco],
+  );
+
   const secciones = useMemo(() => temasPorSeccion(), []);
   const aptasTemaSel = temaSel ? (aptasPorTema[temaSel.slug] ?? 0) : 0;
+  const altaProbTemaSel = temaSel ? (altaProbPorTema[temaSel.slug] ?? 0) : 0;
 
   function elegirTema(tema: Tema) {
     setTemaSel(tema);
     setModo("practica");
     setNumPreguntas(20);
+    setAltaProbabilidad(false);
     setTeoriaAbierta(false);
     setFase("config");
     window.scrollTo(0, 0);
@@ -127,7 +139,7 @@ export function TemasClient() {
     if (!banco || !temaSel) return;
     const ex = construirExamen(banco, {
       numPreguntas,
-      altaProbabilidad: false,
+      altaProbabilidad,
       modo,
       tema: temaSel.slug,
     });
@@ -415,6 +427,48 @@ export function TemasClient() {
             })}
           </div>
         </fieldset>
+
+        {/* Modo alta probabilidad */}
+        <div className="rounded-2xl border border-border bg-surface p-4 shadow-sm">
+          <button
+            type="button"
+            role="switch"
+            aria-checked={altaProbabilidad}
+            onClick={() => setAltaProbabilidad((v) => !v)}
+            className="flex w-full items-center justify-between gap-3 text-left"
+          >
+            <span>
+              <span className="block text-sm font-semibold">
+                Modo alta probabilidad
+              </span>
+              <span className="mt-0.5 block text-xs text-muted">
+                Prioriza las preguntas que más se repiten en los exámenes.
+              </span>
+            </span>
+            <span
+              aria-hidden
+              className={`relative h-7 w-12 flex-none rounded-full transition ${
+                altaProbabilidad ? "bg-brand" : "bg-slate-300"
+              }`}
+            >
+              <span
+                className={`absolute top-0.5 h-6 w-6 rounded-full bg-white shadow transition-all ${
+                  altaProbabilidad ? "left-[22px]" : "left-0.5"
+                }`}
+              />
+            </span>
+          </button>
+          {altaProbabilidad && (
+            <p className="mt-2 text-xs text-muted">
+              {altaProbTemaSel.toLocaleString("es-ES")}{" "}
+              {altaProbTemaSel === 1
+                ? "pregunta de este tema ha"
+                : "preguntas de este tema han"}{" "}
+              caído en {FRECUENCIA_MINIMA_ALTA_PROB} o más exámenes; si hacen
+              falta más, se completa con el resto.
+            </p>
+          )}
+        </div>
 
         {/* Baremo oficial */}
         <div className="rounded-2xl border border-border bg-surface p-4 text-xs leading-relaxed text-muted shadow-sm">

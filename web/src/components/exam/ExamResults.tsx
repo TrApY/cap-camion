@@ -2,6 +2,7 @@
 
 import type { Correccion } from "@/lib/exam";
 import { ExplicacionPregunta } from "./ExplicacionPregunta";
+import { FrecuenciaExamenes } from "./FrecuenciaExamenes";
 
 const LETRAS = ["A", "B", "C", "D", "E", "F"];
 
@@ -104,6 +105,10 @@ export function ExamResults({
                 <p className="text-sm font-medium leading-relaxed">
                   {r.pregunta.enunciado}
                 </p>
+                <FrecuenciaExamenes
+                  frecuencia={r.pregunta.frecuencia}
+                  className="mt-1.5"
+                />
                 <div className="mt-3 space-y-2 text-sm">
                   {r.elegidaIndex === null ? (
                     <p className="text-muted">Sin responder</p>
