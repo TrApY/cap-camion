@@ -43,3 +43,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# identificador de build (lo regenera scripts/gen-version.mjs en dev y build)
+/src/lib/version.ts
+/public/version.json

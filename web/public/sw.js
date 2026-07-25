@@ -7,7 +7,7 @@
 //    aparte en IndexedDB desde la app, así el examen funciona offline.
 //
 // Subir CACHE_VERSION invalida las cachés antiguas.
-const CACHE_VERSION = "v3";
+const CACHE_VERSION = "v4";
 const CACHE = `cap-camion-${CACHE_VERSION}`;
 
 const PRECACHE_URLS = [
@@ -24,18 +24,23 @@ const PRECACHE_URLS = [
   "/icons/apple-touch-icon.png",
 ];
 
+// Descarga el app shell saltándose la caché HTTP y lo guarda en la del SW.
+// addAll falla si algún recurso no responde 200; lo hacemos tolerante.
+async function precacheShell() {
+  const cache = await caches.open(CACHE);
+  await Promise.allSettled(
+    PRECACHE_URLS.map((url) =>
+      fetch(url, { cache: "no-cache" })
+        .then((res) => (res.ok ? cache.put(url, res) : null))
+        .catch(() => null),
+    ),
+  );
+}
+
 self.addEventListener("install", (event) => {
   event.waitUntil(
     (async () => {
-      const cache = await caches.open(CACHE);
-      // addAll falla si algún recurso no responde 200; lo hacemos tolerante.
-      await Promise.allSettled(
-        PRECACHE_URLS.map((url) =>
-          fetch(url, { cache: "no-cache" })
-            .then((res) => (res.ok ? cache.put(url, res) : null))
-            .catch(() => null),
-        ),
-      );
+      await precacheShell();
       await self.skipWaiting();
     })(),
   );
@@ -62,6 +67,10 @@ self.addEventListener("fetch", (event) => {
   // Solo gestionamos same-origin. Supabase y otros pasan directos a red.
   if (url.origin !== self.location.origin) return;
 
+  // El detector de versión nueva tiene que ver siempre la del servidor, así que
+  // /version.json va directo a red: por stale-while-revalidate leería la vieja.
+  if (url.pathname === "/version.json") return;
+
   // Activos estáticos inmutables: cache-first.
   if (url.pathname.startsWith("/_next/static/")) {
     event.respondWith(cacheFirst(req));
@@ -70,6 +79,23 @@ self.addEventListener("fetch", (event) => {
 
   // Documentos y demás GET same-origin: stale-while-revalidate.
   event.respondWith(staleWhileRevalidate(req));
+});
+
+// Re-precache bajo demanda, lo pide el aviso de versión nueva antes de recargar.
+// Los documentos se sirven con stale-while-revalidate, así que tras un deploy la
+// caché guarda todavía la copia vieja y un simple reload la volvería a pintar.
+// Volver a precachear los sobrescribe con los frescos, y entonces sí: al recargar
+// se ve la versión recién desplegada.
+self.addEventListener("message", (event) => {
+  if (event.data?.tipo !== "REFRESCAR_SHELL") return;
+
+  const cliente = event.source;
+  event.waitUntil(
+    precacheShell().then(() => {
+      // El cliente puede haberse cerrado mientras refrescábamos: es opcional.
+      cliente?.postMessage({ tipo: "SHELL_REFRESCADO" });
+    }),
+  );
 });
 
 async function cacheFirst(req) {

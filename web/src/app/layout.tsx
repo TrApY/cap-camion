@@ -4,6 +4,7 @@ import "./globals.css";
 import { TruckLogo } from "@/components/TruckLogo";
 import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 import { SyncInit } from "@/components/SyncInit";
+import { UpdateBanner } from "@/components/UpdateBanner";
 
 export const metadata: Metadata = {
   title: {
@@ -54,6 +55,7 @@ export default function RootLayout({
         </main>
         <ServiceWorkerRegister />
         <SyncInit />
+        <UpdateBanner />
       </body>
     </html>
   );
