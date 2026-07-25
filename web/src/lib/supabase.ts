@@ -10,8 +10,10 @@ if (!url || !anonKey) {
   );
 }
 
-// Cliente de solo lectura del banco público. RLS protege los datos de usuario.
-// No persistimos sesión: el MVP no usa auth todavía.
+// Cliente único de la app: banco público (RLS de solo lectura) y datos del
+// usuario (RLS por `auth.uid()`). La sesión SÍ se persiste y se refresca sola:
+// la cuenta puede ser anónima (CAP-12) y debe sobrevivir a recargas y a los
+// días entre sesiones de estudio.
 export const supabase = createClient(url, anonKey, {
-  auth: { persistSession: false, autoRefreshToken: false },
+  auth: { persistSession: true, autoRefreshToken: true },
 });

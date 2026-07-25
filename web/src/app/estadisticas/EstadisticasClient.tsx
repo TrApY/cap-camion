@@ -21,6 +21,16 @@ import {
   type TramoAcierto,
 } from "@/lib/stats";
 import { TEMAS, temaPorSlug } from "@/lib/temas";
+import {
+  NICK_REGEX,
+  emailVinculado,
+  entrarConEmail,
+  guardarNick,
+  obtenerNick,
+  obtenerSesion,
+  vincularEmail,
+} from "@/lib/auth";
+import { MENSAJE_ERROR_NICK } from "@/components/NickPrompt";
 import { TruckLogo } from "@/components/TruckLogo";
 
 type Fase = "cargando" | "error" | "listo";
@@ -254,6 +264,7 @@ export function EstadisticasClient() {
             Empezar un examen
           </Link>
         </div>
+        <SeccionCuenta />
         <button
           type="button"
           onClick={() => router.push("/")}
@@ -497,6 +508,9 @@ export function EstadisticasClient() {
         )}
       </section>
 
+      {/* 6. Cuenta */}
+      <SeccionCuenta />
+
       <div className="flex flex-col gap-2">
         <button
           type="button"
@@ -506,7 +520,7 @@ export function EstadisticasClient() {
           Volver al inicio
         </button>
 
-        {/* 6. Borrar progreso */}
+        {/* 7. Borrar progreso */}
         <button
           type="button"
           onClick={() => setConfirmandoBorrado(true)}
@@ -545,6 +559,357 @@ export function EstadisticasClient() {
             </button>
           </div>
         </Overlay>
+      )}
+    </div>
+  );
+}
+
+/** Aviso inline de un formulario de la sección Cuenta. */
+interface Aviso {
+  tipo: "ok" | "error";
+  texto: string;
+  /** Motivo técnico devuelto por Supabase, si lo hubiera. */
+  detalle?: string;
+}
+
+const CLASE_INPUT =
+  "w-full rounded-xl border border-border bg-surface px-3 py-2.5 text-sm";
+const CLASE_BOTON =
+  "flex-none rounded-xl bg-brand px-4 py-2.5 text-sm font-semibold text-white shadow-sm disabled:opacity-60";
+
+/**
+ * Sección «Cuenta»: nick público para el ranking y email opcional para poder
+ * usar la misma cuenta en otro dispositivo. Si no hay sesión (las cuentas
+ * anónimas todavía no están activadas en el proyecto) no se enseña ningún
+ * control: solo el aviso de que la nube aún no está disponible.
+ */
+function SeccionCuenta() {
+  const [fase, setFase] = useState<"cargando" | "no-disponible" | "lista">(
+    "cargando",
+  );
+  const [nick, setNick] = useState<string | null>(null);
+  const [email, setEmail] = useState<string | null>(null);
+
+  const [nickBorrador, setNickBorrador] = useState("");
+  const [avisoNick, setAvisoNick] = useState<Aviso | null>(null);
+  const [guardandoNick, setGuardandoNick] = useState(false);
+
+  const [emailVincular, setEmailVincular] = useState("");
+  const [avisoVincular, setAvisoVincular] = useState<Aviso | null>(null);
+  const [vinculando, setVinculando] = useState(false);
+
+  const [emailEntrar, setEmailEntrar] = useState("");
+  const [avisoEntrar, setAvisoEntrar] = useState<Aviso | null>(null);
+  const [entrando, setEntrando] = useState(false);
+
+  // Igual que en la carga principal: el estado se aplica en el callback de la
+  // promesa, nunca sincrónicamente dentro del efecto.
+  useEffect(() => {
+    let cancelado = false;
+    Promise.resolve()
+      .then(async () => {
+        const sesion = await obtenerSesion();
+        if (!sesion) return null;
+        const [nickActual, emailActual] = await Promise.all([
+          obtenerNick(),
+          emailVinculado(),
+        ]);
+        return { nickActual, emailActual };
+      })
+      .then((datos) => {
+        if (cancelado) return;
+        if (!datos) {
+          setFase("no-disponible");
+          return;
+        }
+        setNick(datos.nickActual);
+        setEmail(datos.emailActual);
+        setNickBorrador(datos.nickActual ?? "");
+        setFase("lista");
+      })
+      .catch(() => {
+        if (!cancelado) setFase("no-disponible");
+      });
+    return () => {
+      cancelado = true;
+    };
+  }, []);
+
+  async function enviarNick() {
+    const candidato = nickBorrador.trim();
+    setGuardandoNick(true);
+    setAvisoNick(null);
+    try {
+      const res = await guardarNick(candidato);
+      if (res.ok) {
+        setNick(candidato);
+        setAvisoNick({ tipo: "ok", texto: "Nick guardado" });
+      } else {
+        setAvisoNick({ tipo: "error", texto: MENSAJE_ERROR_NICK[res.motivo] });
+      }
+    } catch {
+      setAvisoNick({ tipo: "error", texto: MENSAJE_ERROR_NICK.error });
+    } finally {
+      setGuardandoNick(false);
+    }
+  }
+
+  async function enviarVinculacion() {
+    const destino = emailVincular.trim();
+    setVinculando(true);
+    setAvisoVincular(null);
+    try {
+      const res = await vincularEmail(destino);
+      setAvisoVincular(
+        res.ok
+          ? {
+              tipo: "ok",
+              texto: `Te hemos enviado un enlace a ${destino}. Ábrelo para confirmar.`,
+            }
+          : {
+              tipo: "error",
+              texto: "No se pudo enviar el enlace de confirmación.",
+              detalle: res.mensaje,
+            },
+      );
+    } catch {
+      setAvisoVincular({
+        tipo: "error",
+        texto: "No se pudo enviar el enlace de confirmación.",
+      });
+    } finally {
+      setVinculando(false);
+    }
+  }
+
+  async function enviarAcceso() {
+    const destino = emailEntrar.trim();
+    setEntrando(true);
+    setAvisoEntrar(null);
+    try {
+      const res = await entrarConEmail(destino);
+      setAvisoEntrar(
+        res.ok
+          ? {
+              tipo: "ok",
+              texto: `Te hemos enviado un enlace de acceso a ${destino}. Ábrelo en este dispositivo.`,
+            }
+          : {
+              tipo: "error",
+              texto:
+                "No se pudo enviar el enlace. Comprueba que ya tienes cuenta con ese email.",
+              detalle: res.mensaje,
+            },
+      );
+    } catch {
+      setAvisoEntrar({
+        tipo: "error",
+        texto: "No se pudo enviar el enlace de acceso.",
+      });
+    } finally {
+      setEntrando(false);
+    }
+  }
+
+  return (
+    <section>
+      <h2 className="text-sm font-semibold uppercase tracking-wide text-muted">
+        Cuenta
+      </h2>
+
+      {fase !== "lista" ? (
+        <div className="mt-2 rounded-2xl border border-border bg-surface p-4 shadow-sm">
+          <p className="text-xs text-muted">
+            {fase === "cargando"
+              ? "Comprobando tu cuenta…"
+              : "La sincronización en la nube aún no está disponible"}
+          </p>
+        </div>
+      ) : (
+        <div className="mt-2 flex flex-col gap-3">
+          {/* Estado actual */}
+          <div className="rounded-2xl border border-border bg-surface p-4 shadow-sm">
+            <p className="text-sm">
+              <span className="text-muted">Nick: </span>
+              <span className="font-semibold">{nick ?? "Sin nick"}</span>
+            </p>
+            {email && (
+              <p className="mt-1 text-sm">
+                <span className="text-muted">Email: </span>
+                <span className="font-semibold break-all">{email}</span>
+              </p>
+            )}
+            <p className="mt-2 text-xs leading-relaxed text-muted">
+              Tu progreso se guarda en este dispositivo y, si tienes cuenta, se
+              copia a la nube para el ranking.
+            </p>
+          </div>
+
+          {/* Nick */}
+          <div className="rounded-2xl border border-border bg-surface p-4 shadow-sm">
+            <label
+              htmlFor="cuenta-nick"
+              className="text-sm font-semibold leading-snug"
+            >
+              {nick ? "Cambiar mi nick" : "Elegir un nick"}
+            </label>
+            <p className="mt-1 text-xs text-muted">
+              Es tu nombre público en el ranking.
+            </p>
+            <div className="mt-2 flex gap-2">
+              <input
+                id="cuenta-nick"
+                type="text"
+                value={nickBorrador}
+                onChange={(e) => setNickBorrador(e.target.value)}
+                maxLength={20}
+                autoComplete="off"
+                autoCapitalize="none"
+                spellCheck={false}
+                placeholder="p. ej. JoTa_89"
+                aria-invalid={avisoNick?.tipo === "error" ? true : undefined}
+                aria-describedby="cuenta-nick-aviso"
+                className={`min-w-0 flex-1 ${CLASE_INPUT}`}
+              />
+              <button
+                type="button"
+                onClick={() => void enviarNick()}
+                disabled={
+                  guardandoNick || !NICK_REGEX.test(nickBorrador.trim())
+                }
+                className={CLASE_BOTON}
+              >
+                {guardandoNick ? "Guardando…" : "Guardar"}
+              </button>
+            </div>
+            <AvisoInline id="cuenta-nick-aviso" aviso={avisoNick}>
+              3-20 caracteres: letras, números, guiones.
+            </AvisoInline>
+          </div>
+
+          {/* Vincular email */}
+          <div className="rounded-2xl border border-border bg-surface p-4 shadow-sm">
+            <label
+              htmlFor="cuenta-email-vincular"
+              className="text-sm font-semibold leading-snug"
+            >
+              Vincular email
+            </label>
+            <p className="mt-1 text-xs leading-relaxed text-muted">
+              Te llegará un enlace de confirmación; sirve para usar tu cuenta en
+              otro dispositivo o recuperarla.
+            </p>
+            <div className="mt-2 flex gap-2">
+              <input
+                id="cuenta-email-vincular"
+                type="email"
+                value={emailVincular}
+                onChange={(e) => setEmailVincular(e.target.value)}
+                autoComplete="email"
+                autoCapitalize="none"
+                spellCheck={false}
+                inputMode="email"
+                placeholder="tu@email.com"
+                aria-invalid={avisoVincular?.tipo === "error" ? true : undefined}
+                aria-describedby="cuenta-email-vincular-aviso"
+                className={`min-w-0 flex-1 ${CLASE_INPUT}`}
+              />
+              <button
+                type="button"
+                onClick={() => void enviarVinculacion()}
+                disabled={vinculando || emailVincular.trim().length === 0}
+                className={CLASE_BOTON}
+              >
+                {vinculando ? "Enviando…" : "Vincular"}
+              </button>
+            </div>
+            <AvisoInline
+              id="cuenta-email-vincular-aviso"
+              aviso={avisoVincular}
+            />
+          </div>
+
+          {/* Entrar con una cuenta existente */}
+          <div className="rounded-2xl border border-border bg-surface p-4 shadow-sm">
+            <label
+              htmlFor="cuenta-email-entrar"
+              className="text-sm font-semibold leading-snug"
+            >
+              ¿Ya tienes cuenta? Entrar con tu email
+            </label>
+            <p className="mt-1 text-xs leading-relaxed text-muted">
+              Este dispositivo pasará a usar esa cuenta.
+            </p>
+            <div className="mt-2 flex gap-2">
+              <input
+                id="cuenta-email-entrar"
+                type="email"
+                value={emailEntrar}
+                onChange={(e) => setEmailEntrar(e.target.value)}
+                autoComplete="email"
+                autoCapitalize="none"
+                spellCheck={false}
+                inputMode="email"
+                placeholder="tu@email.com"
+                aria-invalid={avisoEntrar?.tipo === "error" ? true : undefined}
+                aria-describedby="cuenta-email-entrar-aviso"
+                className={`min-w-0 flex-1 ${CLASE_INPUT}`}
+              />
+              <button
+                type="button"
+                onClick={() => void enviarAcceso()}
+                disabled={entrando || emailEntrar.trim().length === 0}
+                className={CLASE_BOTON}
+              >
+                {entrando ? "Enviando…" : "Entrar"}
+              </button>
+            </div>
+            <AvisoInline id="cuenta-email-entrar-aviso" aviso={avisoEntrar} />
+          </div>
+        </div>
+      )}
+    </section>
+  );
+}
+
+/**
+ * Mensaje bajo un control: el aviso si lo hay, o la ayuda por defecto. El
+ * contenedor se pinta siempre (aunque esté vacío) para que el `aria-describedby`
+ * del input nunca apunte a un id inexistente y el lector de pantalla anuncie el
+ * aviso en cuanto aparece.
+ */
+function AvisoInline({
+  id,
+  aviso,
+  children,
+}: {
+  id: string;
+  aviso: Aviso | null;
+  children?: React.ReactNode;
+}) {
+  return (
+    <div
+      id={id}
+      role={aviso?.tipo === "error" ? "alert" : "status"}
+      className={aviso || children ? "mt-2" : undefined}
+    >
+      {aviso ? (
+        <>
+          <p
+            className={`text-xs font-medium ${
+              aviso.tipo === "ok" ? "text-success" : "text-danger"
+            }`}
+          >
+            {aviso.texto}
+          </p>
+          {aviso.detalle && (
+            <p className="mt-0.5 break-words text-xs text-muted">
+              {aviso.detalle}
+            </p>
+          )}
+        </>
+      ) : (
+        children && <p className="text-xs text-muted">{children}</p>
       )}
     </div>
   );

@@ -3,19 +3,23 @@
 // límite de localStorage en algunos navegadores.
 //
 // Stores:
-//  - "kv"       : clave-valor sin keyPath (caché del banco).
-//  - "sesiones" : histórico de tests terminados (clave autoincremental).
-//  - "progreso" : agregado por pregunta (keyPath "preguntaId").
+//  - "kv"        : clave-valor sin keyPath (caché del banco).
+//  - "sesiones"  : histórico de tests terminados (clave autoincremental).
+//  - "progreso"  : agregado por pregunta (keyPath "preguntaId").
+//  - "sync_cola" : sesiones pendientes de subir a Supabase (clave autoincremental).
 
 const DB_NAME = "cap-camion";
 // v2: se añaden las stores "sesiones" y "progreso" (estadísticas del usuario).
-const DB_VERSION = 2;
+// v3: se añade "sync_cola" (sincronización con la nube, CAP-12).
+const DB_VERSION = 3;
 const STORE = "kv";
 
 /** Store con el histórico de tests terminados. */
 export const STORE_SESIONES = "sesiones";
 /** Store con el agregado de aciertos/fallos por pregunta. */
 export const STORE_PROGRESO = "progreso";
+/** Store con la cola de sesiones pendientes de sincronizar con la nube. */
+export const STORE_SYNC_COLA = "sync_cola";
 
 function openDb(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
@@ -36,6 +40,9 @@ function openDb(): Promise<IDBDatabase> {
       }
       if (!db.objectStoreNames.contains(STORE_PROGRESO)) {
         db.createObjectStore(STORE_PROGRESO, { keyPath: "preguntaId" });
+      }
+      if (!db.objectStoreNames.contains(STORE_SYNC_COLA)) {
+        db.createObjectStore(STORE_SYNC_COLA, { autoIncrement: true });
       }
     };
     req.onsuccess = () => resolve(req.result);
@@ -108,6 +115,77 @@ export async function idbAddIn<T>(store: string, value: T): Promise<void> {
     await new Promise<void>((resolve, reject) => {
       const tx = db.transaction(store, "readwrite");
       tx.objectStore(store).add(value);
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(tx.error);
+    });
+  } finally {
+    db.close();
+  }
+}
+
+/** Registro de una store con clave externa (sin keyPath). */
+export interface RegistroConClave<T> {
+  clave: IDBValidKey;
+  valor: T;
+}
+
+/**
+ * Devuelve todos los registros de una store JUNTO CON su clave, en orden de
+ * clave. Necesario en las stores autoincrementales (la clave no viaja dentro del
+ * valor) para poder borrar un registro concreto después de procesarlo.
+ */
+export async function idbGetAllConClave<T>(
+  store: string,
+): Promise<RegistroConClave<T>[]> {
+  const db = await openDb();
+  try {
+    return await new Promise<RegistroConClave<T>[]>((resolve, reject) => {
+      const tx = db.transaction(store, "readonly");
+      const objectStore = tx.objectStore(store);
+      const reqValores = objectStore.getAll();
+      const reqClaves = objectStore.getAllKeys();
+      tx.oncomplete = () => {
+        const valores = (reqValores.result ?? []) as T[];
+        const claves = reqClaves.result ?? [];
+        resolve(valores.map((valor, i) => ({ clave: claves[i], valor })));
+      };
+      tx.onerror = () => reject(tx.error);
+      tx.onabort = () => reject(tx.error);
+    });
+  } finally {
+    db.close();
+  }
+}
+
+/** Reemplaza el valor de una clave concreta en una store sin keyPath. */
+export async function idbPutConClave<T>(
+  store: string,
+  clave: IDBValidKey,
+  valor: T,
+): Promise<void> {
+  const db = await openDb();
+  try {
+    await new Promise<void>((resolve, reject) => {
+      const tx = db.transaction(store, "readwrite");
+      tx.objectStore(store).put(valor, clave);
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(tx.error);
+    });
+  } finally {
+    db.close();
+  }
+}
+
+/** Borra un registro concreto de una store. */
+export async function idbBorrarEn(
+  store: string,
+  clave: IDBValidKey,
+): Promise<void> {
+  const db = await openDb();
+  try {
+    await new Promise<void>((resolve, reject) => {
+      const tx = db.transaction(store, "readwrite");
+      tx.objectStore(store).delete(clave);
       tx.oncomplete = () => resolve();
       tx.onerror = () => reject(tx.error);
     });

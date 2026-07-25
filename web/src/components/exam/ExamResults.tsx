@@ -1,6 +1,7 @@
 "use client";
 
 import type { Correccion } from "@/lib/exam";
+import { NickPrompt } from "@/components/NickPrompt";
 import { ExplicacionPregunta } from "./ExplicacionPregunta";
 import { FrecuenciaExamenes } from "./FrecuenciaExamenes";
 
@@ -162,6 +163,9 @@ export function ExamResults({
           Volver al inicio
         </button>
       </div>
+
+      {/* Nick para el ranking. Solo aparece si hay cuenta y aún no hay nick. */}
+      <NickPrompt />
     </div>
   );
 }

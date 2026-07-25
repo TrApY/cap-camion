@@ -1,5 +1,7 @@
-// Estadísticas de progreso del usuario. Todo es local al dispositivo
-// (IndexedDB): no hay login ni sincronización con el servidor.
+// Estadísticas de progreso del usuario. El dispositivo (IndexedDB) es la fuente
+// de verdad: la app funciona igual sin cuenta y sin conexión. Si hay cuenta, cada
+// sesión terminada se COPIA además a la nube (ver lib/sync.ts), siempre en
+// segundo plano y sin poder afectar al flujo local.
 //
 // Las funciones de cálculo son PURAS y no tocan IndexedDB, para poder testearlas
 // con `bun test`. Solo las marcadas como IO abren la base de datos.
@@ -12,8 +14,9 @@ import {
   idbClearStore,
   idbGetAll,
 } from "./idb";
+import { construirFilasSync, encolarSesion, sincronizar } from "./sync";
 import type { Correccion } from "./exam";
-import type { ModoExamen } from "./types";
+import type { ModoExamen, ResultadoPregunta } from "./types";
 
 // --- Modelo ---
 
@@ -442,6 +445,25 @@ export async function registrarSesion(entrada: {
       return acc;
     },
   );
+
+  copiarSesionALaNube(sesion, correccion.resultados);
+}
+
+/**
+ * Encola la sesión para la nube y dispara la subida, sin esperar y sin poder
+ * romper nada: si falla (no hay cuenta, no hay red, IndexedDB se queja) solo se
+ * avisa por consola y el progreso local ya está guardado igualmente.
+ */
+function copiarSesionALaNube(
+  sesion: SesionGuardada,
+  resultados: ResultadoPregunta[],
+): void {
+  void Promise.resolve()
+    .then(() => encolarSesion(construirFilasSync(sesion, resultados)))
+    .then(() => sincronizar())
+    .catch((e: unknown) => {
+      console.warn("Sesión no copiada a la nube:", e);
+    });
 }
 
 /**

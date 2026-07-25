@@ -3,6 +3,7 @@ import Link from "next/link";
 import "./globals.css";
 import { TruckLogo } from "@/components/TruckLogo";
 import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
+import { SyncInit } from "@/components/SyncInit";
 
 export const metadata: Metadata = {
   title: {
@@ -52,6 +53,7 @@ export default function RootLayout({
           {children}
         </main>
         <ServiceWorkerRegister />
+        <SyncInit />
       </body>
     </html>
   );
