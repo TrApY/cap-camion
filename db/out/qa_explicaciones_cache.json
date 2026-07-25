@@ -1,0 +1,2792 @@
+{
+  "cap-03c2dd91882c": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, identificando correctamente las especies para las que se requiere el certificado.",
+    "estrato": "norma+texto"
+  },
+  "cap-09eea7d4cc72": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y refuta correctamente las ideas erróneas sin citar información externa ni usar letras para las opciones.",
+    "estrato": "norma+texto"
+  },
+  "cap-13091c815184": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no induce a error, no cita normas externas y es útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-20f90022a480": {
+    "veredicto": "mala",
+    "motivo": "La explicación cita incorrectamente el Art. 18.1 y el Anexo IV del RD 1032/2007 como base legal para las formas de acreditación de conductores de otros países, cuando la información relevante se encuentra en el Art. 18.4.",
+    "estrato": "norma+texto"
+  },
+  "cap-223929ac97f6": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, citando correctamente la norma y sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-349ccf3821b3": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa íntegramente en el texto legal proporcionado y aclara correctamente las clases de acciones y los derechos de voto.",
+    "estrato": "norma+texto"
+  },
+  "cap-3a2f515612fb": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, justificando adecuadamente la exclusión de los daños mencionados.",
+    "estrato": "norma+texto"
+  },
+  "cap-51b40c725774": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación es imprecisa al afirmar que la prohibición \"solo aplica si se compromete la seguridad\", omitiendo la condición adicional de \"fomentar las infracciones\" presente en el texto legal del Artículo 10.1.",
+    "estrato": "norma+texto"
+  },
+  "cap-51f50f9a5eb6": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal aportado, no cita normas no dadas y refuta las opciones incorrectas con información legalmente precisa.",
+    "estrato": "norma+texto"
+  },
+  "cap-61f7cdc79a43": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y es clara y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-691c6e13a37b": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma falsamente que no se deben registrar los datos del vehículo en la hoja de registro, lo cual contradice directamente el Artículo 34.6 del Reglamento (UE) 165/2014.",
+    "estrato": "norma+texto"
+  },
+  "cap-759a541bf058": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y es clara y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-7807763f8fc9": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-7bbecde0156a": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación afirma un requisito legal que no puede ser verificado con el texto legal literal aportado, ya que la sección citada (Anexo I, apartado IV, c) no está presente en el extracto.",
+    "estrato": "norma+texto"
+  },
+  "cap-912a74b161d3": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado sin contradecirlo y no introduce información falsa o no citada.",
+    "estrato": "norma+texto"
+  },
+  "cap-93bd41fc4bae": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya directamente en el texto legal proporcionado y ofrece una justificación útil sin introducir errores ni citar normas externas.",
+    "estrato": "norma+texto"
+  },
+  "cap-96b09096cb61": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y es clara y útil para el alumno sin citar normas no proporcionadas ni inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-9a8fa8732930": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-a876b8bf71e1": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y es útil para el alumno al aclarar la obligación del conductor.",
+    "estrato": "norma+texto"
+  },
+  "cap-adee7b7f9789": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y refuta las opciones incorrectas de manera precisa sin citar información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-b5e0b8813e10": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara las otras opciones sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-ba32714892af": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal, no cita normas no dadas y aclara los términos de forma precisa.",
+    "estrato": "norma+texto"
+  },
+  "cap-be5f37a855ea": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y es útil para el alumno sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-c06866527a01": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, aclarando correctamente el alcance nacional de la prohibición sin citar normas no proporcionadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-c586abafc308": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara el concepto sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-d3e13b8121d2": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no contiene errores ni referencias inaceptables.",
+    "estrato": "norma+texto"
+  },
+  "cap-d69aca64cf27": {
+    "veredicto": "ok",
+    "motivo": "La explicación es precisa, se basa fielmente en el texto legal proporcionado y justifica correctamente la respuesta.",
+    "estrato": "norma+texto"
+  },
+  "cap-f917fa22f829": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no introduce información externa ni induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-09443c239030": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, define adecuadamente la potencia y diferencia correctamente las demás opciones sin inducir a error.",
+    "estrato": "norma-o-match"
+  },
+  "cap-1c97a9e5d111": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, define adecuadamente el envase y lo diferencia correctamente del embalaje sin introducir errores o información externa.",
+    "estrato": "norma-o-match"
+  },
+  "cap-2a4dbe1d2d23": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, la amplía de forma útil y aclara por qué una opción incorrecta lo es, sin introducir errores ni citar información no proporcionada.",
+    "estrato": "norma-o-match"
+  },
+  "cap-2b52b9a700aa": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice los datos oficiales y justifica adecuadamente la importancia del transporte por carretera sin citar información externa ni inducir a error.",
+    "estrato": "norma-o-match"
+  },
+  "cap-396ef2004aa3": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice los datos oficiales, no cita normas externas, no induce a error y no se refiere a las opciones por su letra.",
+    "estrato": "norma-o-match"
+  },
+  "cap-5a1bb49e823b": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice los datos oficiales, no cita información externa y justifica adecuadamente la respuesta.",
+    "estrato": "norma-o-match"
+  },
+  "cap-73edfcbe2bb3": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice los datos oficiales, no cita normas no proporcionadas y es precisa y útil para el alumno.",
+    "estrato": "norma-o-match"
+  },
+  "cap-7e3d3bad2258": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no induce a error y no cita información externa no proporcionada.",
+    "estrato": "norma-o-match"
+  },
+  "cap-9a9d1903dcc0": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta al justificar por qué arrancar en la marcha más baja es incorrecto sobre nieve, y además ofrece consejos útiles y precisos.",
+    "estrato": "norma-o-match"
+  },
+  "cap-9dc9c7fce92f": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, cita correctamente la norma aportada y refuta implícitamente las opciones incorrectas sin referirse a ellas por letra.",
+    "estrato": "norma-o-match"
+  },
+  "cap-c0aea9dc67cf": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, describe con precisión el funcionamiento de cada tipo de freno mencionado y no induce a error ni cita información no proporcionada.",
+    "estrato": "norma-o-match"
+  },
+  "cap-cf2000c2fffe": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, detalla sus razones y refuta las ideas erróneas sin citar información externa ni inducir a error.",
+    "estrato": "norma-o-match"
+  },
+  "cap-d1b335537937": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y a los datos oficiales, y aclara por qué las otras opciones son incorrectas.",
+    "estrato": "norma-o-match"
+  },
+  "cap-e1aad7cedfec": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, clara y útil para el alumno, sin inducir a error.",
+    "estrato": "norma-o-match"
+  },
+  "cap-e25f2573e4c6": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, aclara por qué las otras opciones son incorrectas y no induce a error.",
+    "estrato": "norma-o-match"
+  },
+  "cap-12b08b0e0101": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, completa y no induce a error.",
+    "estrato": "solo-banco"
+  },
+  "cap-24f63d8e095e": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y la complementa con información precisa y útil, sin introducir errores ni citar elementos no proporcionados.",
+    "estrato": "solo-banco"
+  },
+  "cap-2551cc5a6841": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, justifica adecuadamente por qué la afirmación es incorrecta y no introduce información falsa o no proporcionada.",
+    "estrato": "solo-banco"
+  },
+  "cap-320741c8d903": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, la justifica adecuadamente y refuta una opción incorrecta sin introducir errores ni citar información externa.",
+    "estrato": "solo-banco"
+  },
+  "cap-37fb4a959759": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, la desarrolla adecuadamente y descarta las opciones incorrectas sin referirse a ellas por letra.",
+    "estrato": "solo-banco"
+  },
+  "cap-832eca759061": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, justifica su elección y descarta las opciones incorrectas de forma clara y sin errores.",
+    "estrato": "solo-banco"
+  },
+  "cap-8c90e2449d4d": {
+    "veredicto": "ok",
+    "motivo": "La explicación es precisa, fiel a la respuesta correcta y aclara la relación con las demás opciones sin inducir a error.",
+    "estrato": "solo-banco"
+  },
+  "cap-9bbf31303fdb": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, proporciona razones válidas y no incurre en ninguno de los errores especificados.",
+    "estrato": "solo-banco"
+  },
+  "cap-b1e70a7f0874": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, la contextualiza adecuadamente y aclara por qué las otras opciones no son medidas habituales de restricción.",
+    "estrato": "solo-banco"
+  },
+  "cap-b4d3b09073c2": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, clara y útil para el alumno, sin inducir a error ni citar información externa.",
+    "estrato": "solo-banco"
+  },
+  "cap-b6d92769be0c": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, aclara su funcionamiento y descarta las opciones incorrectas de forma precisa y útil para el alumno.",
+    "estrato": "solo-banco"
+  },
+  "cap-c024ec074a20": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, describe con precisión el funcionamiento del láser para medir la distancia y aclara por qué las otras opciones no son la medición directa principal.",
+    "estrato": "solo-banco"
+  },
+  "cap-d06fec741d52": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, clara, concisa y añade una distinción útil sin inducir a error.",
+    "estrato": "solo-banco"
+  },
+  "cap-f0f911d30819": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no induce a error y justifica adecuadamente por qué los accidentes urbanos son más numerosos pero menos graves.",
+    "estrato": "solo-banco"
+  },
+  "cap-0018db3ed93d": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, aclara el motivo de la exención y descarta las opciones incorrectas. No contradice el texto legal aportado ni cita normas no dadas, y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-042a45714a0b": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal proporcionado, confirmando la posibilidad de reducciones y exenciones de la garantía global en determinados supuestos.",
+    "estrato": "norma+texto"
+  },
+  "cap-043ffbda71af": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no introduce información errónea ni referencias no permitidas.",
+    "estrato": "norma+texto"
+  },
+  "cap-05ee276f2e57": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-065ef9e781ad": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara el concepto de responsabilidad limitada sin introducir errores ni citar información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-066a00904b70": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, define claramente los roles de los intervinientes en el contrato de seguro y no contradice el texto legal proporcionado.",
+    "estrato": "norma+texto"
+  },
+  "cap-0754f1e7e384": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, detallando correctamente los pasos a seguir sin introducir errores ni información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-08eccf9d4f9b": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya directamente en el texto legal proporcionado y ofrece un contexto útil sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-09200119340c": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal aportado (Artículo 140.10, que es el contenido facilitado para el 140.33), no cita normas no dadas y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-093fc567590d": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, detallando correctamente los requisitos para el descanso diario fraccionado sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-098f2e08b7fa": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y no introduce información externa ni errores.",
+    "estrato": "norma+texto"
+  },
+  "cap-0a4aa805ae13": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación es correcta y útil, pero no se basa en el artículo 41 del RD 1211/1990 proporcionado, el cual es irrelevante para la pregunta y la explicación.",
+    "estrato": "norma+texto"
+  },
+  "cap-0af8044ef11e": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal, no cita normas no proporcionadas y es clara y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-0b471c78ac40": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y es clara y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-0bb843d9bf54": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma que el Artículo 1.4 de la Ley 27/1999 especifica la composición de las cooperativas de primer y segundo grado, lo cual es falso, ya que dicho artículo solo menciona que pueden revestir esas formas, sin detallar su composición.",
+    "estrato": "norma+texto"
+  },
+  "cap-0bed13d5e55d": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y aclara el alcance de la representación del conductor sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-0c68cc654b88": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya correctamente en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-0c777870bd44": {
+    "veredicto": "mala",
+    "motivo": "La explicación basa su justificación en un apartado del Reglamento (UE) 165/2014 (Anexo I, apartado IV, c) cuyo texto literal no ha sido proporcionado, impidiendo su verificación.",
+    "estrato": "norma+texto"
+  },
+  "cap-0d29eda9d157": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no presenta errores ni referencias inaceptables.",
+    "estrato": "norma+texto"
+  },
+  "cap-0e78bc0eab21": {
+    "veredicto": "mala",
+    "motivo": "La explicación contradice la \"Respuesta oficial\" del Ministerio al afirmar que el límite de 2.000 kg de MMA es incorrecto y que el correcto es 3.500 kg.",
+    "estrato": "norma+texto"
+  },
+  "cap-0ec46cfb821a": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma que la comprobación \"siempre\" debe realizarse en presencia del cargador, lo cual contradice el Artículo 26.3 de la Ley 15/2009, que contempla alternativas si no es posible.",
+    "estrato": "norma+texto"
+  },
+  "cap-0f372a0ab727": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara por qué las otras opciones son incorrectas sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-107cf1c61639": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y refuta correctamente las opciones incorrectas sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-108322e364c0": {
+    "veredicto": "ok",
+    "motivo": "La explicación identifica correctamente la terminología oficial y la fundamenta con la referencia legal proporcionada, sin introducir errores ni información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-10c945adce16": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y aclara las opciones incorrectas sin introducir información externa o errónea.",
+    "estrato": "norma+texto"
+  },
+  "cap-10e696f6f009": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación basa parte de su justificación en una interpretación de la OM FOM/1882/2012 Anexo, 4.14, cuyo texto literal no ha sido proporcionado, impidiendo verificar si realmente se refiere a las responsabilidades del porteador como se afirma.",
+    "estrato": "norma+texto"
+  },
+  "cap-10f2501e3994": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación afirma que el Reglamento Comunitario (UE) 165/2014 Anexo I, apartado IV, c establece el requisito, pero el texto legal literal proporcionado no incluye dicho apartado para su verificación.",
+    "estrato": "norma+texto"
+  },
+  "cap-1131f98c194f": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación afirma que la infracción es muy grave, pero el texto legal proporcionado (Art. 55) solo establece las sanciones para las infracciones ya clasificadas, sin especificar si la infracción en cuestión es muy grave.",
+    "estrato": "norma+texto"
+  },
+  "cap-117d9d431ddc": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma incorrectamente que el período de presentación es de 56 días, cuando el texto legal establece 28 días anteriores más el día en curso.",
+    "estrato": "norma+texto"
+  },
+  "cap-1252f866a5a7": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara las diferencias con las opciones incorrectas sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-13e664bfeaeb": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y aclara correctamente la información sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-14078664a323": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara de forma útil el carácter personal e intransferible de la tarjeta de conductor.",
+    "estrato": "norma+texto"
+  },
+  "cap-156d2aa70f01": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no induce a error y es útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-157bbd9dbce3": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-159be5714d44": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal aportado, no induce a error y es útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-15b3d9161b32": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal proporcionado, sin introducir errores ni citar información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-15e80e31346a": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal proporcionado, sin introducir errores ni citar información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-15f4a86212bb": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación introduce información sobre exenciones y requisitos del CAP que no está contenida ni es verificable con el único texto legal aportado (RD 1032/2007 Art. 4).",
+    "estrato": "norma+texto"
+  },
+  "cap-16fdcad373e8": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no contradice ninguna norma, no cita información no proporcionada y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-1754f321654d": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación atribuye la frecuencia de 'cada dos años' al RD 640/2007 Art. 3, cuando este artículo solo establece la obligación de la revisión periódica, no su periodicidad específica.",
+    "estrato": "norma+texto"
+  },
+  "cap-1763c6c2a20d": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y no introduce información externa ni errores.",
+    "estrato": "norma+texto"
+  },
+  "cap-17bbee947e64": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y aclara por qué las otras opciones son incorrectas sin citar información externa ni inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-180b6989620c": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no introduce información externa y no se refiere a las opciones por su letra.",
+    "estrato": "norma+texto"
+  },
+  "cap-181e057de4c6": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, detallando correctamente todos los datos obligatorios a anotar en el disco-diagrama.",
+    "estrato": "norma+texto"
+  },
+  "cap-187b054224db": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-18ff2c93e830": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya correctamente en el texto legal proporcionado y no introduce información externa ni errores.",
+    "estrato": "norma+texto"
+  },
+  "cap-1b4c8471026f": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado sin contradecirlo ni citar normas externas, y aclara por qué las otras opciones son incorrectas.",
+    "estrato": "norma+texto"
+  },
+  "cap-1b58be9ec32e": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y aclara el uso de los diferentes tipos de documentos de registro.",
+    "estrato": "norma+texto"
+  },
+  "cap-1cd712ef865b": {
+    "veredicto": "mala",
+    "motivo": "La explicación atribuye falsamente las condiciones de exención del tacógrafo para el transporte de maquinaria al Artículo 2.n del RD 640/2007, cuyo contenido real es diferente y no se corresponde con dichas condiciones.",
+    "estrato": "norma+texto"
+  },
+  "cap-1d51b930aca3": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara las diferencias con otras contingencias sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-1e69dd0fe750": {
+    "veredicto": "mala",
+    "motivo": "La explicación contradice la respuesta oficial del Ministerio al afirmar efectos positivos de la declaración amistosa de accidente, y sus afirmaciones no están respaldadas por el texto legal proporcionado.",
+    "estrato": "norma+texto"
+  },
+  "cap-1e8ab187c9e3": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara la distinción entre las obligaciones específicas y la obligación general de velar por la seguridad y salud.",
+    "estrato": "norma+texto"
+  },
+  "cap-1f01798e6226": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación introduce información sobre el plazo de 15 días y un escenario diferente que no está respaldado por el único texto legal proporcionado (Artículo 149 del Reglamento 952/2013), lo cual excede el alcance de la base legal dada.",
+    "estrato": "norma+texto"
+  },
+  "cap-1f4d9bf536c4": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y es clara y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-20126553dc66": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal aportado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-2014afec4ef7": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya directamente en el texto legal proporcionado y no induce a error ni cita normas no dadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-20973f3e188f": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y no introduce información errónea o no citada.",
+    "estrato": "norma+texto"
+  },
+  "cap-2106265e53c7": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, sin errores ni referencias prohibidas.",
+    "estrato": "norma+texto"
+  },
+  "cap-214ccf960f1b": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, cita correctamente la norma aportada y justifica adecuadamente por qué las otras opciones no están exentas.",
+    "estrato": "norma+texto"
+  },
+  "cap-217ff86969ec": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación basa su razonamiento en una afirmación sobre la aplicación de la normativa de transporte terrestre que no se encuentra en el texto legal proporcionado.",
+    "estrato": "norma+texto"
+  },
+  "cap-219706b99b76": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no induce a error y no cita normas no aportadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-2198bc526b97": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación afirma que ciertas enfermedades son reconocidas sin que el texto legal literal proporcionado las detalle explícitamente, excediendo la \"única base legal\" permitida.",
+    "estrato": "norma+texto"
+  },
+  "cap-21f6173b0f52": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa exclusivamente en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-23391dc20f99": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa íntegramente en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-2355ecd1025d": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, sin introducir información externa ni inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-23bc627a2666": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación es correcta en su contenido, pero la información sobre el lugar de inmovilización no se deriva del texto legal literal del Art. 216.g del RD 1211/1990 proporcionado, el cual solo remite a otro artículo no incluido.",
+    "estrato": "norma+texto"
+  },
+  "cap-23e8b172eefd": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación incluye información sobre la distancia de colocación y visibilidad de los triángulos que no se encuentra en el texto legal (RD 1428/2003 Art. 130.3) aportado como única base para la justificación.",
+    "estrato": "norma+texto"
+  },
+  "cap-240a882fa828": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, resumiendo correctamente las obligaciones del empresario sin introducir errores o información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-242ba09c30f3": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal proporcionado, citando correctamente la norma y aclarando un término de las opciones sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-2474271dce7f": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara las funciones del transitario de forma precisa.",
+    "estrato": "norma+texto"
+  },
+  "cap-250837f291eb": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara las opciones incorrectas sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-2684b3c080f1": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no contiene errores ni referencias no autorizadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-272c2551c472": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma que las hojas de registro deben llevar la marca de homologación, lo cual no se encuentra en el texto legal literal proporcionado para el apartado IV, c, que en su lugar describe una marca para la correcta colocación de la hoja en el apartado III, c, 1.1.",
+    "estrato": "norma+texto"
+  },
+  "cap-278650cb4787": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, aclarando de forma útil la diferencia entre sufrir una lesión y producir un daño.",
+    "estrato": "norma+texto"
+  },
+  "cap-27ff9686488f": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y no contiene errores ni referencias no autorizadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-283b1177aad0": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal, no cita normas no proporcionadas, no induce a error y no se refiere a las opciones por su letra.",
+    "estrato": "norma+texto"
+  },
+  "cap-292895f56e04": {
+    "veredicto": "mala",
+    "motivo": "La explicación atribuye falsamente la exigencia de anotar la matrícula del vehículo en el disco-diagrama al Reglamento Comunitario (UE) 165/2014 Anexo I, apartado IV, d, cuando el texto legal literal proporcionado para esa sección define la \"circunferencia efectiva de los neumáticos de las ruedas\" y no menciona la matrícula.",
+    "estrato": "norma+texto"
+  },
+  "cap-29c59aee7dd3": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara las opciones de forma precisa.",
+    "estrato": "norma+texto"
+  },
+  "cap-2a243a4d2638": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-2bd6ce97b155": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa exclusivamente en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-2cef383bb7b6": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y refuta correctamente las opciones incorrectas sin introducir información externa o errónea.",
+    "estrato": "norma+texto"
+  },
+  "cap-2cf7cdfe2abb": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara correctamente el flujo de información sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-2f43e7893fc1": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no induce a error y no cita normas no proporcionadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-301d52f9d5b5": {
+    "veredicto": "mala",
+    "motivo": "La explicación induce a error al afirmar que los plazos de 12, 24 o 48 horas son para averías o pérdidas no manifiestas, cuando la Ley 15/2009 Art. 60 establece un plazo de siete días naturales para estas últimas.",
+    "estrato": "norma+texto"
+  },
+  "cap-320fb53df967": {
+    "veredicto": "mala",
+    "motivo": "La explicación cita un apartado (IV, b) que no existe en el texto legal proporcionado y la afirmación sobre la subdivisión de 20 km/h no se encuentra en las secciones relevantes del mismo.",
+    "estrato": "norma+texto"
+  },
+  "cap-3320ca67b904": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-33316fa19d33": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma que la información se establece en la OM FOM/1882/2012 Anexo, 8.5, pero el texto legal literal proporcionado no incluye la sección 8.5 ni la información mencionada.",
+    "estrato": "norma+texto"
+  },
+  "cap-33db677b8156": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no induce a error y aclara las opciones incorrectas sin citar normas no proporcionadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-361e870abdf0": {
+    "veredicto": "mala",
+    "motivo": "La explicación cita el Artículo 140.37 de la Ley 16/1987 y describe su contenido, pero el texto legal literal proporcionado para dicho artículo solo llega hasta el punto 15, haciendo que la justificación sea inverificable con la información dada.",
+    "estrato": "norma+texto"
+  },
+  "cap-3687d2cde686": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel al texto legal y a la respuesta correcta, identificando correctamente la documentación exigida y justificando por qué todas las opciones son correctas.",
+    "estrato": "norma+texto"
+  },
+  "cap-36b42147982a": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, proporciona información útil y relevante, y cita correctamente la normativa sin introducir elementos externos ni inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-36fda2fba5c1": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y aclara las opciones sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-37ddda8254bd": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación es correcta y fiel a la respuesta, pero no se basa en el texto legal proporcionado, el cual no contiene las definiciones relevantes para justificarla.",
+    "estrato": "norma+texto"
+  },
+  "cap-381b8ce934ef": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma que la exención está \"contemplada en la normativa\", pero el texto legal literal proporcionado para el Reglamento Comunitario (CE) 561/2006 Art. 2.g no contiene ninguna mención a dicha exención, induciendo a error sobre el contenido de la base legal dada.",
+    "estrato": "norma+texto"
+  },
+  "cap-3894fa2ec7e5": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal y aclara adecuadamente la validez de la homologación en la UE.",
+    "estrato": "norma+texto"
+  },
+  "cap-38a12ead1da9": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no contiene errores ni referencias a opciones por letra.",
+    "estrato": "norma+texto"
+  },
+  "cap-39e0d89da427": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma que la condición de que el transporte público forme parte del objeto social es la 'única' condición, lo cual es falso según el Artículo 43 de la Ley 16/1987 que lista múltiples requisitos.",
+    "estrato": "norma+texto"
+  },
+  "cap-3a4e8cbdc017": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación afirma que el Art. 143.4 establece las infracciones específicas como causa de inmovilización, pero el texto legal proporcionado solo remite a puntos numerados de otros artículos (140 y 141) cuyo contenido no se ha facilitado, impidiendo la verificación directa de dicha afirmación.",
+    "estrato": "norma+texto"
+  },
+  "cap-3aa2ca2a977a": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara de forma precisa las opciones sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-3ac2454f0447": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma incorrectamente que treinta mil euros es el capital mínimo para una sociedad limitada, lo cual contradice el texto legal aportado (Art. 4.1 que establece un euro).",
+    "estrato": "norma+texto"
+  },
+  "cap-3b32225ff281": {
+    "veredicto": "mala",
+    "motivo": "La explicación atribuye incorrectamente la obligación de retirar el obstáculo en el menor tiempo posible al Artículo 130.2 del RD 1428/2003, cuando dicha obligación se encuentra en el Artículo 130.1.",
+    "estrato": "norma+texto"
+  },
+  "cap-3d645859ed34": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara correctamente por qué las otras opciones no son válidas.",
+    "estrato": "norma+texto"
+  },
+  "cap-3e4c8e3497d4": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación es fiel a la respuesta correcta, pero el texto legal literal proporcionado no contiene la información necesaria para justificar la regla sobre el inicio de la responsabilidad del transportista.",
+    "estrato": "norma+texto"
+  },
+  "cap-3e77be312771": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no induce a error y es útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-3f40886dca82": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, aclarando el concepto de Operador Económico Autorizado sin inducir a error ni citar normas no proporcionadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-3f4dcb2b1d4d": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal aportado sin contradecirlo, y descarta las opciones incorrectas de forma precisa y sin citar normas no dadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-40f2422b945b": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, aclarando los puntos clave sin introducir errores ni citar información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-413319b102ce": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en la norma legal proporcionada y refuta las opciones incorrectas de manera precisa.",
+    "estrato": "norma+texto"
+  },
+  "cap-42309559aade": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, identificando correctamente a todos los responsables de garantizar el respeto de los horarios de transporte.",
+    "estrato": "norma+texto"
+  },
+  "cap-431a3281bd44": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación atribuye obligaciones específicas al Art. 2.1 que no se detallan explícitamente en el texto legal proporcionado.",
+    "estrato": "norma+texto"
+  },
+  "cap-4358b9fbd469": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel al texto legal y a la respuesta oficial del Ministerio, corrigiendo una pequeña imprecisión de la respuesta correcta indicada en el examen ('empresa' por 'centro').",
+    "estrato": "norma+texto"
+  },
+  "cap-43f958f179e0": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no contradice la normativa aportada ni induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-44dcc43ac4a6": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación afirma que la falta de título habilitante justifica la inmovilización según el Art. 143.4, pero el texto legal proporcionado de dicho artículo no detalla las infracciones a las que se refiere, haciendo la justificación incompleta.",
+    "estrato": "norma+texto"
+  },
+  "cap-451258ab10a5": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación afirma la existencia y obligatoriedad de una placa descriptiva, así como su ubicación, pero el texto legal proporcionado como única base no menciona en absoluto dicha placa.",
+    "estrato": "norma+texto"
+  },
+  "cap-470330614bc6": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, sin introducir errores ni citas externas, y es útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-48083e656e48": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara las opciones incorrectas sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-48137331a22e": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y oficial, y no contradice el texto legal aportado para el tacógrafo analógico ni introduce información falsa o citas no dadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-4849ce792ae3": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y es clara y precisa.",
+    "estrato": "norma+texto"
+  },
+  "cap-48509c71cac5": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y no introduce información falsa o externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-48745a8c094f": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara las funciones de los demás actores sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-4938932269e7": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara el plazo de borrado para autoridades y transportistas sin introducir información externa o errónea.",
+    "estrato": "norma+texto"
+  },
+  "cap-4b142d85c2b8": {
+    "veredicto": "mala",
+    "motivo": "La explicación basa su justificación en el Artículo 141.24 de la Ley 16/1987, cuyo contenido no se encuentra en el texto legal literal proporcionado como única base legal.",
+    "estrato": "norma+texto"
+  },
+  "cap-4befe73e2aec": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y aclara las condiciones de aplicación sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-4ca33fc31a1c": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y la clarifica adecuadamente sin introducir errores ni citar normas no proporcionadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-4d52eb96ba6e": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación afirma el límite correcto pero no lo justifica con el texto legal de \"RD 1561/1995 Art. 10\" proporcionado, el cual no contiene directamente dicha limitación.",
+    "estrato": "norma+texto"
+  },
+  "cap-4df98e57bb10": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara por qué las otras opciones son incorrectas sin introducir errores ni citas externas.",
+    "estrato": "norma+texto"
+  },
+  "cap-4e829f316d49": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y es clara y precisa para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-4e8fa08b0277": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y se basa íntegramente en el texto legal proporcionado sin introducir información externa o errónea.",
+    "estrato": "norma+texto"
+  },
+  "cap-4ea6fc66ff89": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal aportado sin contradecirlo ni citar normas externas, y aclara la definición sin inducir a error ni referirse a opciones por su letra.",
+    "estrato": "norma+texto"
+  },
+  "cap-4f570114d27c": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación afirma prohibiciones legales que, aunque correctas en el marco general de la Ley de Sociedades de Capital, no están explícitamente justificadas por los artículos 1.4 y 32 del RD Legislativo 1/2010 proporcionados como única base legal.",
+    "estrato": "norma+texto"
+  },
+  "cap-4f6a256d581b": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y refuta correctamente las opciones incorrectas sin citar normas externas ni usar letras para las opciones.",
+    "estrato": "norma+texto"
+  },
+  "cap-50660a7e6522": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal aportado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-508d119fd668": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no introduce información errónea ni citas no proporcionadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-519940b30233": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal aportado y proporciona información precisa y útil sobre los tipos de transporte.",
+    "estrato": "norma+texto"
+  },
+  "cap-51bbcce26968": {
+    "veredicto": "mala",
+    "motivo": "La explicación se contradice al calificar la infracción como 'grave' después de haberla definido como 'muy grave', lo que induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-52009af61061": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no induce a error y aclara las diferencias con las opciones incorrectas sin citarlas por letra.",
+    "estrato": "norma+texto"
+  },
+  "cap-5203bdeaa768": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación hace afirmaciones sobre la inmovilización de vehículos basándose en puntos de los artículos 140 y 141, cuyo contenido no ha sido proporcionado en el texto legal, impidiendo su verificación.",
+    "estrato": "norma+texto"
+  },
+  "cap-526979411f76": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y es clara y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-52aff8995b64": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara por qué una pausa no subsana la infracción ya cometida, sin citar normas externas ni inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-52c42b3bf78d": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma falsamente que la sordera, la parálisis del nervio radial y la fatiga de vainas tendinosas están reconocidas en el RD 1299/2006 Anexo I, cuando el texto legal literal proporcionado de dicho anexo solo lista grupos generales de enfermedades y no estas condiciones específicas.",
+    "estrato": "norma+texto"
+  },
+  "cap-52dfa803c43f": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, citando correctamente la norma y aclarando un posible error común sin inducir a confusión.",
+    "estrato": "norma+texto"
+  },
+  "cap-5350a5fbf055": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, justifica adecuadamente la incorrección de las otras opciones y solo cita la norma legal proporcionada.",
+    "estrato": "norma+texto"
+  },
+  "cap-543e007720f1": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, cita la normativa proporcionada y aclara las consecuencias del incumplimiento sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-544a7cff7e87": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal, no cita normas no proporcionadas y aclara la razón de la medida sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-548d9adca59b": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y no contradice el texto legal aportado, aunque este último no contiene la información sobre la frecuencia de las revisiones.",
+    "estrato": "norma+texto"
+  },
+  "cap-54c649395e10": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación hace afirmaciones sobre los tiempos máximos de conducción y la ausencia de tolerancias que no están explícitamente detalladas en el Artículo 10 del Reglamento (CE) 561/2006, que es la única base legal proporcionada.",
+    "estrato": "norma+texto"
+  },
+  "cap-54e2645e9c5a": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal aportado y aclara el funcionamiento del tacógrafo analógico respecto a la selección de actividades por parte del conductor.",
+    "estrato": "norma+texto"
+  },
+  "cap-55080011dcdb": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no induce a error y es útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-552e3970f012": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma que la definición de 'vehículo batería' se encuentra en el texto legal 'RD 2822/1998 Anexo II, C' proporcionado, pero dicha definición no aparece en el extracto legal literal.",
+    "estrato": "norma+texto"
+  },
+  "cap-554b908a49c4": {
+    "veredicto": "ok",
+    "motivo": "La explicación justifica correctamente la respuesta correcta basándose en el texto legal aportado, sin contradicciones ni referencias incorrectas.",
+    "estrato": "norma+texto"
+  },
+  "cap-55851983d4f9": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal aportado y proporciona información adicional útil y precisa sobre el funcionamiento del disco-diagrama.",
+    "estrato": "norma+texto"
+  },
+  "cap-56159aa0b22d": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara el concepto de garantía sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-56260a9c1d3b": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, interpretando correctamente el Reglamento Comunitario (CE) 561/2006 Art. 8.6 sin introducir errores ni información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-56ecdc1eb98c": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, aclarando los requisitos del transporte privado complementario sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-570de0d030c4": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma que el RD 1561/1995 Art. 10.4 especifica claramente que \"tiempo de presencia\" es sinónimo de \"tiempo de disponibilidad\", lo cual no se desprende literalmente del texto legal aportado, que solo describe la condición de disponibilidad del trabajador durante el tiempo de presencia.",
+    "estrato": "norma+texto"
+  },
+  "cap-58b73e0c9caa": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-590896758a27": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y aclara por qué las otras opciones no son válidas sin citarlas por letra.",
+    "estrato": "norma+texto"
+  },
+  "cap-596e7cca4200": {
+    "veredicto": "mala",
+    "motivo": "La explicación atribuye al Anexo 10.2 de la OM FOM/1882/2012 una autorización que no se encuentra en el texto legal literal proporcionado para dicho artículo.",
+    "estrato": "norma+texto"
+  },
+  "cap-598f2ddafbc1": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-5991c047e07c": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y se basa en el texto legal proporcionado sin introducir información externa o errores.",
+    "estrato": "norma+texto"
+  },
+  "cap-59d0f965ba1b": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación asume la clasificación de la carencia de autorización como infracción muy grave y generaliza las condiciones de inmovilización del Art. 143.4.a, sin que estos hechos se deriven explícitamente del texto legal proporcionado.",
+    "estrato": "norma+texto"
+  },
+  "cap-5a9cf17c4faa": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, citando correctamente la normativa y ofreciendo información útil sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-5b5c90f5ee7c": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-5b84645f7f68": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara las condiciones de entrada en vacío sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-5bdb3c0a348a": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-5bdb54cfdc70": {
+    "veredicto": "mala",
+    "motivo": "La explicación basa su afirmación principal en el contenido del punto 5.4 del Anexo de la OM FOM/1882/2012, pero dicho texto legal no ha sido proporcionado como parte de la \"única base legal que puedes usar\", impidiendo verificar la fidelidad de la explicación a la norma citada.",
+    "estrato": "norma+texto"
+  },
+  "cap-5cbc4109f920": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal proporcionado, sin introducir errores ni citar información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-5e4d7b2de5b6": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa exclusivamente en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-5ef2b3ebe932": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y refuta la opción incorrecta sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-5f41957d1b14": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no induce a error ni cita normas no proporcionadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-5f4284e45856": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya directamente en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-5f6fc9fe5e86": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-5f8d463f12be": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y describe con precisión los tipos de declaración sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-5f9ef3267f8b": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa únicamente en el texto legal proporcionado y aclara correctamente por qué las otras opciones no son órganos de la sociedad cooperativa.",
+    "estrato": "norma+texto"
+  },
+  "cap-601d0bd6e96d": {
+    "veredicto": "mala",
+    "motivo": "La explicación clasifica las infracciones como \"graves\" cuando el Artículo 140 las define como \"muy graves\", y cita sub-artículos (140.22 y 140.35) cuyo contenido no aparece en el texto legal literal proporcionado.",
+    "estrato": "norma+texto"
+  },
+  "cap-609acb1aac78": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-60ca209ff436": {
+    "veredicto": "mala",
+    "motivo": "La explicación contradice la respuesta oficial del Ministerio al clasificar la infracción como \"muy grave\" en lugar de \"grave\".",
+    "estrato": "norma+texto"
+  },
+  "cap-618f0fecd8a7": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal aportado y todas sus afirmaciones son correctas y verificables en el Artículo 15 del RD 1032/2007.",
+    "estrato": "norma+texto"
+  },
+  "cap-62144b248239": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal aportado, no introduce información falsa ni cita normas no proporcionadas, y aclara por qué las otras opciones son incorrectas sin referirse a ellas por letra.",
+    "estrato": "norma+texto"
+  },
+  "cap-627df748c825": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación afirma que la definición es 'exactamente' como la normativa, pero omite una parte de la definición legal del 'tiempo diario de conducción' según el Artículo 4.k del Reglamento (CE) 561/2006.",
+    "estrato": "norma+texto"
+  },
+  "cap-6302c1044062": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, aclarando el ámbito de aplicación y sus exclusiones de manera precisa y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-642e51ba36d0": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación se basa en el RD 1299/2006 Anexo I para justificar la inclusión o exclusión de enfermedades, pero el texto legal literal proporcionado solo lista grupos generales y no el detalle de las enfermedades específicas.",
+    "estrato": "norma+texto"
+  },
+  "cap-650a357c1ad3": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, citando correctamente la norma y justificando la prohibición de remunerar por distancia si compromete la seguridad o fomenta infracciones.",
+    "estrato": "norma+texto"
+  },
+  "cap-652ec08d65d3": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y es útil para el alumno sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-653f9280e77d": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal aportado, no cita normas externas y justifica de forma coherente por qué las opciones se refieren a la protección de la totalidad del cuerpo.",
+    "estrato": "norma+texto"
+  },
+  "cap-65cb8fdf5fc7": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara las opciones incorrectas de manera útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-65df9be58a06": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma que el Reglamento Comunitario (UE) 165/2014 Anexo I, apartado IV, d, establece la obligación de anotar el kilometraje inicial y final en el disco, pero esta información no se encuentra en el texto legal literal proporcionado para dicha referencia.",
+    "estrato": "norma+texto"
+  },
+  "cap-668a310e0a36": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no induce a error ni cita información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-66d24e446cf2": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara los motivos de la inmovilización sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-688c89ef73ec": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y refuta correctamente una opción incorrecta sin citar normas externas ni inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-68a5fd8f6392": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara las funciones de los transitarios sin introducir errores ni citar información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-6923c6428845": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y aclara conceptos útiles para el alumno sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-699490a650b5": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa exclusivamente en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-6a09ed415d89": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, detallando las obligaciones del trabajador sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-6a47ec07432b": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara correctamente la irrelevancia de la distancia para esta exención específica.",
+    "estrato": "norma+texto"
+  },
+  "cap-6a59571b1993": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y se basa íntegramente en el texto legal proporcionado sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-6c32f3d1edde": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara las opciones incorrectas sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-6dbce9b88230": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación justifica la respuesta citando el Artículo 140.37 de la Ley 16/1987, pero el texto legal literal proporcionado está truncado y no incluye dicho punto, impidiendo verificar la afirmación.",
+    "estrato": "norma+texto"
+  },
+  "cap-6e07230b9fa0": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, precisa, no contradice el texto legal aportado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-6e1ebc98a109": {
+    "veredicto": "ok",
+    "motivo": "La explicación es precisa, se basa correctamente en el texto legal proporcionado y justifica la respuesta sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-6e3336418344": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no contiene errores ni referencias inaceptables.",
+    "estrato": "norma+texto"
+  },
+  "cap-6e88813d58c8": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y descarta las otras opciones de forma adecuada sin citar información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-6f1353ee6433": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no introduce información errónea o no proporcionada.",
+    "estrato": "norma+texto"
+  },
+  "cap-6f714c707461": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal aportado, no cita normas externas y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-6f96ad0637fd": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-7125b44bb553": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma que la normativa permite dividir los periodos en dos días consecutivos, pero esta flexibilidad no se menciona en el texto literal del RD 1032/2007 Art. 7.2 proporcionado.",
+    "estrato": "norma+texto"
+  },
+  "cap-7138129be9f0": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y aclara la exención sin introducir errores ni citar normas externas.",
+    "estrato": "norma+texto"
+  },
+  "cap-720ad3d6953f": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y refuta correctamente las opciones incorrectas sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-72ee61244a06": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y es útil para el alumno al aclarar por qué las otras opciones son incorrectas.",
+    "estrato": "norma+texto"
+  },
+  "cap-72f4b25773c8": {
+    "veredicto": "mala",
+    "motivo": "La explicación atribuye un contenido específico al Artículo 142.17 que no se encuentra en el texto legal literal proporcionado como única base.",
+    "estrato": "norma+texto"
+  },
+  "cap-7328ad20b6b3": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, aclarando la diferencia entre el máximo absoluto y la media semanal sin introducir errores.",
+    "estrato": "norma+texto"
+  },
+  "cap-74c49109ed34": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y justifica adecuadamente por qué otras opciones son incorrectas basándose en la normativa proporcionada.",
+    "estrato": "norma+texto"
+  },
+  "cap-75a4ba886060": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no contiene errores ni referencias inaceptables.",
+    "estrato": "norma+texto"
+  },
+  "cap-7605dc5fec81": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma incorrectamente que el Artículo 226 del Reglamento (UE) 952/2013 establece el régimen de tránsito interno, cuando dicho artículo se refiere exclusivamente al tránsito externo.",
+    "estrato": "norma+texto"
+  },
+  "cap-77f6c45ade66": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y se basa directamente en el texto legal proporcionado, identificando correctamente los sistemas de tránsito.",
+    "estrato": "norma+texto"
+  },
+  "cap-79557dc16903": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación afirma que el Reglamento Comunitario (UE) 165/2014 Anexos I y IB exige revisiones periódicas y calibraciones, pero el texto legal literal proporcionado de dichos anexos no detalla explícitamente esta exigencia.",
+    "estrato": "norma+texto"
+  },
+  "cap-7a72d93682cd": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación afirma que la gripe A no encaja en 'categorías específicas' del RD 1299/2006 Anexo I, pero el texto legal literal proporcionado solo lista los grupos, no las categorías específicas, lo que implica un conocimiento externo no dado.",
+    "estrato": "norma+texto"
+  },
+  "cap-7b9dab247ace": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara correctamente la condición de la prohibición sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-7c4e02ee008d": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no contiene errores ni referencias prohibidas.",
+    "estrato": "norma+texto"
+  },
+  "cap-7ca79a1bccea": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y es útil para el alumno sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-7d1a25563a75": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación es fiel a la respuesta correcta de la pregunta, pero ignora completamente el texto legal aportado por ser irrelevante para el tema de las agencias de transporte, lo que la hace incompleta en el contexto dado.",
+    "estrato": "norma+texto"
+  },
+  "cap-7d44c924b14a": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, detallando con precisión los diferentes periodos de depósito o precinto.",
+    "estrato": "norma+texto"
+  },
+  "cap-7d476f8c8c87": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y es útil para el alumno al aclarar por qué las otras opciones son incorrectas.",
+    "estrato": "norma+texto"
+  },
+  "cap-7da9c6391e94": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, sin errores ni referencias indebidas.",
+    "estrato": "norma+texto"
+  },
+  "cap-7e120d14a9b8": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y es clara y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-7e3310da6ca0": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y es clara y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-7ebe023d35d3": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y refuta las opciones incorrectas de manera precisa.",
+    "estrato": "norma+texto"
+  },
+  "cap-7ffcb20afb93": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, aclarando correctamente los roles de los agentes y la DGT sin introducir información externa o errónea.",
+    "estrato": "norma+texto"
+  },
+  "cap-806be979a7bc": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal, no cita normas externas y aclara correctamente por qué las otras opciones son incorrectas.",
+    "estrato": "norma+texto"
+  },
+  "cap-80c66f6fc92c": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-81416b042584": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel al texto legal y a la respuesta correcta, y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-8184e26d535e": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, identificando correctamente al propietario como el obligado principal sin citar información externa ni inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-821274cdfd16": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación añade detalles sobre los términos de integración de los vehículos (propiedad, arrendamiento financiero o arrendamiento ordinario) que no están explícitamente en el texto legal del Artículo 102 proporcionado, sino que son referenciados por un artículo (54.2) que no se ha facilitado.",
+    "estrato": "norma+texto"
+  },
+  "cap-8254270e93f2": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y es clara y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-826ec88dae1c": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no introduce información externa y aclara un posible error del alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-84f2e539bbe0": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal aportado, no cita normas no dadas y es precisa y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-852f23141efd": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya directamente en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-85810e641ea8": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y es útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-85ad59fbbe4a": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal aportado, sin citar normas no dadas ni inducir a error, y no se refiere a las opciones por su letra.",
+    "estrato": "norma+texto"
+  },
+  "cap-86a10db8c710": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa correctamente en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-87cd8297facf": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y aclara un punto clave sobre el cómputo del tiempo sin citar información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-88259999c015": {
+    "veredicto": "mala",
+    "motivo": "La explicación contradice la respuesta correcta indicada en la pregunta (2,5 toneladas) al afirmar que es incorrecta, aunque se alinea con el texto legal y la respuesta oficial del Ministerio (3,5 toneladas).",
+    "estrato": "norma+texto"
+  },
+  "cap-888422f863f6": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara los puntos clave sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-89bfe23b379a": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación afirma la obligación de los agentes de tráfico sin que el texto legal aportado (Art. 129 del RD 1428/2003) la establezca explícitamente, aunque sea correcta en un contexto más amplio.",
+    "estrato": "norma+texto"
+  },
+  "cap-8a6c54808274": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no contiene errores ni referencias inaceptables.",
+    "estrato": "norma+texto"
+  },
+  "cap-8ad8cb36d22a": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y es útil para el alumno al detallar las funciones del tacógrafo y justificar la exclusión de otras opciones.",
+    "estrato": "norma+texto"
+  },
+  "cap-8b440924f37c": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, afirma un hecho correcto sobre la duración de los discos de tacógrafo analógico y no contradice el texto legal aportado ni cita normas externas.",
+    "estrato": "norma+texto"
+  },
+  "cap-8c590b2abb31": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y refuta las opciones incorrectas sin citar elementos externos.",
+    "estrato": "norma+texto"
+  },
+  "cap-8ccf20c660b0": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, citando correctamente la norma y sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-8e6f4a5128f0": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal proporcionado, y no induce a error ni cita información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-8e9810d17187": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, aclarando correctamente la condición de entrada en vacío sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-8f075008e374": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación no aborda la discrepancia entre el período de 56 días mencionado en la pregunta y el período de 28 días establecido en el Reglamento Comunitario (UE) 165/2014 Art. 36.2, lo que la hace imprecisa e incompleta para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-8f38a81fbab5": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no introduce información errónea ni referencias no proporcionadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-8f391bb98e32": {
+    "veredicto": "mala",
+    "motivo": "La explicación cita incorrectamente el artículo 4.2.b del RD Legislativo 8/2004 para los daños a las personas, cuando la información correcta se encuentra en el artículo 4.2.a.",
+    "estrato": "norma+texto"
+  },
+  "cap-906bc789ceed": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y es clara y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-90727554e347": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación cita el Artículo 140.35 de la Ley 16/1987 y afirma su contenido, pero el texto literal de dicho artículo no se encuentra entre los datos legales proporcionados para su verificación.",
+    "estrato": "norma+texto"
+  },
+  "cap-90ebd2511f4c": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se justifica con el texto legal proporcionado y aclara correctamente la distinción de obligaciones.",
+    "estrato": "norma+texto"
+  },
+  "cap-91656139623c": {
+    "veredicto": "mala",
+    "motivo": "La explicación basa su justificación en un apartado del Reglamento Comunitario (UE) 165/2014 (Anexo I, apartado IV, d) cuyo texto literal no ha sido proporcionado, impidiendo su verificación con la única base legal permitida.",
+    "estrato": "norma+texto"
+  },
+  "cap-9243dbbf4c19": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal y aclara correctamente la irrelevancia del artículo citado por el Ministerio.",
+    "estrato": "norma+texto"
+  },
+  "cap-9265ff6cf72c": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-92f87f9ab662": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal, no cita normas externas y justifica adecuadamente la clasificación de los manguitos y mangas.",
+    "estrato": "norma+texto"
+  },
+  "cap-937a56fe663b": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-93ea84f3fcda": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-947e395043b8": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-94c0f5838d9a": {
+    "veredicto": "mala",
+    "motivo": "La explicación cita incorrectamente el Artículo 140.34, que no está presente en el texto legal proporcionado como única base, y la justificación de la infracción es una interpretación forzada.",
+    "estrato": "norma+texto"
+  },
+  "cap-95698b7dc2a0": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la normativa, no contradice el texto legal, no cita normas externas y aclara correctamente por qué las otras opciones son incorrectas.",
+    "estrato": "norma+texto"
+  },
+  "cap-95701d63d4fe": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en la normativa proporcionada y aclara las opciones incorrectas sin citarlas por letra.",
+    "estrato": "norma+texto"
+  },
+  "cap-95aaff7a296a": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y es clara y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-95add69e9189": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no introduce información externa y aclara puntos relevantes sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-95d24a557787": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no induce a error ni cita normas no proporcionadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-963bd3116872": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, proporciona información precisa sobre la función del tacógrafo y otros dispositivos, y no contradice el texto legal aportado.",
+    "estrato": "norma+texto"
+  },
+  "cap-963ec09d8c5a": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal, no cita normas no dadas y es útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-977323ef4aca": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara correctamente los criterios de estacionamiento habitual.",
+    "estrato": "norma+texto"
+  },
+  "cap-9816e2b8c488": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, refuta correctamente las opciones incorrectas sin introducir errores ni citar normas no proporcionadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-982b378407e6": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal proporcionado, sin introducir errores ni citar información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-993974ac41a3": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no introduce información errónea ni citas no proporcionadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-99648c098efb": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara por qué una opción distractora no es válida sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-9ab15ed82324": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal, no cita normas externas y aclara correctamente el carácter personal del disco-diagrama.",
+    "estrato": "norma+texto"
+  },
+  "cap-9ad57d29ceb8": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación utiliza 'zona más interior' en lugar de 'zona más céntrica', que es el término exacto de la respuesta oficial del Ministerio, lo que la hace imprecisa.",
+    "estrato": "norma+texto"
+  },
+  "cap-9af7bcfbaeee": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal proporcionado, y no contiene errores, contradicciones ni referencias no citadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-9b076ced039c": {
+    "veredicto": "mala",
+    "motivo": "La explicación atribuye incorrectamente el \"falseamiento de documentos de control\" al Artículo 140.22 de la Ley 16/1987, cuando el texto legal proporcionado para dicho artículo se refiere a la negativa u obstrucción a la actuación de los Servicios de Inspección, y el falseamiento de documentos de control se encuentra en el Artículo 140.9.",
+    "estrato": "norma+texto"
+  },
+  "cap-9bb3ef5d6547": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, aclarando además por qué las otras opciones no son aplicables en este escenario de conflicto de competencias.",
+    "estrato": "norma+texto"
+  },
+  "cap-9bdc6fc477db": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, aclarando correctamente los plazos obligatorios para el volcado de datos de las tarjetas de conductor.",
+    "estrato": "norma+texto"
+  },
+  "cap-9c48c7479f88": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa exclusivamente en el texto legal proporcionado y aclara las responsabilidades de manera precisa y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-9c6bab7991a9": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no induce a error y no cita normas no proporcionadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-9cdde14e3dd6": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara las opciones incorrectas sin citarlas por letra.",
+    "estrato": "norma+texto"
+  },
+  "cap-9cf147395e79": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no induce a error y aclara el rol de los órganos competentes sin citar normas externas ni opciones por letra.",
+    "estrato": "norma+texto"
+  },
+  "cap-9d4b9983e4ca": {
+    "veredicto": "dudosa",
+    "motivo": "Aunque la explicación es factualmente correcta y fiel a la respuesta, el texto legal aportado (Reglamento Comunitario (UE) 165/2014 Art. 13) es insuficiente para justificar las afirmaciones sobre los tipos de tacógrafos y sus consumibles, lo que la hace incompleta en su fundamentación legal.",
+    "estrato": "norma+texto"
+  },
+  "cap-9d971a9480c9": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y proporciona una justificación útil sin errores.",
+    "estrato": "norma+texto"
+  },
+  "cap-9daf9e6cfe01": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación usa 'asegurado' para definir quién paga la prima, pero luego cita la ley que especifica que el 'tomador' es quien está obligado al pago, sin aclarar la relación o distinción entre ambas figuras, lo que puede generar imprecisión.",
+    "estrato": "norma+texto"
+  },
+  "cap-9dbcbfe83845": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y no introduce información externa ni induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-9e0bc7fc8829": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa correctamente en el texto legal proporcionado y aclara por qué una opción incorrecta no es válida.",
+    "estrato": "norma+texto"
+  },
+  "cap-9e969afc5674": {
+    "veredicto": "mala",
+    "motivo": "La explicación se refiere directamente a una de las opciones de la pregunta, lo cual es inaceptable.",
+    "estrato": "norma+texto"
+  },
+  "cap-9f1cd71ccb7f": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma que el Reglamento Comunitario (CE) 1/2005 Anexo I establece la separación de animales con y sin cuernos, pero esta disposición no se encuentra en el texto legal literal proporcionado.",
+    "estrato": "norma+texto"
+  },
+  "cap-9fae3139c910": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación afirma la respuesta correcta y descarta las incorrectas, pero la necesidad de la autorización administrativa no se justifica con el texto legal del Artículo 41 del RD 1211/1990 que se proporciona, lo que la hace incompleta en su fundamentación.",
+    "estrato": "norma+texto"
+  },
+  "cap-9fc0d112b5b3": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara una opción incorrecta sin introducir información falsa o citar normas no dadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-a0998a7f5f9e": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y justifica de forma clara por qué la semana se contabiliza de lunes a domingo.",
+    "estrato": "norma+texto"
+  },
+  "cap-a09e38b3eede": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y es clara y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-a1ab3e86010c": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación se basa en una sección de la normativa (3.3) que no está incluida en el texto legal proporcionado, impidiendo verificar su afirmación.",
+    "estrato": "norma+texto"
+  },
+  "cap-a1bd34fffb0c": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara de forma útil por qué otras opciones no son válidas sin citar información externa ni inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-a20b8bf99449": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación es correcta y útil, pero la afirmación principal sobre la marca de homologación en las hojas de registro no está explícitamente contenida en el texto legal literal proporcionado, que es la única base legal permitida.",
+    "estrato": "norma+texto"
+  },
+  "cap-a3c9047d8cb4": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no introduce información externa y es clara para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-a42ec9bb4471": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación omite la salvedad del texto legal sobre la obligatoriedad de satisfacer los gastos generados por la práctica de pruebas, lo que la hace imprecisa.",
+    "estrato": "norma+texto"
+  },
+  "cap-a46d2c680bc6": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal aportado, no contradice ninguna norma ni induce a error, y aclara correctamente las responsabilidades.",
+    "estrato": "norma+texto"
+  },
+  "cap-a475f10b9cbd": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y es útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-a5772e347f41": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y aclara por qué las otras opciones no son correctas sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-a59929de4ddf": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y es clara y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-a5bf04d37ba2": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y aclara por qué otras opciones son incorrectas sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-a67061defef1": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, aclara la distinción entre descansos diarios normales y reducidos, y no contradice la normativa aportada.",
+    "estrato": "norma+texto"
+  },
+  "cap-a680cf1b85b9": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal aportado, no induce a error y no cita normas no dadas ni se refiere a opciones por su letra.",
+    "estrato": "norma+texto"
+  },
+  "cap-a6c8d6c6bd9f": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, aclarando los requisitos y desmintiendo las opciones incorrectas de forma precisa y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-a7b4e6fefaaa": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal aportado, sin introducir errores ni citar normas externas.",
+    "estrato": "norma+texto"
+  },
+  "cap-a800e271270f": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma incorrectamente que el plazo de 5 días se refiere a las alegaciones de la parte reclamada cuando el texto legal indica 10 días para ese fin.",
+    "estrato": "norma+texto"
+  },
+  "cap-a821d6f4de25": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-a82b9d88eae2": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara correctamente las condiciones de distancia sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-a82bb9cca445": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal proporcionado, identificando correctamente los tres supuestos que obligan a la descarga de datos de la tarjeta del conductor.",
+    "estrato": "norma+texto"
+  },
+  "cap-ab199f582c5c": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, cita correctamente la base legal proporcionada y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-ab45807591fb": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-abaf39f16695": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado sin contradicciones ni citas externas, y refuta una opción incorrecta de manera precisa.",
+    "estrato": "norma+texto"
+  },
+  "cap-abdd12ba62d7": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya directamente en el texto legal proporcionado y no contiene errores ni referencias indebidas.",
+    "estrato": "norma+texto"
+  },
+  "cap-ac7b6d252536": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-af11170b2273": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no induce a error y es clara para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-af40406bdda6": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma falsamente que el cuentarrevoluciones no es un elemento obligatorio del tacógrafo analógico, lo cual contradice el texto legal que lo incluye como dispositivo indicador obligatorio.",
+    "estrato": "norma+texto"
+  },
+  "cap-af724549d0af": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-b08b3fdda5b0": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara de forma precisa por qué las otras opciones son incorrectas sin citar normas externas ni inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-b0cdef46f5c8": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-b10125b9989d": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, cita correctamente la norma legal proporcionada y no introduce información falsa ni externa, aclarando además por qué las otras opciones son incorrectas.",
+    "estrato": "norma+texto"
+  },
+  "cap-b17fea922cae": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no induce a error ni cita información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-b1c335a0662d": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y refuta una opción incorrecta sin citar letras.",
+    "estrato": "norma+texto"
+  },
+  "cap-b20a6232d69b": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y refuta adecuadamente las opciones incorrectas sin citar información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-b25ccdf3f224": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y aclara correctamente por qué las otras opciones son incorrectas.",
+    "estrato": "norma+texto"
+  },
+  "cap-b2a07b41e5e4": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación afirma que las pinzas están prohibidas por la normativa, pero el texto legal proporcionado (Art. 116 del RD 1428/2003) no menciona ni prohíbe explícitamente el uso de pinzas en el cinturón de seguridad.",
+    "estrato": "norma+texto"
+  },
+  "cap-b3ab19e8ccf1": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no induce a error y no cita normas no proporcionadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-b3ec24f586a9": {
+    "veredicto": "ok",
+    "motivo": "La explicación es precisa, se basa fielmente en el texto legal proporcionado y la respuesta correcta, y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-b3f3efe33469": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-b4624f635026": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y se basa directamente en el texto legal proporcionado, sin contradicciones ni errores.",
+    "estrato": "norma+texto"
+  },
+  "cap-b497ba112845": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, aclarando adecuadamente la obligación del conductor sin introducir errores.",
+    "estrato": "norma+texto"
+  },
+  "cap-b49eacc80457": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y aclara por qué otras opciones son incorrectas sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-b544586b711e": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado (Artículo 12, apartado 6 del Reglamento Comunitario (UE) 165/2014) y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-b5a1a3c63205": {
+    "veredicto": "mala",
+    "motivo": "La explicación atribuye la regla de fraccionamiento de la pausa al texto legal del Artículo 8 proporcionado, el cual no contiene dicha información.",
+    "estrato": "norma+texto"
+  },
+  "cap-b630d86fda96": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y es clara y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-b6d750f41e22": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y descarta las otras opciones de forma adecuada.",
+    "estrato": "norma+texto"
+  },
+  "cap-b709d97b1926": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación introduce un límite de 56 horas semanales no presente en el texto legal aportado y el artículo citado (141.24) se refiere a la falta de consignación de datos, no al exceso de horas de conducción.",
+    "estrato": "norma+texto"
+  },
+  "cap-b7404b1090f0": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara una posible confusión entre tasas en sangre y aire espirado sin citar información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-b78dd4509e19": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y distingue correctamente el tiempo de trabajo efectivo del tiempo de presencia.",
+    "estrato": "norma+texto"
+  },
+  "cap-b7c7645c79f7": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-b85198c15a09": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara de forma útil por qué las otras opciones son incorrectas.",
+    "estrato": "norma+texto"
+  },
+  "cap-b8a46f2d9e4f": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no induce a error y proporciona contexto útil sin citar normas externas.",
+    "estrato": "norma+texto"
+  },
+  "cap-b90598952151": {
+    "veredicto": "ok",
+    "motivo": "La explicación es correcta, se basa en el artículo 6.2 del Reglamento Comunitario (CE) 561/2006, que está incluido en el texto legal proporcionado, y llega a la respuesta correcta de forma clara y precisa.",
+    "estrato": "norma+texto"
+  },
+  "cap-bafcdf730469": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal aportado, no contradice ninguna norma ni induce a error, y no se refiere a opciones por su letra.",
+    "estrato": "norma+texto"
+  },
+  "cap-bb0bf73a9173": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y aclara los puntos clave sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-bb9f07347ed0": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y aclara por qué las otras opciones son incorrectas sin citar información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-bbf0d450eed9": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, proporciona un razonamiento lógico y no contiene afirmaciones falsas ni referencias a opciones por letra.",
+    "estrato": "norma+texto"
+  },
+  "cap-bc49dc9d2f55": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara las opciones incorrectas sin referirse a ellas por letra.",
+    "estrato": "norma+texto"
+  },
+  "cap-bc6d7798cde9": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya correctamente en el texto legal proporcionado y refuta las opciones incorrectas de manera precisa.",
+    "estrato": "norma+texto"
+  },
+  "cap-bcce5fe965d1": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, detallando correctamente las formas que puede adoptar la declaración previa a la salida.",
+    "estrato": "norma+texto"
+  },
+  "cap-bcf8516d8a5e": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y aclara un posible punto de confusión sin introducir errores.",
+    "estrato": "norma+texto"
+  },
+  "cap-bd83488b6f40": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y refuta correctamente las opciones incorrectas sin citar normas no dadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-bd9de2e296e4": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado sin contradecirlo ni citar normas externas, y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-be0076c949de": {
+    "veredicto": "mala",
+    "motivo": "La explicación atribuye una regla específica (minoración en más del 50% de los descansos) al Art. 140.37 que no aparece en el texto legal proporcionado y, además, realiza un cálculo incorrecto al afirmar que el descanso se ha reducido en más del 50%.",
+    "estrato": "norma+texto"
+  },
+  "cap-be4f659bed6d": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal proporcionado, y aclara por qué las otras opciones son incorrectas sin introducir información falsa o no citada.",
+    "estrato": "norma+texto"
+  },
+  "cap-be8cb3d19c3d": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y refuta las opciones incorrectas de forma precisa y sin citar normas no proporcionadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-be8d5ca52120": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya correctamente en el texto legal proporcionado y es útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-beabe8c1b43e": {
+    "veredicto": "mala",
+    "motivo": "La explicación justifica la exención con razones no contenidas en el Artículo 41 del RD 1211/1990, la única base legal proporcionada.",
+    "estrato": "norma+texto"
+  },
+  "cap-bf5d2e7de24d": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y no induce a error ni cita normas no dadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-bfdd1f3f1ebd": {
+    "veredicto": "mala",
+    "motivo": "La explicación atribuye una afirmación legal específica al Artículo 140.22 de la Ley 16/1987, pero el texto literal de dicho artículo no se encuentra en la \"única base legal\" proporcionada para su verificación.",
+    "estrato": "norma+texto"
+  },
+  "cap-c1d57c484ff0": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y aclara por qué una opción incorrecta no es válida sin citar información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-c259060519c0": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, aportando aclaraciones útiles sin introducir errores ni citar información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-c28ece5ddf5f": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y aclara los criterios de exclusión de las opciones incorrectas sin introducir información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-c32b7acc439a": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación es correcta en su contenido, pero no se apoya en el texto legal proporcionado, el cual es irrelevante para la pregunta y no justifica la afirmación.",
+    "estrato": "norma+texto"
+  },
+  "cap-c32eb1385ffa": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación afirma que la normativa establece que el tiempo de trabajo abarca todas las actividades laborales independientemente de para cuántos empleadores se realicen, pero esta afirmación específica no se encuentra explícitamente en el Artículo 10 del RD 1561/1995 proporcionado.",
+    "estrato": "norma+texto"
+  },
+  "cap-c3be27cde567": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, proporciona un razonamiento útil y no presenta errores ni contradicciones con el texto legal disponible.",
+    "estrato": "norma+texto"
+  },
+  "cap-c3f578780e94": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y descarta correctamente las opciones incorrectas sin citar elementos externos ni usar letras para las opciones.",
+    "estrato": "norma+texto"
+  },
+  "cap-c4144d6b6eab": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya directamente en el texto legal proporcionado y aclara un posible error sin introducir información falsa.",
+    "estrato": "norma+texto"
+  },
+  "cap-c465eafd0137": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa correctamente en el texto legal proporcionado y aclara por qué cada tipo de sociedad es admisible.",
+    "estrato": "norma+texto"
+  },
+  "cap-c492edf65762": {
+    "veredicto": "mala",
+    "motivo": "La explicación atribuye incorrectamente a la sección III.c del Reglamento la obligación de tener dispositivos de registro para distancia, velocidad y apertura de caja, cuando esta información se encuentra en la sección III.a.",
+    "estrato": "norma+texto"
+  },
+  "cap-c56769a039e2": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación es fiel a la respuesta correcta, pero su justificación legal no puede ser verificada con el texto legal aportado, que está truncado y no incluye el apartado relevante.",
+    "estrato": "norma+texto"
+  },
+  "cap-c56b967eeeec": {
+    "veredicto": "mala",
+    "motivo": "La explicación atribuye incorrectamente la base legal al citar el apartado III, c.4 para una afirmación que se encuentra en el apartado II del mismo anexo en el texto legal proporcionado.",
+    "estrato": "norma+texto"
+  },
+  "cap-c6a0e0f538af": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y ofrece información adicional útil y veraz para el alumno sin citar normas no dadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-c6cc73e553a2": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y es útil para el alumno al aclarar las opciones incorrectas.",
+    "estrato": "norma+texto"
+  },
+  "cap-c793524cb806": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara por qué las otras opciones no son válidas sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-c7fbda83c124": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado sin contradecirlo ni citar fuentes externas, y refuta las opciones incorrectas de manera precisa.",
+    "estrato": "norma+texto"
+  },
+  "cap-c85d5ec8402c": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma que el Reglamento Comunitario (UE) 165/2014 Anexo I, apartado IV, c, establece la obligatoriedad de los datos del fabricante, pero el texto legal literal proporcionado para dicho apartado no contiene esa información.",
+    "estrato": "norma+texto"
+  },
+  "cap-c8c94554e518": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y se basa directamente en el texto legal proporcionado sin introducir información externa ni errores.",
+    "estrato": "norma+texto"
+  },
+  "cap-c933c9380214": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y distingue adecuadamente las opciones sin contradecir el texto legal ni citar normas externas.",
+    "estrato": "norma+texto"
+  },
+  "cap-c96e0167777c": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y es clara y útil para el alumno sin citar información externa ni inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-ca23b43aa58f": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, justifica adecuadamente la prioridad de la acción y se apoya correctamente en el texto legal proporcionado sin contradecirlo ni introducir información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-caf94783fd0c": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y no introduce información falsa o ajena.",
+    "estrato": "norma+texto"
+  },
+  "cap-cbb6a6586ff0": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-ccea11a5985d": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y añade información útil y precisa del mismo texto legal sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-cd21f11cb829": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación es imprecisa al describir la condición de los 30 kilómetros de recorrido, ya que la ley establece una limitación general de 30 km de ida, salvo si es en el mismo sentido de la marcha, donde no hay limitación.",
+    "estrato": "norma+texto"
+  },
+  "cap-ce963301dc5a": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara el concepto de capacidad de tracción propia sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-d0129167cd03": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma falsamente que la ley establece un mínimo fijo para las infracciones muy graves y que la sanción no depende del número de viajeros, cuando el texto legal muestra excepciones donde sí puede depender del número de viajeros.",
+    "estrato": "norma+texto"
+  },
+  "cap-d02b4551b2da": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se ajusta al texto legal proporcionado, no cita normas externas y aclara correctamente el ámbito de exclusión del seguro obligatorio.",
+    "estrato": "norma+texto"
+  },
+  "cap-d0d19154b1f9": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal aportado, no cita normas externas y sus afirmaciones son correctas y útiles para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-d13c55b5fada": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara adecuadamente el ámbito de competencia de las Juntas Arbitrales del Transporte.",
+    "estrato": "norma+texto"
+  },
+  "cap-d196307b5d08": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no induce a error ni cita información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-d25d1e24674b": {
+    "veredicto": "mala",
+    "motivo": "La explicación es falsa porque afirma que todas las opciones son correctas, lo cual contradice directamente la respuesta oficial del Ministerio que indica que todas son incorrectas.",
+    "estrato": "norma+texto"
+  },
+  "cap-d280f3b0d68e": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y aclara las opciones incorrectas sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-d47ad834a356": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, aclarando correctamente el límite máximo de conducción diaria y la diferencia con el tiempo estándar.",
+    "estrato": "norma+texto"
+  },
+  "cap-d4a9f9703087": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal y aclara correctamente la irrelevancia del artículo citado por el Ministerio.",
+    "estrato": "norma+texto"
+  },
+  "cap-d4fc9f7db983": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y está completamente respaldada por el texto legal proporcionado, sin introducir información externa ni contradicciones.",
+    "estrato": "norma+texto"
+  },
+  "cap-d58c33fe23b7": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación basa su justificación legal en un apartado del reglamento cuyo texto literal no ha sido proporcionado, lo que impide su verificación.",
+    "estrato": "norma+texto"
+  },
+  "cap-d5aaa2df8589": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no induce a error y aclara el límite de tiempo de conducción.",
+    "estrato": "norma+texto"
+  },
+  "cap-d63b1f328053": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-d683385733e3": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y es clara y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-d6be1026790c": {
+    "veredicto": "mala",
+    "motivo": "La explicación introduce cantidades específicas de capacidad financiera (9.000 y 5.000 euros) que no se mencionan en el texto legal literal del Artículo 43 de la Ley 16/1987 proporcionado.",
+    "estrato": "norma+texto"
+  },
+  "cap-d6f8b7ca9919": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma falsamente que una de las opciones correctas, que describe mercancías de la Unión según el artículo 5(23)(b) del Reglamento (UE) 952/2013, es incorrecta.",
+    "estrato": "norma+texto"
+  },
+  "cap-d76d5983f850": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma que las enfermedades profesionales deben tener una alta ocurrencia, lo cual no se menciona en la definición legal proporcionada en los artículos 157 y 316 del RD Legislativo 8/2015.",
+    "estrato": "norma+texto"
+  },
+  "cap-d7a2f93f7f88": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara el concepto sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-d7dfa083fcda": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma falsamente que la función de los cascos se detalla en el Anexo I del RD 773/1997, cuando el texto legal aportado no contiene dicha información.",
+    "estrato": "norma+texto"
+  },
+  "cap-d8e78efc1bd6": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y aclara por qué las otras opciones son incorrectas sin citar normas no dadas ni inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-dc73a79138f8": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación es fiel al texto legal al referirse al 'descanso diario normal', pero no aborda la discrepancia con la pregunta que menciona el 'descanso semanal reducido', lo que puede generar confusión al alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-ddb55feb8692": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y realiza un cálculo exacto sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-ded98e20675e": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-df2e81a91e07": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, identificando correctamente la condición de inmovilización para un exceso de conducción leve.",
+    "estrato": "norma+texto"
+  },
+  "cap-df6d8aced57c": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal proporcionado, sin citar normas externas ni inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-df8900079eae": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-df8efef17ac2": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no introduce información externa ni induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-df903e5df81a": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y aclara por qué las otras opciones son incorrectas sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-e0652fea6182": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación afirma que el Reglamento Comunitario (UE) 165/2014 Anexo I, apartado III, c, establece cómo se registran los datos de forma que la línea sea quebrada, pero el texto legal proporcionado no describe la apariencia visual de la línea ni justifica la naturaleza 'discontinua' del registro que llevaría a una línea quebrada.",
+    "estrato": "norma+texto"
+  },
+  "cap-e0e25c1026ab": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no contiene errores ni referencias no autorizadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-e19d03570e13": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, sus afirmaciones son precisas y están respaldadas por el texto legal proporcionado, sin citar normas externas ni inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-e1b2563f9bc9": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y está bien fundamentada en el texto legal proporcionado, sin introducir errores ni citas externas.",
+    "estrato": "norma+texto"
+  },
+  "cap-e1cbabc05f7f": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y no induce a error, además de no citar normas no dadas ni referirse a opciones por su letra.",
+    "estrato": "norma+texto"
+  },
+  "cap-e2631b171336": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara los puntos clave sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-e26a0b52270d": {
+    "veredicto": "mala",
+    "motivo": "La explicación atribuye permisos y prohibiciones específicas al Anexo I del Reglamento (CE) 1/1/2005 que no aparecen en el texto legal literal proporcionado.",
+    "estrato": "norma+texto"
+  },
+  "cap-e2cb5f85d134": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma que el Reglamento Comunitario (UE) 165/2014 Anexo I, apartado IV, a.2 establece la capacidad de 24 horas, pero el texto legal literal proporcionado para esa referencia no contiene dicha información.",
+    "estrato": "norma+texto"
+  },
+  "cap-e356285d136d": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no contiene errores ni referencias inaceptables.",
+    "estrato": "norma+texto"
+  },
+  "cap-e3e0ab922a05": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal aportado sin contradecirlo ni citar normas externas, y aclara un punto relevante sobre las cooperativas de trabajo asociado sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-e3ed8e1e4d64": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal proporcionado, no contiene errores ni referencias no autorizadas, y es clara y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-e436edfb34ae": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación afirma el contenido del Artículo 140.20 de la Ley 16/1987, pero dicho artículo no se encuentra en el texto legal literal proporcionado, impidiendo la verificación de su fidelidad.",
+    "estrato": "norma+texto"
+  },
+  "cap-e4c725666469": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, detallando correctamente los requisitos de identificación y firma sin introducir errores ni información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-e4f63892c2e5": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma el contenido del Artículo 140.22 de la Ley 16/1987, pero dicho texto legal no se ha proporcionado en su totalidad, impidiendo la verificación de la afirmación.",
+    "estrato": "norma+texto"
+  },
+  "cap-e53b499d3fd3": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal proporcionado, sin introducir errores ni información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-e5b9731738a9": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y se basa correctamente en el Artículo 2.o del RD 640/2007, cuyo texto está incluido en los datos legales proporcionados.",
+    "estrato": "norma+texto"
+  },
+  "cap-e5cbc3a7ef01": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara el plazo de compensación sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-e77d6a13d097": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara los puntos clave sin errores ni citas externas.",
+    "estrato": "norma+texto"
+  },
+  "cap-e7886d9917d5": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no induce a error, y aclara el motivo de la excepción sin citar normas no proporcionadas ni referirse a opciones por su letra.",
+    "estrato": "norma+texto"
+  },
+  "cap-e7e0921f765d": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara las obligaciones del empleador sin inducir a error ni citar normas externas.",
+    "estrato": "norma+texto"
+  },
+  "cap-e8000eee47b2": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara por qué las otras opciones son incorrectas sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-e90fbfce266d": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no induce a error ni cita normas no proporcionadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-e95d13459174": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y es útil para el alumno al aclarar el alcance de la obligación.",
+    "estrato": "norma+texto"
+  },
+  "cap-ea20b2ffac94": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-ea9951c819dc": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara un posible punto de confusión sin introducir errores.",
+    "estrato": "norma+texto"
+  },
+  "cap-eb7bd87ac238": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa correctamente en el texto legal proporcionado y justifica adecuadamente el veredicto.",
+    "estrato": "norma+texto"
+  },
+  "cap-ebb1f6014eb8": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y no induce a error, aunque simplifica ligeramente una de las condiciones del artículo 102.2.a.",
+    "estrato": "norma+texto"
+  },
+  "cap-ebb51d2bd4f4": {
+    "veredicto": "mala",
+    "motivo": "La explicación basa su afirmación principal en el contenido del punto 10.3 del Anexo de la OM FOM/1882/2012, cuyo texto literal no ha sido proporcionado para su verificación.",
+    "estrato": "norma+texto"
+  },
+  "cap-ec6eba08c3c4": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, no induce a error y es útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-ecdef4bd2691": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación afirma que la normativa establece un control cada dos años, pero esta afirmación no puede ser verificada con el texto legal literal proporcionado, ya que está truncado y no incluye los apartados relevantes (VI, 3 y VI, 4).",
+    "estrato": "norma+texto"
+  },
+  "cap-ecdf6d1ea46f": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal proporcionado, aclarando por qué las otras opciones son incorrectas sin citar normas no dadas ni inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-ece5194ff6d9": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y es útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-edf7c74ec55d": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación es imprecisa al afirmar que a partir de la tercera hora de espera de carga o descarga se considera tiempo de trabajo efectivo si la duración es previsible, ya que omite la salvedad de que esto puede variar según convenios colectivos si se conoce de antemano su duración previsible, según el Art. 10.4.c del RD 1561/1995.",
+    "estrato": "norma+texto"
+  },
+  "cap-eecc2ae035c2": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-eeff6a9611e2": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma que el conductor puede acceder a sus propios datos en cualquier momento, lo cual no está respaldado por el Artículo 4.5 del Reglamento (UE) 165/2014, que solo concede explícitamente este acceso en cualquier momento a las autoridades de control y a la empresa de transporte.",
+    "estrato": "norma+texto"
+  },
+  "cap-ef2ebb72b869": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado sin contradecirlo ni citar normas externas, y diferencia correctamente las opciones sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-ef61fc9c9776": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no contiene errores ni referencias indebidas.",
+    "estrato": "norma+texto"
+  },
+  "cap-ef93f5ba5b1b": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma un hecho que no está contenido ni es derivable del texto legal aportado (RD 1211/1990 Art. 41), el cual es completamente irrelevante para la pregunta y la respuesta.",
+    "estrato": "norma+texto"
+  },
+  "cap-efabf8f6b340": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y no introduce información falsa o ajena.",
+    "estrato": "norma+texto"
+  },
+  "cap-efea0522f102": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa directamente en el texto legal proporcionado y no induce a error ni cita normas no dadas.",
+    "estrato": "norma+texto"
+  },
+  "cap-f006079835e7": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal aportado, no cita normas externas y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-f0f573b96112": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, citando correctamente la norma y sin inducir a error ni referirse a opciones por su letra.",
+    "estrato": "norma+texto"
+  },
+  "cap-f1e6a897073b": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara las opciones de manera precisa sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-f3814f3e366f": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la normativa y a la respuesta correcta, y aclara las opciones incorrectas sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-f4bb4d8d9b8f": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, aclara los requisitos sin contradecir la normativa aportada ni inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-f513315c14ee": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa correctamente en el texto legal proporcionado y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-f5331199d478": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara los puntos clave sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-f64ee2d77c3f": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, detallando correctamente las exenciones al uso del tacógrafo.",
+    "estrato": "norma+texto"
+  },
+  "cap-f6bd36db855f": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara por qué las otras opciones son incorrectas sin introducir información falsa o no proporcionada.",
+    "estrato": "norma+texto"
+  },
+  "cap-f7359b87c127": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, cita correctamente la norma proporcionada y aclara los criterios sin introducir errores.",
+    "estrato": "norma+texto"
+  },
+  "cap-f7b1feb0bbd7": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara las opciones incorrectas sin citar información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-f956b06318b6": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no contiene errores ni citas externas.",
+    "estrato": "norma+texto"
+  },
+  "cap-f95a39638409": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y es clara y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-fa07bf627789": {
+    "veredicto": "ok",
+    "motivo": "La explicación es precisa, se basa directamente en el artículo legal proporcionado y aclara correctamente la respuesta y las opciones incorrectas sin citar información externa.",
+    "estrato": "norma+texto"
+  },
+  "cap-fa54f65a46f6": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara los motivos de retirada sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-fa68d2d2e2ba": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma incorrectamente que diez años es el periodo de vigencia del permiso de conducir para las categorías profesionales, lo cual es falso en el contexto de conductores profesionales.",
+    "estrato": "norma+texto"
+  },
+  "cap-faf2da2a8034": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, aclarando la responsabilidad del transportista y refutando las opciones incorrectas sin citar normas externas ni inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-fb203b7b553f": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y es clara y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-fb415de58d53": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya correctamente en el texto legal proporcionado y ofrece una aclaración útil sobre las sociedades anónimas.",
+    "estrato": "norma+texto"
+  },
+  "cap-fba4db3f3dcf": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara un concepto relacionado sin citar normas externas ni inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-fbd33fe9bcf7": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y es clara y útil para el alumno sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-fc42e013dfe3": {
+    "veredicto": "dudosa",
+    "motivo": "La explicación justifica la respuesta basándose en que el RD 1299/2006 Anexo I incluye enfermedades por agentes físicos y que el ruido es un agente físico, pero el texto legal literal proporcionado no especifica que la sordera por ruido esté explícitamente reconocida bajo ese grupo.",
+    "estrato": "norma+texto"
+  },
+  "cap-fcb2de060704": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la definición legal de descanso y aclara correctamente sus implicaciones sin introducir errores.",
+    "estrato": "norma+texto"
+  },
+  "cap-fd25adc979d4": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y no introduce información externa ni errores.",
+    "estrato": "norma+texto"
+  },
+  "cap-fdb4dabc4c45": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y justifica la necesidad de llevar papel para impresión basándose en la interpretación correcta del artículo 36.2 del Reglamento (UE) 165/2014, que exige la posibilidad de presentar documentos impresos. Además, descarta correctamente las otras opciones.",
+    "estrato": "norma+texto"
+  },
+  "cap-fe134ef86a95": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y aclara por qué las otras opciones no son correctas sin introducir errores ni citar normas externas.",
+    "estrato": "norma+texto"
+  },
+  "cap-ff05b4562c1a": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, no contradice el texto legal aportado, no cita normas externas y es clara y útil para el alumno.",
+    "estrato": "norma+texto"
+  },
+  "cap-ff7a8ce72e7d": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya correctamente en el texto legal proporcionado y no contiene errores ni referencias inaceptables.",
+    "estrato": "norma+texto"
+  },
+  "cap-1ed78e8a9caa": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa íntegramente en el texto legal proporcionado y aclara correctamente las condiciones de la compensación del descanso semanal reducido.",
+    "estrato": "norma+texto"
+  },
+  "cap-2f2596e9ab17": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y es útil para el alumno al aclarar las opciones sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-4f3802f71c67": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y aclara adecuadamente las excepciones y otras posibles sanciones.",
+    "estrato": "norma+texto"
+  },
+  "cap-504eb9629415": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-534d9aa16af5": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se apoya en el texto legal proporcionado y aclara adecuadamente la flexibilidad que los estatutos ofrecen para la convocatoria de la junta general.",
+    "estrato": "norma+texto"
+  },
+  "cap-5ddd7d1d0ed9": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, y no contiene errores ni referencias inaceptables.",
+    "estrato": "norma+texto"
+  },
+  "cap-66929bf2b145": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y al texto legal, identificando correctamente la regla general y las dos excepciones mencionadas en el artículo 6.",
+    "estrato": "norma+texto"
+  },
+  "cap-81d3c8dda610": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta y complementa la información con un detalle relevante del texto legal proporcionado, sin contradecirlo ni inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-97836fac8156": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, cita correctamente la norma y aclara de forma útil por qué solo el MRN es necesario, sin contradecir el texto legal.",
+    "estrato": "norma+texto"
+  },
+  "cap-a5de095a5b1f": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa en el texto legal proporcionado y aclara por qué otras opciones no son aplicables en este contexto específico sin inducir a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-ada431542389": {
+    "veredicto": "ok",
+    "motivo": "La explicación identifica correctamente la infracción como muy grave según el Artículo 54.2.c) y aplica el rango de sanción correspondiente de 10.001 a 100.000 euros del Artículo 55.1.c) de la Ley Orgánica 4/2000, llegando a la respuesta correcta y aclarando por qué otras opciones son incorrectas para este caso.",
+    "estrato": "norma+texto"
+  },
+  "cap-d2c095ef643e": {
+    "veredicto": "ok",
+    "motivo": "La explicación es fiel a la respuesta correcta, se basa exclusivamente en los artículos 18 y 19 de la Ley 31/1995 proporcionados y no induce a error.",
+    "estrato": "norma+texto"
+  },
+  "cap-d5b2a3059def": {
+    "veredicto": "mala",
+    "motivo": "La explicación afirma que la OM INT/2223/2014 Anexo II, A) 1 establece los daños materiales como criterio para un accidente de tráfico, lo cual contradice el texto legal literal de dicho punto que solo menciona personas fallecidas o heridas.",
+    "estrato": "norma+texto"
+  }
+}

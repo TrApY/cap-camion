@@ -414,5 +414,21 @@
     "bytes": 43837,
     "content_type": "application/xml",
     "origen": "boe-texto:OM INT/2223/2014"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada?query=%7B%22query%22%3A%7B%22query_string%22%3A%7B%22query%22%3A%22numero_oficial%3A%5C%22284%2F2021%5C%22%22%7D%7D%7D&limit=50": {
+    "archivo": "boe/busqueda__RD_284_2021.json",
+    "fecha": "2026-07-24T22:17:54+00:00",
+    "sha256": "41abe55807892aa47185297d6452d900dfb48384a5703cf1ccded84382ccb521",
+    "bytes": 1614,
+    "content_type": "application/json",
+    "origen": "boe-busqueda:RD 284/2021"
+  },
+  "https://www.boe.es/datosabiertos/api/legislacion-consolidada/id/BOE-A-2021-6624/texto": {
+    "archivo": "boe/BOE-A-2021-6624__texto.xml",
+    "fecha": "2026-07-24T22:18:00+00:00",
+    "sha256": "ef491e8aa93d74001f6e11dbd633f8f92e67ea2cc9b7f10e0f62e00bfe4b1f1e",
+    "bytes": 397614,
+    "content_type": "application/xml",
+    "origen": "boe-texto:RD 284/2021"
   }
 }

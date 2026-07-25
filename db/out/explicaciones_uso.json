@@ -1,0 +1,25 @@
+{
+  "etapas": {
+    "explicaciones": {
+      "llamadas": 2670,
+      "entrada": 1585228,
+      "salida": 265990,
+      "pensamiento": 0,
+      "total": 1851218
+    },
+    "resumenes": {
+      "llamadas": 11,
+      "entrada": 14340,
+      "salida": 6068,
+      "pensamiento": 23617,
+      "total": 44025
+    },
+    "qa": {
+      "llamadas": 561,
+      "entrada": 736750,
+      "salida": 28899,
+      "pensamiento": 769774,
+      "total": 1535423
+    }
+  }
+}
